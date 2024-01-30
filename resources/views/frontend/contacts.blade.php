@@ -1,4 +1,4 @@
-@extends('layouts.main');
+@extends('frontend.layouts.main');
 @section('container');
       <!-- Contact starts -->
       <section id="contact" class="contact section-padding">

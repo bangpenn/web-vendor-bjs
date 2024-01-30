@@ -18,7 +18,15 @@
 </head>
 <body>
 
-    @include('partials.navbar');
+    {{-- navbar --}}
+    @include('frontend.partials.navbar');
+
+    content
+    @yield('container');
+
+
+    {{-- footer --}}
+    @include('frontend.partials.footer');
 
 
 

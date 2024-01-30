@@ -1,4 +1,4 @@
-@extends('layouts.main');
+@extends('frontend.layouts.main');
 @section('container');
     <!-- about section starts -->
     <section id="about" class="about section-padding">

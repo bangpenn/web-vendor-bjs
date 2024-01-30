@@ -20,6 +20,10 @@ Route::get('/', function () {
 
 // Grouping frontend routes
 Route::prefix('frontend')->group(function () {
+    Route::get('/main', function () {
+        return view('frontend.layouts.main');
+    });
+
     Route::get('/home', function () {
         return view('frontend.home');
     });

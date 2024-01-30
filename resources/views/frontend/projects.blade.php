@@ -1,4 +1,5 @@
-
+@extends('frontend.layouts.main');
+@section('container');
       <!-- portfolio strats -->
       <section id="portfolio" class="portfolio section-padding">
         <div class="container">

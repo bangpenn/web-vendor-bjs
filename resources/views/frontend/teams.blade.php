@@ -1,4 +1,4 @@
-@extends('layouts.main');
+@extends('frontend.layouts.main');
 @section('container');
       <!-- team starts -->
       <section class="team section-padding" id="team">

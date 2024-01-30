@@ -1,4 +1,4 @@
-@extends('layouts.main');
+@extends('frontend.layouts.main');
 @section('container');
       <!-- Video Profil Start -->
       <section id="video-profil" class="video-profil section-padding">

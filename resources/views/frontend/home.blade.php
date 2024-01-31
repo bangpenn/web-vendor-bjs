@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
-        <path d="M14.078 20.953c-2.692 0-4.699-1.385-4.699-4.7v-5.308H6.931V8.07c2.694-.699 3.821-3.017 3.95-5.023h2.796v4.558h3.263v3.34h-3.263v4.622c0 1.386.699 1.864 1.813 1.864h1.58v3.522h-2.992z"></path>
-    </svg>
 
     <title>Tukuklik | Website Vendor Management Systems</title>
 
@@ -50,48 +47,167 @@
       </nav>
 
 
-
+      <section id="banner">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{ asset('frontend/img/showroom1.jpg') }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h5>Kolaborasi yang Menguntungkan</h5>
+                    <p>Di perusahaan kami, kami percaya pada kerjasama yang saling menguntungkan. Bergabunglah dengan jaringan vendor kami dan nikmati peluang kolaborasi yang luas.</p>
+                    <p><a href="{{ url('frontend/form') }}" class="btn btn-danger mt-3">Daftar</a></p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ asset('frontend/img/showroom2.jpg') }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h5>Peluang Pertumbuhan Bersama</h5>
+                    <p>Bergabunglah dengan perusahaan kami untuk mendapatkan peluang pertumbuhan bersama yang tak terbatas.</p>
+                    <p><a href="{{ url('frontend/form') }}" class="btn btn-danger mt-3">Daftar</a></p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{ asset('frontend/img/showroom3.jpg') }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                  <h5>Networking yang Luas dan Peluang Ekspansi</h5>
+                    <p>Dengan bergabung bersama kami, Anda akan mendapatkan akses ke jaringan yang luas dan peluang ekspansi yang tak terbatas.</p>
+                    <p><a href="{{ url('frontend/form') }}" class="btn btn-danger mt-3">Daftar</a></p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </section>
+
+
+       <!-- portfolio strats -->
+       <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Our Projects</h2>
+                        <p>Kami berkomitmen untuk memberikan dampak positif dalam setiap langkah.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                          <div class="img-area mb-4">
+                              <img src="{{ asset('frontend/img/percetakkan.png') }}" class="img-fluid" alt="" width="500" height="300">
+                          </div>
+                            <h3 class="card-title">Konveksi</h3>
+                            <p class="lead">Ingin bergabung sebagai vendor? Klik tombol di bawah untuk mendaftar sekarang!</p>
+                            <a href="formKonveksi.html" class="btn btn-danger text-white">Daftar</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                          <div class="img-area mb-4">
+                              <img src="{{ asset('frontend/img/gift-set.png') }}" class="img-fluid" alt="" width="500" height="300">
+                          </div>
+                            <h3 class="card-title">ATK</h3>
+                            <p class="lead">Ingin bergabung sebagai vendor? Klik tombol di bawah untuk mendaftar sekarang!</p>
+                            <a href="formAtk.html" class="btn btn-danger text-white">Daftar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                          <div class="img-area mb-4">
+                              <img src="{{ asset('frontend/img/percetakkan.png') }}" class="img-fluid" alt="" width="500" height="300">
+                          </div>
+                            <h3 class="card-title">Percetakkan</h3>
+                            <p class="lead">Ingin bergabung sebagai vendor? Klik tombol di bawah untuk mendaftar sekarang!</p>
+                            <a href="formPercetakkan.html" class="btn btn-danger text-white">Daftar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                          <div class="img-area mb-4">
+                              <img src="{{ asset('frontend/img/gift-set.png') }}" class="img-fluid" alt="" width="500" height="300">
+                          </div>
+                            <h3 class="card-title">Souvenir</h3>
+                            <p class="lead">Ingin bergabung sebagai vendor? Klik tombol di bawah untuk mendaftar sekarang!</p>
+                            <a href="formSouvenir.html" class="btn btn-danger text-white">Daftar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="{{ asset('frontend/img/home-1.jpg') }}" class="d-block w-100" alt="...">
-            <div class="carousel-caption">
-                <h5>Kolaborasi yang Menguntungkan</h5>
-                <p>Di perusahaan kami, kami percaya pada kerjasama yang saling menguntungkan. Bergabunglah dengan jaringan vendor kami dan nikmati peluang kolaborasi yang luas.</p>
-                <p><a href="{{ url('frontend/form') }}" class="btn btn-danger mt-3">Daftar</a></p>
+      </section>
+      <!-- portfolio ends -->
+
+        {{-- <!-- Pertnership --> --}}
+    <section id="partner">
+        <div class="container mb-5">
+            <div class="row text-center">
+                <h2 class="display-6">
+                    Partnership
+                </h2>
+                <p class="display-6 mt-lg-2">
+                    Tukuklik.com telah terdaftar dan terkualifikasi pada LPSE dan SIKaP, serta menjadi mitra resmi
+                    E-Catalogue, Toko Daring, SIMPeL Kemenkeu, dan PaDI UMKM.
+                </p>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src="{{ asset('frontend/img/home-2.jpg') }}" class="d-block w-100" alt="...">
-            <div class="carousel-caption">
-                <h5>Peluang Pertumbuhan Bersama</h5>
-                <p>Bergabunglah dengan perusahaan kami untuk mendapatkan peluang pertumbuhan bersama yang tak terbatas.</p>
-                <p><a href=""{{ url('frontend/form') }}" " class="btn btn-danger mt-3">Daftar</a></p>
+            <div class="logo-container crop-img">
+                <img src="{{ asset('frontend/assets/LKPP.png') }}" alt="logo 1" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/belapengadaan.png') }}" alt="logo 2" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/padiumkm.svg') }}" alt="logo 3" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/lpse.png') }}" alt="logo 4" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/sikap.png') }}" alt="logo 5" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/simpel.png') }}" alt="logo 6" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/ecatalogue.png') }}" alt="logo 7" class="img-fluid" width="120" height="120">
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src="{{ asset('frontend/img/home-3.jpg') }}" class="d-block w-100" alt="...">
-            <div class="carousel-caption">
-              <h5>Networking yang Luas dan Peluang Ekspansi</h5>
-                <p>Dengan bergabung bersama kami, Anda akan mendapatkan akses ke jaringan yang luas dan peluang ekspansi yang tak terbatas.</p>
-                <p><a href="{{ url('frontend/form') }}" class="btn btn-danger mt-3">Daftar</a></p>
-            </div>
-          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+        <div class="container">
+            <div class="row text-center">
+                <p class="display-6 mt-lg-2">
+                    Kami sudah dipercaya dan telah bekerjasama dengan lebih dari 430 instansi, BUMN, maupun Swasta.
+                </p>
+            </div>
+            <div class="logo-container crop-img">
+                <img src="{{ asset('frontend/assets/pertamina.png') }}" alt="logo 8" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/bni.png') }}" alt="logo 9" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/perkebunan.png') }}" alt="logo 10" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/bankjatim.png') }}" alt="logo 11" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/pln.png') }}" alt="logo 12" class="img-fluid" width="80" height="80">
+                <img src="{{ asset('frontend/assets/telkom.webp') }}" alt="logo 13" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/bri.png') }}" alt="logo 14" class="img-fluid" width="80" height="80">
+                <img src="{{ asset('frontend/assets/kemenkeu.png') }}" alt="logo 15" class="img-fluid" width="70" height="70">
+                <img src="{{ asset('frontend/assets/sier.png') }}" alt="logo 16" class="img-fluid" width="55" height="55">
+                <img src="{{ asset('frontend/assets/taspen.png') }}" alt="logo 17" class="img-fluid" width="80" height="80">
+                <img src="{{ asset('frontend/assets/pos.png') }}" alt="logo 18" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/waskita.png') }}" alt="logo 19" class="img-fluid" width="80" height="80">
+                <img src="{{ asset('frontend/assets/kominfo.png') }}" alt="logo 20" class="img-fluid" width="80" height="80">
+                <img src="{{ asset('frontend/assets/jember.png') }}" alt="logo 21" class="img-fluid" width="80" height="80">
+                <img src="{{ asset('frontend/assets/djp.png') }}" alt="logo 22" class="img-fluid" width="40" height="40">
+                <img src="{{ asset('frontend/assets/pelindo.png') }}" alt="logo 23" class="img-fluid" width="130" height="130">
+
+
+            </div>
+        </div>
+    </section>
 
       <!-- about section starts -->
       <section id="about" class="about section-padding">
@@ -160,122 +276,9 @@
       </section> -->
       <!-- services section Ends -->
 
-      <!-- About Us -->
-    <section id="partner">
-        <div class="container mb-5">
-            <div class="row text-center">
-                <h2 class="display-6">
-                    Partnership
-                </h2>
-                <p class="display-6 mt-lg-2">
-                    Tukuklik.com telah terdaftar dan terkualifikasi pada LPSE dan SIKaP, serta menjadi mitra resmi
-                    E-Catalogue, Toko Daring, SIMPeL Kemenkeu, dan PaDI UMKM.
-                </p>
-            </div>
-            <div class="logo-container crop-img">
-                <img src="{{ asset('frontend/assets/LKPP.png') }}" alt="logo 1" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/belapengadaan.png') }}" alt="logo 2" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/padiumkm.svg') }}" alt="logo 3" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/lpse.png') }}" alt="logo 4" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/sikap.png') }}" alt="logo 5" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/simpel.png') }}" alt="logo 6" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/ecatalogue.png') }}" alt="logo 7" class="img-fluid" width="120" height="120">
-            </div>
-        </div>
-        <div class="container">
-            <div class="row text-center">
-                <p class="display-6 mt-lg-2">
-                    Kami sudah dipercaya dan telah bekerjasama dengan lebih dari 430 instansi, BUMN, maupun Swasta.
-                </p>
-            </div>
-            <div class="logo-container crop-img">
-                <img src="{{ asset('frontend/assets/pertamina.png') }}" alt="logo 8" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/bni.png') }}" alt="logo 9" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/perkebunan.png') }}" alt="logo 10" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/bankjatim.png') }}" alt="logo 11" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/pln.png') }}" alt="logo 12" class="img-fluid" width="80" height="80">
-                <img src="{{ asset('frontend/assets/telkom.webp') }}" alt="logo 13" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/bri.png') }}" alt="logo 14" class="img-fluid" width="80" height="80">
-                <img src="{{ asset('frontend/assets/kemenkeu.png') }}" alt="logo 15" class="img-fluid" width="70" height="70">
-                <img src="{{ asset('frontend/assets/sier.png') }}" alt="logo 16" class="img-fluid" width="55" height="55">
-                <img src="{{ asset('frontend/assets/taspen.png') }}" alt="logo 17" class="img-fluid" width="80" height="80">
-                <img src="{{ asset('frontend/assets/pos.png') }}" alt="logo 18" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/waskita.png') }}" alt="logo 19" class="img-fluid" width="80" height="80">
-                <img src="{{ asset('frontend/assets/kominfo.png') }}" alt="logo 20" class="img-fluid" width="80" height="80">
-                <img src="{{ asset('frontend/assets/jember.png') }}" alt="logo 21" class="img-fluid" width="80" height="80">
-                <img src="{{ asset('frontend/assets/djp.png') }}" alt="logo 22" class="img-fluid" width="40" height="40">
-                <img src="{{ asset('frontend/assets/pelindo.png') }}" alt="logo 23" class="img-fluid" width="130" height="130">
 
 
-            </div>
-        </div>
-    </section>
 
-      <!-- portfolio strats -->
-      <section id="portfolio" class="portfolio section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-header text-center pb-5">
-                        <h2>Our Projects</h2>
-                        <p>Kami berkomitmen untuk memberikan dampak positif dalam setiap langkah.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-12 col-lg-3">
-                    <div class="card text-light text-center bg-white pb-2">
-                        <div class="card-body text-dark">
-                          <div class="img-area mb-4">
-                              <img src="{{ asset('frontend/img/percetakkan.png') }}" class="img-fluid" alt="" width="500" height="300">
-                          </div>
-                            <h3 class="card-title">Konveksi</h3>
-                            <p class="lead">Ingin bergabung sebagai vendor? Klik tombol di bawah untuk mendaftar sekarang!</p>
-                            <a href="formKonveksi.html" class="btn btn-danger text-white">Daftar</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-3">
-                    <div class="card text-light text-center bg-white pb-2">
-                        <div class="card-body text-dark">
-                          <div class="img-area mb-4">
-                              <img src="{{ asset('frontend/img/gift-set.png') }}" class="img-fluid" alt="" width="500" height="300">
-                          </div>
-                            <h3 class="card-title">ATK</h3>
-                            <p class="lead">Ingin bergabung sebagai vendor? Klik tombol di bawah untuk mendaftar sekarang!</p>
-                            <a href="formAtk.html" class="btn btn-danger text-white">Daftar</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-3">
-                    <div class="card text-light text-center bg-white pb-2">
-                        <div class="card-body text-dark">
-                          <div class="img-area mb-4">
-                              <img src="{{ asset('frontend/img/percetakkan.png') }}" class="img-fluid" alt="" width="500" height="300">
-                          </div>
-                            <h3 class="card-title">Percetakkan</h3>
-                            <p class="lead">Ingin bergabung sebagai vendor? Klik tombol di bawah untuk mendaftar sekarang!</p>
-                            <a href="formPercetakkan.html" class="btn btn-danger text-white">Daftar</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-3">
-                    <div class="card text-light text-center bg-white pb-2">
-                        <div class="card-body text-dark">
-                          <div class="img-area mb-4">
-                              <img src="{{ asset('frontend/img/gift-set.png') }}" class="img-fluid" alt="" width="500" height="300">
-                          </div>
-                            <h3 class="card-title">Souvenir</h3>
-                            <p class="lead">Ingin bergabung sebagai vendor? Klik tombol di bawah untuk mendaftar sekarang!</p>
-                            <a href="formSouvenir.html" class="btn btn-danger text-white">Daftar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </section>
-      <!-- portfolio ends -->
       <!-- team starts -->
       <section class="team section-padding" id="team">
           <div class="container">
@@ -284,10 +287,15 @@
                     <div class="section-header text-center pb-5">
                         <h2>Our Team</h2>
                         <p>Tim Ahli <br>Hasil Luar Biasa</p>
+                        <img src="{{ asset('frontend/img/foto bersama.jpeg') }}" alt="" class="img-fluid">
+                </div>
+                    {{-- <div class="section-header text-center pb-5">
+                        <h2>Our Team</h2>
+                        <p>Tim Ahli <br>Hasil Luar Biasa</p>
                         <div class="col-12 col-md-6 col-lg-3 mx-auto">
                             <div class="card text-center">
                                 <div class="card-body">
-                                    <img src="{{ asset('frontend/img/team-1.jpg') }}" alt="" class="img-fluid rounded-circle">
+                                    <img src="{{ asset('frontend/img/foto bersama.jpeg') }}" alt="" class="img-fluid rounded-circle">
                                 <h3 class="card-title py-2">Budi Santoso</h3>
                                 <p class="card-text">Project Director</p>
 
@@ -367,7 +375,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
           </div>
       </section>
 
@@ -380,7 +388,7 @@
                 <div class="section-header text-center pb-5">
                     <h2>Watch Our Video</h2>
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" width="800" height="450" src="https://www.youtube.com/embed/nElS_nJH4YU" frameborder="0" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" width="450" height="800" src="{{ asset('frontend/img/tukuklik.mp4') }}" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -431,15 +439,6 @@
           </div>
       </footer>
       <!-- footer ends -->
-
-
-
-
-
-
-
-
-
 
     <!-- All Js -->
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>

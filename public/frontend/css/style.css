@@ -28,16 +28,19 @@ body {
 	font-size: 18px;
 	line-height: 1.9;
 }
-.carousel-inner:before {
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: rgba(0, 0, 0, 0.7);
-	z-index: 1;
+#banner{
+    .carousel-inner:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
 }
+
 .navbar .getstarted {
 	background: #106eea;
 	margin-left: 30px;
@@ -176,4 +179,45 @@ body {
 
 .crop-img img{
     object-fit: cover;
+}
+
+
+/* Catalog style */
+
+#catalog {
+    .cards-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      .card img {
+
+        max-width: 100%;
+        max-height: 100%;
+
+      }
+      .card {
+          padding: 20px; /* Atur ruang di dalam kartu */
+          margin: 0 10px; /* Atur jarak antara kartu */
+          box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1); /* Atur bayangan kartu */
+          border: none; /* Hapus garis batas kartu jika tidak diperlukan */
+          border-radius: 10px; /* Atur sudut lengkungan kartu */
+        }
+      .carousel-inner {
+        padding: 2em;
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        position: absolute;
+        background-color: #0000001c;
+        height: 10vh;
+        border-radius: 70%;
+        /* top: 50%; */
+        transform: translateY(400%);
+      }
+
+      @media (min-width: 768px) {
+        .card img {
+          height: auto;
+        }
+      }
 }

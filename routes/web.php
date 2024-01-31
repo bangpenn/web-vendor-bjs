@@ -28,6 +28,10 @@ Route::prefix('frontend')->group(function () {
         return view('frontend.home');
     });
 
+    Route::get('/catalog', function () {
+        return view('frontend.catalog');
+    });
+
     Route::get('/form', function () {
         return view('frontend.form');
     })->name('frontend.form');

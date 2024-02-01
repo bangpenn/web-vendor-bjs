@@ -181,6 +181,34 @@
                         </div>
                     </div>
                 </div>
+                <div class="carousel-item">
+                    <div class="cards-wrapper">
+                        <div class="card">
+                            <img src="{{ asset('frontend/img/test9.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Baju Batik</h5>
+                                <p class="card-text">Kain katun cukup sering digunakan sebagai bahan untuk membuat seragam kantor.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="{{ asset('frontend/img/test10.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Baju Batik</h5>
+                                <p class="card-text">Kain mori merupakan bahan sering digunakan sebagai bahan untuk membuat baju batik.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="{{ asset('frontend/img/test9.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Baju Batik</h5>
+                                <p class="card-text">Kain katun cukup sering digunakan sebagai bahan untuk membuat seragam kantor.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

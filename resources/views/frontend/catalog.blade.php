@@ -160,7 +160,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Jaket Kantor</h5>
                                 <p class="card-text">Kain katun cukup sering digunakan sebagai bahan untuk membuat seragam kantor.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -168,7 +168,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Jaket Kantor</h5>
                                 <p class="card-text">Kain katun cukup sering digunakan sebagai bahan untuk membuat seragam kantor.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -176,7 +176,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Jaket Kantor</h5>
                                 <p class="card-text">Kain katun cukup sering digunakan sebagai bahan untuk membuat seragam kantor.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -187,8 +187,8 @@
                             <img src="{{ asset('frontend/img/test9.jpg') }}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Baju Batik</h5>
-                                <p class="card-text">Kain katun cukup sering digunakan sebagai bahan untuk membuat seragam kantor.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <p class="card-text">Kain katun cukup sering digunakan sebagai bahan untuk membuat baju batik.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -196,15 +196,201 @@
                             <div class="card-body">
                                 <h5 class="card-title">Baju Batik</h5>
                                 <p class="card-text">Kain mori merupakan bahan sering digunakan sebagai bahan untuk membuat baju batik.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
                             <img src="{{ asset('frontend/img/test9.jpg') }}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Baju Batik</h5>
-                                <p class="card-text">Kain katun cukup sering digunakan sebagai bahan untuk membuat seragam kantor.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <p class="card-text">Kain katun cukup sering digunakan sebagai bahan untuk membuat baju batik.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="catalog" class="catalog mt-5 ">
+        <div class="title text-center">
+            <h3>Spesifikasi Goodiebag</h3>
+        </div>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="cards-wrapper">
+                        <div class="card ">
+                            <img src="{{ asset('frontend/img/test12.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Tali Bisban</h5>
+                                <p class="card-text">Goodiebag Tali Bisban.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="{{ asset('frontend/img/test13.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Tali Bisban</h5>
+                                <p class="card-text">Goodiebag Tali Bisban.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="{{ asset('frontend/img/test11.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Tali Bisban</h5>
+                                <p class="card-text">Goodiebag Tali Bisban.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="cards-wrapper">
+                        <div class="card">
+                            <img src="{{ asset('frontend/img/test14.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Tali Bisban</h5>
+                                <p class="card-text">Goodiebag Tali Bisban.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="{{ asset('frontend/img/test16.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Tali Bisban</h5>
+                                <p class="card-text">Goodiebag Tali Bisban.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="{{ asset('frontend/img/test15.JPG') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Tali Bisban</h5>
+                                <p class="card-text">Goodiebag Tali Bisban.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="cards-wrapper">
+                        <div class="card">
+                            <img src="{{ asset('frontend/img/test17.JPG') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Tali Bisban</h5>
+                                <p class="card-text">Goodiebag Tali Bisban.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="{{ asset('frontend/img/test18.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Tali Bisban</h5>
+                                <p class="card-text">Goodiebag Tali Bisban.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="{{ asset('frontend/img/test19.JPG') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Tali Bisban</h5>
+                                <p class="card-text">Goodiebag Tali Bisban.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="cards-wrapper">
+                        <div class="card">
+                            <img src="{{ asset('frontend/img/test21.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Canvas</h5>
+                                <p class="card-text">Goodiebag Canvas.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="{{ asset('frontend/img/test20.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Canvas</h5>
+                                <p class="card-text">Goodiebag Canvas.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="{{ asset('frontend/img/test22.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Canvas</h5>
+                                <p class="card-text">Goodiebag Canvas.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="cards-wrapper">
+                        <div class="card">
+                            <img src="{{ asset('frontend/img/test24.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Canvas</h5>
+                                <p class="card-text">Goodiebag Canvas.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="{{ asset('frontend/img/test23.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Canvas</h5>
+                                <p class="card-text">Goodiebag Canvas.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="{{ asset('frontend/img/test25.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag Canvas</h5>
+                                <p class="card-text">Goodiebag Canvas.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="cards-wrapper">
+                        <div class="card">
+                            <img src="{{ asset('frontend/img/test27.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag D600</h5>
+                                <p class="card-text">Goodiebag D600.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="{{ asset('frontend/img/test26.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag D600</h5>
+                                <p class="card-text">Goodiebag D600.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="{{ asset('frontend/img/test28.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Goodiebag D600</h5>
+                                <p class="card-text">Goodiebag D600.</p>
+                                <a href="#" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>

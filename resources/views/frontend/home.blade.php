@@ -349,18 +349,18 @@
                     <div class="card text-center">
                         <div class="card-body">
                             <img src="{{ asset('frontend/img/team-3.jpg') }}" alt="" class="img-fluid rounded-circle">
-                        <h3 class="card-title py-2">Fofo</h3>
-                        <p class="card-text">Chief Marketing Officer</p>
-                        <p class="socials">
-                            <i class="bi bi-twitter text-dark mx-1"></i>
-                        <i class="bi bi-facebook text-dark mx-1"></i>
-                        <i class="bi bi-linkedin text-dark mx-1"></i>
-                        <i class="bi bi-instagram text-dark mx-1"></i>
-                        </p>
-                        </div>
-                    </div>
+                            <h3 class="card-title py-2">Fofo</h3>
+                            <p class="card-text">Chief Marketing Officer</p>
+                            <p class="socials">
+                                <i class="bi bi-twitter text-dark mx-1"></i>
+                                <i class="bi bi-facebook text-dark mx-1"></i>
+                                <i class="bi bi-linkedin text-dark mx-1"></i>
+                                <i class="bi bi-instagram text-dark mx-1"></i>
+                    </p>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
                     <div class="card text-center">
                         <div class="card-body">
                             <img src="{{ asset('frontend/img/team-4.jpg') }}" alt="" class="img-fluid rounded-circle">

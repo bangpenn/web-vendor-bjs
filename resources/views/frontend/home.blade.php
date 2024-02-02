@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--divinectorweb.com-->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -213,82 +212,46 @@
       <section id="about" class="about section-padding">
           <div class="container">
               <div class="row">
-                  <div class="col-lg-4 col-md-12 col-12">
+                  <div class="col-lg-6 col-md-12 col-12 mt-md-5">
                       <div class="about-img">
-                          <img src="{{ asset('frontend/img/about.jpg') }}" alt="" class="img-fluid">
+                          <img src="{{ asset('frontend/img/foto_bersama-removebg-preview.png') }}" alt="" class="img-fluid">
                       </div>
                   </div>
-                  <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                  <div class="col-lg-6 col-md-12 col-12 ps-lg-5 pe-lg-5 mt-md-5">
                       <div class="about-text">
-                            <h2>Berkualitas Terbaik <br/> Layanan yang Pernah Ada</h2>
-                            <p>Dengan bergabung bersama kami, Anda akan mendapatkan akses ke jaringan yang luas dan peluang ekspansi yang tak terbatas. Kami percaya pada pertumbuhan bersama dan memberikan platform bagi vendor untuk mencapai potensi penuh mereka. Mari bersama-sama mengeksplorasi peluang baru dan menghadirkan inovasi. <br> Tunggu apa lagi??</p>
-                            <a href="{{ url('frontend/form') }}" class="btn btn-danger">Daftar Sekarang</a>
+                            <h2>Our Team</h2>
+                            <h5>Tim ahli luar biasa</h5>
+                            <p>Ayo bergabung bersama kami sebagai mitra perusahaan! Sebagai vendor, kami berkomitmen untuk membantu Anda mengembangkan bisnis Anda ke tingkat selanjutnya. Kami mengundang Anda untuk menjalin kemitraan yang saling menguntungkan, di mana kami akan menyediakan solusi teknologi terbaik untuk mendukung pertumbuhan bisnis Anda. Dengan kerjasama yang erat, kita bisa mewujudkan potensi penuh dari usaha Anda. Mari kita jalin kemitraan yang kuat dan sukses bersama-sama.<br> Tunggu apa lagi??</p>
+                            <a href="{{ url('frontend/form') }}" class="btn btn-info text-white">Pelajari lebih lanjut</a>
                       </div>
                   </div>
               </div>
           </div>
       </section>
-      <!-- about section Ends -->
-      <!-- services section Starts -->
-      <!-- <section class="services section-padding" id="services">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-12">
-                      <div class="section-header text-center pb-5">
-                          <h2>Our Services</h2>
-                          <p>Kami siap menyediakan layanan terbaik untuk Anda.</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-white text-center bg-dark pb-2">
-                        <div class="card-body">
-                            <i class="bi bi-laptop"></i>
-                            <h3 class="card-title">Kolaborasi yang Menguntungkan</h3>
-                            <p class="lead">Di perusahaan kami, kami percaya pada kerjasama yang saling menguntungkan. Bergabunglah dengan jaringan vendor kami dan nikmati peluang kolaborasi yang luas. Kami mendukung pertumbuhan bisnis Anda dengan memberikan akses ke pelanggan baru dan pasar yang berkembang.</p> -->
-                            <!-- <button class="btn bg-warning text-dark">Read More</button> -->
-                        <!-- </div>
-                    </div>
-                </div>
-                  <div class="col-12 col-md-12 col-lg-4">
-                      <div class="card text-white text-center bg-dark pb-2">
-                          <div class="card-body">
-                            <i class="bi bi-journal"></i>
-                              <h3 class="card-title">Networking yang Luas dan Peluang Ekspansi</h3>
-                              <p class="lead">Dengan bergabung bersama kami, Anda akan mendapatkan akses ke jaringan yang luas dan peluang ekspansi yang tak terbatas. Kami percaya pada pertumbuhan bersama dan memberikan platform bagi vendor untuk mencapai potensi penuh mereka. Mari bersama-sama mengeksplorasi peluang baru dan menghadirkan inovasi.</p> -->
-                              <!-- <button class="btn bg-warning text-dark">Read More</button> -->
-                          <!-- </div>
-                      </div>
-                  </div>
-                  <div class="col-12 col-md-12 col-lg-4">
-                      <div class="card text-white text-center bg-dark pb-2">
-                          <div class="card-body">
-                            <i class="bi bi-intersect"></i>
-                              <h3 class="card-title">Peluang Pertumbuhan Bersama</h3>
-                              <p class="lead">Bergabunglah dengan perusahaan kami untuk mendapatkan peluang pertumbuhan bersama yang tak terbatas. Dengan berbagai program pengembangan dan dukungan yang kami sediakan, Anda dapat mengembangkan bisnis Anda ke level yang baru. Mari jalin kemitraan yang produktif dan saling menguntungkan.</p> -->
-                              <!-- <button class="btn bg-warning text-dark">Read More</button> -->
-                          <!-- </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section> -->
-      <!-- services section Ends -->
 
 
-
-
-      <!-- team starts -->
+      {{-- <!-- team starts -->
       <section class="team section-padding" id="team">
           <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-lg-6 mb-4 mb-lg-0" style="text-align: right;">
                     <div class="section-header text-center pb-5">
                         <h2>Our Team</h2>
-                        <p>Tim Ahli <br>Hasil Luar Biasa</p>
-                        <img src="{{ asset('frontend/img/foto bersama.jpeg') }}" alt="" class="img-fluid">
+                        <h6>Kami membantu Anda untuk bekerja sama, <br>untuk memperbesar usaha kita bersama</h6>
+                        <small>bersama-sama kita bisa mencapai kesuksesan yang lebih besar</small> <br>
+                        <a href="{{ url('frontend/form') }}" class="btn text-white btn-sm btn-info">Lihat Selengkapnya</a>
+                    </div>
                 </div>
+
+                <div class="col-lg-6">
+                    <div class="video-text ps-4">
+                        <img src="{{ asset('frontend/img/foto_bersama-removebg-preview.png') }}" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div> --}}
+
+
+
                     {{-- <div class="section-header text-center pb-5">
                         <h2>Our Team</h2>
                         <p>Tim Ahli <br>Hasil Luar Biasa</p>
@@ -376,31 +339,43 @@
                     </div>
                 </div>
             </div> --}}
-          </div>
-      </section>
+          {{-- </div>
+      </section> --}}
 
       <!-- team ends -->
 
       <!-- Video Profil Start -->
       <section id="video-profil" class="video-profil section-padding">
-        <div class="container container-fluid mt-5 mb-5">
+        <div class="container">
             <div class="row">
-                <div class="section-header text-center pb-5">
-                    <h2>Watch Our Video</h2>
+
+                <!-- Teks -->
+                <div class="col-lg-6">
+                    <div class="video-text pe-4 mt-md-5 ">
+                        <h2>Watch Our Video</h2>
+                        <p>
+                            Dengan bergabung bersama kami, Anda akan mendapatkan akses ke jaringan yang luas dan peluang ekspansi yang tak terbatas. Kami percaya pada pertumbuhan bersama dan memberikan platform bagi vendor untuk mencapai potensi penuh mereka. Mari bersama-sama mengeksplorasi peluang baru dan menghadirkan inovasi. <br> Tunggu apa lagi??
+                        </p>
+                        <a href="{{ url('frontend/form') }}" class="btn btn-info text-white">Pelajari lebih lanjut</a>
+                    </div>
+                </div>
+                <!-- Video Profil -->
+                <div class="col-lg-6 text-center mb-4 mb-lg-0 mt-2">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" width="450" height="800" src="{{ asset('frontend/img/tukuklik.mp4') }}" frameborder="0" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item"  width="300" height="532" src="{{ asset('frontend/img/tukuklik.mp4') }}" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
-      </section>
+    </section>
+
       <!-- Video Profil End -->
       <!-- Contact starts -->
       <section id="contact" class="contact section-padding">
-        <div class="container mt-5 mb-5">
+        <div class="container mb-5">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-header text-center pb-5">
+                    <div class="section-header text-center">
                         <h2>Contact Us</h2>
                         <p>Terima kasih telah menghubungi kami. Kami siap membantu Anda dengan segala pertanyaan atau permintaan yang Anda miliki. <br>Jangan ragu untuk menghubungi kami melalui formulir kontak di bawah ini atau melalui informasi kontak yang tercantum. </p>
                     </div>

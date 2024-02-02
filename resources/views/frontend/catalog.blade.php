@@ -66,7 +66,7 @@
                 <!-- Tambahkan properti position: relative; dan z-index untuk konten -->
                 <div class="text-white">
                     <h1 class="mb-3">Tukuklik Vendor</h1>
-                    <h4 class="mb-3">Gabung bersama kami, untuk memperbesar usaha kita</h4>
+                    <h4 class="mb-3">Gabung bersama kami, untuk memperbesar usaha kita bersama</h4>
                     <a class="btn btn-outline-light btn" href="#!" role="button">Daftar Vendor</a>
                 </div>
             </div>

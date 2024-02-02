@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Get radio buttons
     const jenisVendorRadios = document.querySelectorAll('input[name="jenis_vendor"]');
-    const kategoriVendorSelect = document.querySelector('#kategori-vendor select'); 
+    const kategoriVendorSelect = document.querySelector('#kategori-vendor select');
 
     // Function to populate kategori vendor options
     function populateKategoriVendorOptions(jenisVendor) {
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         switch (jenisVendor) {
             case 'percetakkan':
                 kategoriVendorSelect.innerHTML = `
-                    <option selected>Choose...</option>
+                    <option selected>Pilih vendor...</option>
                     <option>1. Vendor Percetakkan Amplop</option>
                     <option>2. Vendor Percetakkan Kalender</option>
                     <option>3. Vendor Percetakkan Paper Bag</option>
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 break;
             case 'souvenir':
                 kategoriVendorSelect.innerHTML = `
-                    <option selected>Choose...</option>
+                    <option selected>Pilih vendor...</option>
                     <option>1. Vendor Souvenir Thumbler Stainless & Plastik</option>
                     <option>2. Vendor Souvenir Power Bank</option>
                     <option>3. Vendor Souvenir Speaker Bluetooth</option>
@@ -49,17 +49,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 break;
             case 'atk':
                 kategoriVendorSelect.innerHTML = `
-                    <option selected>Choose...</option>
+                    <option selected>Pilih vendor...</option>
                     <option>1. Vendor ATK</option>
                     <option>2. Vendor ATK Kertas HVS</option>
                     <option>3. Vendor ATK Printer</option>
                     <option>4. Vendor ATK Pemotong Kertas</option>
-                    <option>5. Vendor ATK Pemotong AC</option>                    
+                    <option>5. Vendor ATK Pemotong AC</option>
                 `;
                 break;
             case 'konveksi':
                 kategoriVendorSelect.innerHTML = `
-                    <option selected>Choose...</option>
+                    <option selected>Pilih vendor...</option>
                     <option>1. Vendor Konveksi Kaos</option>
                     <option>2. Vendor Konveksi Jaket</option>
                     <option>3. Vendor Konveksi Kemeja Dinas</option>

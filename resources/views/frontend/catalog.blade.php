@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multi-Card Carousel</title>
+  <title>Tukuklik | Website Vendor Management Systems</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
@@ -15,29 +15,29 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="#"><span class="text-danger">Tukuklik</span>Vendor</a>
+          <a class="navbar-brand" href="{{ url('/') }}"><span class="text-danger">Tukuklik</span>Vendor</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#partner">Partner</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#portfolio">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#team">Team</a>
+                <a class="nav-link" href="{{ url('/') }}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Vendor
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ url('frontend/form') }}" >Konveksi</a></li>
+                    <li><a class="dropdown-item" href="{{ url('frontend/form') }}" >Percetakan</a></li>
+                    <li><a class="dropdown-item" href="{{ url('frontend/form') }}" >ATK</a></li>
+                    <li><a class="dropdown-item" href="{{ url('frontend/form') }}" >Souvenir</a></li>
+                  </ul>
+                {{-- <a class="nav-link" href="#team">Team</a> --}}
               </li>
             </ul>
           </div>
@@ -1044,6 +1044,42 @@
             </a>
         </div>
     </section>
+    <!-- Contact starts -->
+    <section id="contact" class="contact section-padding">
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center">
+                        <h2>Contact Us</h2>
+                        <p>Terima kasih telah menghubungi kami. Kami siap membantu Anda dengan segala pertanyaan atau permintaan yang Anda miliki. <br>Jangan ragu untuk menghubungi kami melalui formulir kontak di bawah ini atau melalui informasi kontak yang tercantum. </p>
+                    </div>
+                </div>
+            </div>
+			<div class="row m-0">
+				<div class="col-md-12 p-0 pt-4 pb-4">
+					<form action="#" class="bg-light p-4 m-auto">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="mb-3">
+									<input class="form-control" placeholder="Full Name" required="" type="text">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="mb-3">
+									<input class="form-control" placeholder="Email" required="" type="email">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="mb-3">
+									<textarea class="form-control" placeholder="Message" required="" rows="3"></textarea>
+								</div>
+							</div><button class="btn btn-warning btn-lg btn-block mt-3" type="button">Send Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+      </section>
 
       <!-- footer starts -->
       <footer class="bg-dark p-2 text-center" class="">
@@ -1053,8 +1089,8 @@
     </footer>
     <!-- footer ends -->
 
-
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

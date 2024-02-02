@@ -21,7 +21,7 @@
           document.addEventListener('DOMContentLoaded', function () {
               Swal.fire({
                   title: "Contoh Baju",
-                  text: "Apakah anda memiliki spesifikasi yang persis dengan gambar?",
+                  html: "<div class='text-center'>Apakah anda memiliki spesifikasi yang persis dengan gambar?</div>",
                   imageUrl: "{{ asset('frontend/img/konveksi/test2.jpg') }}", // Pastikan URL gambar ini benar
                   imageWidth: 200,
                   imageHeight: 280,
@@ -44,6 +44,29 @@
                       });
                   }
               });
+
+        //     Swal.fire({
+        //           title: "Spesifikasi!!!",
+        //           text: "Pastikan spesifikasi sesuai dengan yang dibutuhkan.",
+        //           icon: "warning",
+        //           showDenyButton: true,
+        //           showCancelButton: true,
+        //           showCloseButton: true,
+        //           confirmButtonText: "Siap!!",
+        //           denyButtonText: `Maaf, belum`
+        //         }).then((result) => {
+        //         /* Read more about isConfirmed, isDenied below */
+        //         if (result.isConfirmed) {
+        //             Swal.fire("Lanjut isi Form!", "", "success").then(() => {
+        //                 window.location.href = "{{ url('frontend/form') }}";
+        //             });
+
+        //         } else if (result.isDenied) {
+        //             Swal.fire("Cari yang lain", "", "error").then(() =>{
+        //               window.location.href = "{{ url('/') }}";
+        //             });
+        //         }
+        // });
           });
       </script>
 

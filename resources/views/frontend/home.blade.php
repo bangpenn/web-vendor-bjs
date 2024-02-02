@@ -26,13 +26,13 @@
                 <a class="nav-link" href="{{ url('/') }}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="#partner">Partner</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact</a>
@@ -103,6 +103,57 @@
           </div>
       </section>
 
+      {{-- <!-- Pertnership --> --}}
+     <section id="partner">
+        <div class="container mb-5">
+            <div class="row text-center">
+                <h2 class="display-6 fw-bold">
+                    Partnership
+                </h2>
+                <p class="display-6 mt-lg-2">
+                    Tukuklik.com telah terdaftar dan terkualifikasi pada Layanan Pengadaan Secara Elektronik (LPSE) dan Sistem Informasi Pengadaan Barang/Jasa Pemerintah (SIKaP), serta menjadi mitra resmi
+                    E-Catalogue, Toko Daring, SIMPeL Kemenkeu, dan PaDI UMKM.
+                </p>
+            </div>
+            <div class="logo-container crop-img">
+                <img src="{{ asset('frontend/assets/LKPP.png') }}" alt="logo 1" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/belapengadaan.png') }}" alt="logo 2" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/padiumkm.svg') }}" alt="logo 3" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/lpse.png') }}" alt="logo 4" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/sikap.png') }}" alt="logo 5" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/simpel.png') }}" alt="logo 6" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/ecatalogue.png') }}" alt="logo 7" class="img-fluid" width="120" height="120">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row text-center">
+                <p class="display-6 mt-lg-2">
+                    Kami telah dipercaya dan menjalin kerjasama dengan lebih dari 430 instansi, Badan Usaha Milik Negara (BUMN), maupun perusahaan Swasta.
+                </p>
+            </div>
+            <div class="logo-container crop-img">
+                <img src="{{ asset('frontend/assets/pertamina.png') }}" alt="logo 8" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/bni.png') }}" alt="logo 9" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/perkebunan.png') }}" alt="logo 10" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/bankjatim.png') }}" alt="logo 11" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/pln.png') }}" alt="logo 12" class="img-fluid" width="80" height="80">
+                <img src="{{ asset('frontend/assets/telkom.webp') }}" alt="logo 13" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/bri.png') }}" alt="logo 14" class="img-fluid" width="80" height="80">
+                <img src="{{ asset('frontend/assets/kemenkeu.png') }}" alt="logo 15" class="img-fluid" width="70" height="70">
+                <img src="{{ asset('frontend/assets/sier.png') }}" alt="logo 16" class="img-fluid" width="55" height="55">
+                <img src="{{ asset('frontend/assets/taspen.png') }}" alt="logo 17" class="img-fluid" width="80" height="80">
+                <img src="{{ asset('frontend/assets/pos.png') }}" alt="logo 18" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('frontend/assets/waskita.png') }}" alt="logo 19" class="img-fluid" width="80" height="80">
+                <img src="{{ asset('frontend/assets/kominfo.png') }}" alt="logo 20" class="img-fluid" width="80" height="80">
+                <img src="{{ asset('frontend/assets/jember.png') }}" alt="logo 21" class="img-fluid" width="80" height="80">
+                <img src="{{ asset('frontend/assets/djp.png') }}" alt="logo 22" class="img-fluid" width="40" height="40">
+                <img src="{{ asset('frontend/assets/pelindo.png') }}" alt="logo 23" class="img-fluid" width="130" height="130">
+
+
+            </div>
+        </div>
+    </section>
+
 
        <!-- portfolio strats -->
        <section id="portfolio" class="portfolio section-padding">
@@ -170,56 +221,6 @@
       </section>
       <!-- portfolio ends -->
 
-        {{-- <!-- Pertnership --> --}}
-    <section id="partner">
-        <div class="container mb-5">
-            <div class="row text-center">
-                <h2 class="display-6">
-                    Partnership
-                </h2>
-                <p class="display-6 mt-lg-2">
-                    Tukuklik.com telah terdaftar dan terkualifikasi pada LPSE dan SIKaP, serta menjadi mitra resmi
-                    E-Catalogue, Toko Daring, SIMPeL Kemenkeu, dan PaDI UMKM.
-                </p>
-            </div>
-            <div class="logo-container crop-img">
-                <img src="{{ asset('frontend/assets/LKPP.png') }}" alt="logo 1" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/belapengadaan.png') }}" alt="logo 2" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/padiumkm.svg') }}" alt="logo 3" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/lpse.png') }}" alt="logo 4" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/sikap.png') }}" alt="logo 5" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/simpel.png') }}" alt="logo 6" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/ecatalogue.png') }}" alt="logo 7" class="img-fluid" width="120" height="120">
-            </div>
-        </div>
-        <div class="container">
-            <div class="row text-center">
-                <p class="display-6 mt-lg-2">
-                    Kami sudah dipercaya dan telah bekerjasama dengan lebih dari 430 instansi, BUMN, maupun Swasta.
-                </p>
-            </div>
-            <div class="logo-container crop-img">
-                <img src="{{ asset('frontend/assets/pertamina.png') }}" alt="logo 8" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/bni.png') }}" alt="logo 9" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/perkebunan.png') }}" alt="logo 10" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/bankjatim.png') }}" alt="logo 11" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/pln.png') }}" alt="logo 12" class="img-fluid" width="80" height="80">
-                <img src="{{ asset('frontend/assets/telkom.webp') }}" alt="logo 13" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/bri.png') }}" alt="logo 14" class="img-fluid" width="80" height="80">
-                <img src="{{ asset('frontend/assets/kemenkeu.png') }}" alt="logo 15" class="img-fluid" width="70" height="70">
-                <img src="{{ asset('frontend/assets/sier.png') }}" alt="logo 16" class="img-fluid" width="55" height="55">
-                <img src="{{ asset('frontend/assets/taspen.png') }}" alt="logo 17" class="img-fluid" width="80" height="80">
-                <img src="{{ asset('frontend/assets/pos.png') }}" alt="logo 18" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/waskita.png') }}" alt="logo 19" class="img-fluid" width="80" height="80">
-                <img src="{{ asset('frontend/assets/kominfo.png') }}" alt="logo 20" class="img-fluid" width="80" height="80">
-                <img src="{{ asset('frontend/assets/jember.png') }}" alt="logo 21" class="img-fluid" width="80" height="80">
-                <img src="{{ asset('frontend/assets/djp.png') }}" alt="logo 22" class="img-fluid" width="40" height="40">
-                <img src="{{ asset('frontend/assets/pelindo.png') }}" alt="logo 23" class="img-fluid" width="130" height="130">
-
-
-            </div>
-        </div>
-    </section>
 
       <!-- about section starts -->
       <section id="about" class="about section-padding">
@@ -234,8 +235,8 @@
                       <div class="about-text">
                             <h2>Our Team</h2>
                             <h5>Tim ahli luar biasa</h5>
-                            <p>Ayo bergabung bersama kami sebagai mitra perusahaan! Sebagai vendor, kami berkomitmen untuk membantu Anda mengembangkan bisnis Anda ke tingkat selanjutnya. Kami mengundang Anda untuk menjalin kemitraan yang saling menguntungkan, di mana kami akan menyediakan solusi teknologi terbaik untuk mendukung pertumbuhan bisnis Anda. Dengan kerjasama yang erat, kita bisa mewujudkan potensi penuh dari usaha Anda. Mari kita jalin kemitraan yang kuat dan sukses bersama-sama.<br> Tunggu apa lagi??</p>
-                            <a href="{{ url('frontend/form') }}" class="btn btn-info text-white">Pelajari lebih lanjut</a>
+                            <p>Ayo bergabung bersama kami sebagai mitra perusahaan! Sebagai vendor, kami berkomitmen untuk membantu Anda mengembangkan bisnis Anda ke tingkat selanjutnya. Kami mengundang Anda untuk menjalin kemitraan yang saling menguntungkan, di mana kami akan menyediakan solusi teknologi terbaik untuk mendukung pertumbuhan bisnis Anda. Dengan kerjasama yang erat, kita bisa mewujudkan potensi penuh dari usaha Anda. Mari kita jalin kemitraan yang kuat dan sukses bersama-sama.<br> yaa gak siiih, Tunggu apa lagi??</p>
+                            <a href="{{ url('frontend/form') }}" class="btn btn-danger text-white">Daftar dong</a>
                       </div>
                   </div>
               </div>
@@ -367,9 +368,9 @@
                     <div class="video-text pe-4 mt-md-5 ">
                         <h2>Watch Our Video</h2>
                         <p>
-                            Dengan bergabung bersama kami, Anda akan mendapatkan akses ke jaringan yang luas dan peluang ekspansi yang tak terbatas. Kami percaya pada pertumbuhan bersama dan memberikan platform bagi vendor untuk mencapai potensi penuh mereka. Mari bersama-sama mengeksplorasi peluang baru dan menghadirkan inovasi. <br> Tunggu apa lagi??
+                            Dengan bergabung bersama kami, Anda akan mendapatkan akses ke jaringan yang luas dan peluang ekspansi yang tak terbatas. Kami percaya pada pertumbuhan bersama dan memberikan platform bagi vendor untuk mencapai potensi penuh mereka. Mari bersama-sama mengeksplorasi peluang baru dan menghadirkan inovasi. <br> yaa gak siiih, Tunggu apa lagi??
                         </p>
-                        <a href="{{ url('frontend/form') }}" class="btn btn-info text-white">Pelajari lebih lanjut</a>
+                        <a href="{{ url('frontend/form') }}" class="btn btn-danger text-white">Daftar dong</a>
                     </div>
                 </div>
                 <!-- Video Profil -->
@@ -381,6 +382,8 @@
             </div>
         </div>
     </section>
+
+
 
       <!-- Video Profil End -->
       <!-- Contact starts -->

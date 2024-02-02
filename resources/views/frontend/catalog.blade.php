@@ -13,6 +13,43 @@
 
 </head>
 <body>
+
+    <button type="button" id="btn" style="display: none;">Login</button>
+      <script src="dist/sweetalert2.all.min.js"></script>
+      <!-- Letakkan script ini di bawah elemen HTML yang diinginkan atau gunakan event DOMContentLoaded -->
+      <script>
+          document.addEventListener('DOMContentLoaded', function () {
+              Swal.fire({
+                  title: "Contoh Baju",
+                  text: "Apakah anda memiliki spesifikasi yang persis dengan gambar?",
+                  imageUrl: "{{ asset('frontend/img/konveksi/test2.jpg') }}", // Pastikan URL gambar ini benar
+                  imageWidth: 200,
+                  imageHeight: 280,
+                  showDenyButton: true,
+                  showCancelButton: true,
+                  confirmButtonText: "Punya dong",
+                  denyButtonText: `Loh gapunya`,
+                  allowOutsideClick: false,
+                  showCloseButton: true
+              }).then((result) => {
+                  /* Read more about isConfirmed, isDenied below */
+                  if (result.isConfirmed) {
+                      Swal.fire("Lanjut isi Form!", "", "success").then(() => {
+                          window.location.href = "{{ url('frontend/form') }}";
+                      });
+
+                  } else if (result.isDenied) {
+                      Swal.fire("Cari yang lain", "", "error").then(() =>{
+                        window.location.href = "{{ url('/') }}";
+                      });
+                  }
+              });
+          });
+      </script>
+
+
+      <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@4/bulma.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <a class="navbar-brand" href="{{ url('/') }}"><span class="text-danger">Tukuklik</span>Vendor</a>
@@ -44,12 +81,16 @@
         </div>
       </nav>
 
+
+
+
       <div class="container-fluid" style="position: relative;">
         <div class="p-5 text-center bg-image rounded-3" style="
             background-image: url('{{ asset('frontend/img/foto bersama.jpeg') }}');
             height: 648px;
             background-size: cover;
-            position: relative; /* Tambahkan properti position: relative; */
+            position: relative;
+
         ">
             <!-- Elemen mask -->
             <div class="mask" style="
@@ -67,11 +108,12 @@
                 <div class="text-white">
                     <h1 class="mb-3">Tukuklik Vendor</h1>
                     <h4 class="mb-3">Gabung bersama kami, untuk memperbesar usaha kita bersama</h4>
-                    <a class="btn btn-outline-light btn" href="#!" role="button">Daftar Vendor</a>
+                    <a class="btn btn-outline-light btn" href="{{ url('frontend/form') }}" role="button">Daftar Vendor</a>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 

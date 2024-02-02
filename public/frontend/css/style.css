@@ -185,6 +185,9 @@ body {
 /* Catalog style */
 
 #catalog {
+
+
+
     background-color: rgb(241, 255, 255);
     .cards-wrapper {
         display: flex;
@@ -224,3 +227,5 @@ body {
         }
       }
 }
+
+

@@ -376,7 +376,10 @@
                 <!-- Video Profil -->
                 <div class="col-lg-6 text-center mb-4 mb-lg-0 mt-2">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item"  width="300" height="532" src="{{ asset('frontend/img/tukuklik.mp4') }}" allowfullscreen></iframe>
+                        <video class="embed-responsive-item" width="300" height="532" controls>
+                            <source src="{{ asset('frontend/img/tukuklik.mp4') }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>

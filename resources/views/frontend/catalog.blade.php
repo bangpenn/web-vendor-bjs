@@ -14,8 +14,8 @@
 </head>
 <body>
 
-    <button type="button" id="btn" style="display: none;">Login</button>
-      <script src="dist/sweetalert2.all.min.js"></script>
+    {{-- <button type="button" id="btn" style="display: none;">Login</button>
+      {{-- <script src="dist/sweetalert2.all.min.js"></script>
       <!-- Letakkan script ini di bawah elemen HTML yang diinginkan atau gunakan event DOMContentLoaded -->
       <script>
           document.addEventListener('DOMContentLoaded', function () {
@@ -43,9 +43,9 @@
                         window.location.href = "{{ url('/') }}";
                       });
                   }
-              });
+              }); --}}
 
-        //     Swal.fire({
+        {{-- //     Swal.fire({
         //           title: "Spesifikasi!!!",
         //           text: "Pastikan spesifikasi sesuai dengan yang dibutuhkan.",
         //           icon: "warning",
@@ -66,9 +66,9 @@
         //               window.location.href = "{{ url('/') }}";
         //             });
         //         }
-        // });
-          });
-      </script>
+        // }); --}}
+          {{-- });
+      </script> --}}
 
 
       <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@4/bulma.css" rel="stylesheet">
@@ -154,7 +154,41 @@
                             <div class="card-body">
                                 <h5 class="card-title">Kaos Kantor</h5>
                                 <p class="card-text">Kaos kantor Bahan Taipan Tropical adalah jenis bahan yang terbuat serat katun (cotton) dan polyester.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
+                                {{-- <script src="dist/sweetalert2.all.min.js"></script>
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function () {
+                                        // Menambahkan event listener untuk tombol daftar
+                                        document.getElementById('daftarButton').addEventListener('click', function () {
+                                            Swal.fire({
+                                                title: "Contoh Baju",
+                                                html: "<div class='text-center'>Apakah anda memiliki spesifikasi yang persis dengan gambar?</div>",
+                                                imageUrl: "{{ asset('frontend/img/konveksi/test2.jpg') }}", // Pastikan URL gambar ini benar
+                                                imageWidth: 200,
+                                                imageHeight: 280,
+                                                showDenyButton: true,
+                                                showCancelButton: true,
+                                                confirmButtonText: "Punya dong",
+                                                denyButtonText: `Loh gapunya`,
+                                                allowOutsideClick: false,
+                                                showCloseButton: true
+                                            }).then((result) => {
+                                                /* Read more about isConfirmed, isDenied below */
+                                                if (result.isConfirmed) {
+                                                    Swal.fire("Lanjut isi Form!", "", "success").then(() => {
+                                                        window.location.href = "{{ url('frontend/form') }}";
+                                                    });
+
+                                                } else if (result.isDenied) {
+                                                    Swal.fire("Cari yang lain", "", "error").then(() =>{
+                                                        window.location.href = "{{ url('/') }}";
+                                                    });
+                                                }
+                                            });
+                                        });
+                                    });
+                                </script> --}}
+
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -162,7 +196,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Kaos Kantor</h5>
                                 <p class="card-text">Kaos kantor Bahan Taipan Tropical adalah jenis bahan yang terbuat serat katun (cotton) dan polyester.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -170,7 +204,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Kaos Kantor</h5>
                                 <p class="card-text">Kaos kantor Bahan Taipan Tropical adalah jenis bahan yang terbuat serat katun (cotton) dan polyester.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -182,7 +216,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Kaos Jersey</h5>
                                 <p class="card-text">Bahan kain jersey merupakan kombinasi dari bahan katun dan sintetis.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -190,7 +224,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Kaos Jersey</h5>
                                 <p class="card-text">Bahan kain jersey merupakan kombinasi dari bahan katun dan sintetis.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -198,7 +232,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Kaos Jersey</h5>
                                 <p class="card-text">Bahan kain jersey merupakan kombinasi dari bahan katun dan sintetis.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -210,7 +244,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Kaos katun</h5>
                                 <p class="card-text">Bahan kain cotton combed 30s dan 24s.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -218,7 +252,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Kaos katun</h5>
                                 <p class="card-text">Bahan kain cotton combed 30s dan 24a.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -226,7 +260,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Kaos katun</h5>
                                 <p class="card-text">Bahan kain cotton combed 30s dan 24s.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -238,7 +272,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Jaket Kantor</h5>
                                 <p class="card-text">Kain katun cukup sering digunakan sebagai bahan untuk membuat seragam kantor.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -246,7 +280,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Jaket Kantor</h5>
                                 <p class="card-text">Kain katun cukup sering digunakan sebagai bahan untuk membuat seragam kantor.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -254,7 +288,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Jaket Kantor</h5>
                                 <p class="card-text">Kain katun cukup sering digunakan sebagai bahan untuk membuat seragam kantor.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -266,7 +300,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Baju Batik</h5>
                                 <p class="card-text">Kain katun cukup sering digunakan sebagai bahan untuk membuat baju batik.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -274,7 +308,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Baju Batik</h5>
                                 <p class="card-text">Kain mori merupakan bahan sering digunakan sebagai bahan untuk membuat baju batik.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -282,7 +316,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Baju Batik</h5>
                                 <p class="card-text">Kain katun cukup sering digunakan sebagai bahan untuk membuat baju batik.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -312,7 +346,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Tali Bisban</h5>
                                 <p class="card-text">Goodiebag Tali Bisban.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -320,7 +354,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Tali Bisban</h5>
                                 <p class="card-text">Goodiebag Tali Bisban.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -328,7 +362,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Tali Bisban</h5>
                                 <p class="card-text">Goodiebag Tali Bisban.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -340,7 +374,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Tali Bisban</h5>
                                 <p class="card-text">Goodiebag Tali Bisban.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -348,7 +382,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Tali Bisban</h5>
                                 <p class="card-text">Goodiebag Tali Bisban.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -356,7 +390,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Tali Bisban</h5>
                                 <p class="card-text">Goodiebag Tali Bisban.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -368,7 +402,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Tali Bisban</h5>
                                 <p class="card-text">Goodiebag Tali Bisban.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -376,7 +410,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Tali Bisban</h5>
                                 <p class="card-text">Goodiebag Tali Bisban.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -384,7 +418,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Tali Bisban</h5>
                                 <p class="card-text">Goodiebag Tali Bisban.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -396,7 +430,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Canvas</h5>
                                 <p class="card-text">Goodiebag Canvas.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -404,7 +438,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Canvas</h5>
                                 <p class="card-text">Goodiebag Canvas.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -412,7 +446,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Canvas</h5>
                                 <p class="card-text">Goodiebag Canvas.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -424,7 +458,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Canvas</h5>
                                 <p class="card-text">Goodiebag Canvas.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -432,7 +466,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Canvas</h5>
                                 <p class="card-text">Goodiebag Canvas.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -440,7 +474,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag Canvas</h5>
                                 <p class="card-text">Goodiebag Canvas.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -452,7 +486,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag D600</h5>
                                 <p class="card-text">Goodiebag D600.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -460,7 +494,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag D600</h5>
                                 <p class="card-text">Goodiebag D600.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -468,7 +502,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Goodiebag D600</h5>
                                 <p class="card-text">Goodiebag D600.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -498,7 +532,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Euroka PS009</h5>
                                 <p class="card-text">Pouch Euroka PS009.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -506,7 +540,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Euroka PS009</h5>
                                 <p class="card-text">Pouch Euroka PS009.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -514,7 +548,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Euroka PS009</h5>
                                 <p class="card-text">Pouch Euroka PS009.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -526,7 +560,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Acropolis PS007</h5>
                                 <p class="card-text">Pouch Acropolis PS007.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -534,7 +568,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Acropolis PS007</h5>
                                 <p class="card-text">Pouch Acropolis PS007.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -542,7 +576,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Acropolis PS007</h5>
                                 <p class="card-text">Pouch Acropolis PS007.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -554,7 +588,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Genesis PS010</h5>
                                 <p class="card-text">Pouch Genesis PS010.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -562,7 +596,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Genesis PS010</h5>
                                 <p class="card-text">Pouch Genesis PS010.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -570,7 +604,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Genesis PS010</h5>
                                 <p class="card-text">Pouch Genesis PS010.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -582,7 +616,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Kecil PS012</h5>
                                 <p class="card-text">Pouch Kecil PS012.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -590,7 +624,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Kecil PS012</h5>
                                 <p class="card-text">Pouch Kecil PS012.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -598,7 +632,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Kecil PS012</h5>
                                 <p class="card-text">Pouch Kecil PS012.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -610,7 +644,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP</h5>
                                 <p class="card-text">Pouch Premium POP.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -618,7 +652,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP</h5>
                                 <p class="card-text">Pouch Premium POP.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -626,7 +660,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP</h5>
                                 <p class="card-text">Pouch Premium POP.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -638,7 +672,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP001</h5>
                                 <p class="card-text">Pouch Premium POP001.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -646,7 +680,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP001</h5>
                                 <p class="card-text">Pouch Premium POP001.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -654,7 +688,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP001</h5>
                                 <p class="card-text">Pouch Premium POP001.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -666,7 +700,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP006</h5>
                                 <p class="card-text">Pouch Premium POP006.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -674,7 +708,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP006</h5>
                                 <p class="card-text">Pouch Premium POP006.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -682,7 +716,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP006</h5>
                                 <p class="card-text">Pouch Premium POP006.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -694,7 +728,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP007</h5>
                                 <p class="card-text">Pouch Premium POP007.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -702,7 +736,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP007</h5>
                                 <p class="card-text">Pouch Premium POP007.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -710,7 +744,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP007</h5>
                                 <p class="card-text">Pouch Premium POP007.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -722,7 +756,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP012</h5>
                                 <p class="card-text">Pouch Premium POP012.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -730,7 +764,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP012</h5>
                                 <p class="card-text">Pouch Premium POP012.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -738,7 +772,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP012</h5>
                                 <p class="card-text">Pouch Premium POP012.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -750,7 +784,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Standart PS003</h5>
                                 <p class="card-text">Pouch Standart PS003.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -758,7 +792,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Standart PS003</h5>
                                 <p class="card-text">Pouch Standart PS003.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -766,7 +800,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Standart PS003</h5>
                                 <p class="card-text">Pouch Standart PS003.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -778,7 +812,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Standart PS004</h5>
                                 <p class="card-text">Pouch Standart PS004.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -786,7 +820,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Standart PS004</h5>
                                 <p class="card-text">Pouch Standart PS004.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -794,7 +828,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Standart PS004</h5>
                                 <p class="card-text">Pouch Standart PS004.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -806,7 +840,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP011</h5>
                                 <p class="card-text">Pouch Premium POP011.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -814,7 +848,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP011</h5>
                                 <p class="card-text">Pouch Premium POP011.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -822,7 +856,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pouch Premium POP011</h5>
                                 <p class="card-text">Pouch Premium POP011.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -834,7 +868,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Puch Acme PS006</h5>
                                 <p class="card-text">Puch Acme PS006.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -842,7 +876,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Puch Acme PS006</h5>
                                 <p class="card-text">Puch Acme PS006.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -850,7 +884,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Puch Acme PS006</h5>
                                 <p class="card-text">Puch Acme PS006.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -881,7 +915,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Adara T001</h5>
                                 <p class="card-text">Tas Adara T001.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -889,7 +923,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Adara T001</h5>
                                 <p class="card-text">Tas Adara T001.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -897,7 +931,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Adara T001</h5>
                                 <p class="card-text">Tas Adara T001.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -909,7 +943,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Alice T002</h5>
                                 <p class="card-text">Tas Alice T002.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -917,7 +951,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Alice T002</h5>
                                 <p class="card-text">Tas Alice T002.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -925,7 +959,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Alice T002</h5>
                                 <p class="card-text">Tas Alice T002.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -937,7 +971,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Amara T003</h5>
                                 <p class="card-text">Tas Amara T003.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -945,7 +979,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Amara T003</h5>
                                 <p class="card-text">Tas Amara T003.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -953,7 +987,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Amara T003</h5>
                                 <p class="card-text">Tas Amara T003.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -965,7 +999,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Astala T004</h5>
                                 <p class="card-text">Tas Astala T004.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -973,7 +1007,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Astala T004</h5>
                                 <p class="card-text">Tas Astala T004.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -981,7 +1015,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Astala T004</h5>
                                 <p class="card-text">Tas Astala T004.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -993,7 +1027,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Cassia T005</h5>
                                 <p class="card-text">Tas Cassia T005.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -1001,7 +1035,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Cassia T005</h5>
                                 <p class="card-text">Tas Cassia T005.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -1009,7 +1043,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Cassia T005</h5>
                                 <p class="card-text">Tas Cassia T005.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -1021,7 +1055,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Kepegawaian TK001</h5>
                                 <p class="card-text">Tas Kepegawaian TK001.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -1029,7 +1063,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Kepegawaian TK001</h5>
                                 <p class="card-text">Tas Kepegawaian TK001.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -1037,7 +1071,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Kepegawaian TK001</h5>
                                 <p class="card-text">Tas Kepegawaian TK001.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -1049,7 +1083,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Kepegawaian TK002</h5>
                                 <p class="card-text">Tas Kepegawaian TK002.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -1057,7 +1091,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Kepegawaian TK002</h5>
                                 <p class="card-text">Tas Kepegawaian TK002.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -1065,7 +1099,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Kepegawaian TK002</h5>
                                 <p class="card-text">Tas Kepegawaian TK002.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -1077,7 +1111,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Kepegawaian TK003</h5>
                                 <p class="card-text">Tas Kepegawaian TK003.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -1085,7 +1119,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Kepegawaian TK003</h5>
                                 <p class="card-text">Tas Kepegawaian TK003.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                         <div class="card d-none d-md-block">
@@ -1093,7 +1127,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Tas Kepegawaian TK003</h5>
                                 <p class="card-text">Tas Kepegawaian TK003.</p>
-                                <a href="#" class="btn btn-primary">Daftar</a>
+                                <a href="#" id="daftarButton" onclick="tampilkanAlert()" class="btn btn-primary">Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -1153,6 +1187,9 @@
         </div>
     </footer>
     <!-- footer ends -->
+
+    <script src="{{ asset('frontend/js/alert.js')}}"></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>

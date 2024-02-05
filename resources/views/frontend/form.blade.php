@@ -137,8 +137,6 @@
                 <input type="text" name="harga" class="form-control" placeholder="Masukkan Harga">
             </div><br>
 
-
-
             <div class="form-group">
                 <label>Upload Gambar Produk</label>
                 <input type="file" class="form-control-file" name="">

@@ -26,7 +26,8 @@
         <h2 class="alert alert-primary text-center mt-3">
             Formulir Pendaftaran Vendor
         </h2>
-        <form class="row g-3">
+        <form class="row g-3" action="{{ url('simpan-data') }}"  method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="form-group">
                 <label>Nama Distributor</label>
                 <input type="text" name="nama-distributor" class="form-control" placeholder="Masukkan Nama Lengkap">

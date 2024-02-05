@@ -161,7 +161,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-header text-center pb-5">
-                        <h2>Our Projects</h2>
+                        <h2 class="display-6 fw-bold">Our Projects</h2>
                         <p>Kami berkomitmen untuk memberikan dampak positif dalam setiap langkah.</p>
                     </div>
                 </div>
@@ -233,7 +233,7 @@
                   </div>
                   <div class="col-lg-6 col-md-12 col-12 ps-lg-5 pe-lg-5 mt-md-5">
                       <div class="about-text">
-                            <h2>Our Team</h2>
+                            <h2 class="display-6 fw-bold">Our Team</h2>
                             <h5>Tim ahli luar biasa</h5>
                             <p>Ayo bergabung bersama kami sebagai mitra perusahaan! Sebagai vendor, kami berkomitmen untuk membantu Anda mengembangkan bisnis Anda ke tingkat selanjutnya. Kami mengundang Anda untuk menjalin kemitraan yang saling menguntungkan, di mana kami akan menyediakan solusi teknologi terbaik untuk mendukung pertumbuhan bisnis Anda. Dengan kerjasama yang erat, kita bisa mewujudkan potensi penuh dari usaha Anda. Mari kita jalin kemitraan yang kuat dan sukses bersama-sama.<br> yaa gak siiih, Tunggu apa lagi??</p>
                             <a href="{{ url('frontend/form') }}" class="btn btn-danger text-white">Daftar dong</a>
@@ -366,7 +366,7 @@
                 <!-- Teks -->
                 <div class="col-lg-6">
                     <div class="video-text pe-4 mt-md-5 ">
-                        <h2>Watch Our Video</h2>
+                        <h2 class="display-6 fw-bold">Watch Our Video</h2>
                         <p>
                             Dengan bergabung bersama kami, Anda akan mendapatkan akses ke jaringan yang luas dan peluang ekspansi yang tak terbatas. Kami percaya pada pertumbuhan bersama dan memberikan platform bagi vendor untuk mencapai potensi penuh mereka. Mari bersama-sama mengeksplorasi peluang baru dan menghadirkan inovasi. <br> yaa gak siiih, Tunggu apa lagi??
                         </p>
@@ -395,7 +395,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-header text-center">
-                        <h2>Contact Us</h2>
+                        <h2 class="display-6 fw-bold">Contact Us</h2>
                         <p>Terima kasih telah menghubungi kami. Kami siap membantu Anda dengan segala pertanyaan atau permintaan yang Anda miliki. <br>Jangan ragu untuk menghubungi kami melalui formulir kontak di bawah ini atau melalui informasi kontak yang tercantum. </p>
                     </div>
                 </div>

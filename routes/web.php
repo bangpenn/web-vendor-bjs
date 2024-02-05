@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,4 +58,9 @@ Route::prefix('admin')->group(function () {
         })->name('admin.vendor.profile');
     });
 });
+
+
+// formulir
+
+Route::post('/simpan-data', [FormController::class, 'simpanData'])->name('simpan-data');
 

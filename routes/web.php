@@ -35,6 +35,10 @@ Route::prefix('frontend')->group(function () {
     Route::get('/form', function () {
         return view('frontend.form');
     })->name('frontend.form');
+
+    Route::get('/form2', function () {
+        return view('frontend.form2');
+    })->name('frontend.form2');
 });
 
 // Grouping admin routes

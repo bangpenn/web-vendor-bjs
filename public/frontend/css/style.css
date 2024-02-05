@@ -186,9 +186,6 @@ body {
 
 #catalog {
 
-
-
-
     background-color: rgb(241, 255, 255);
     .cards-wrapper {
         display: flex;
@@ -229,4 +226,41 @@ body {
       }
 }
 
+#form2 {
+    .cards-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      .card img {
+
+        max-width: 100%;
+        max-height: 100%;
+
+      }
+      .card {
+          padding: 20px; /* Atur ruang di dalam kartu */
+          margin: 0 10px; /* Atur jarak antara kartu */
+          box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1); /* Atur bayangan kartu */
+          border: none; /* Hapus garis batas kartu jika tidak diperlukan */
+          border-radius: 10px; /* Atur sudut lengkungan kartu */
+        }
+      .carousel-inner {
+        padding: 2em;
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        position: absolute;
+        background-color: #e1e1e100;
+        height: 10vh;
+        border-radius: 70%;
+        /* top: 50%; */
+        transform: translateY(400%);
+      }
+
+      @media (min-width: 768px) {
+        .card img {
+          height: auto;
+        }
+      }
+}
 

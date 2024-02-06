@@ -11,6 +11,7 @@
     <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 
@@ -161,14 +162,17 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-header text-center pb-5">
-                        <h2 class="display-6 fw-bold">Our Projects</h2>
-                        <p>Kami berkomitmen untuk memberikan dampak positif dalam setiap langkah.</p>
+                        <h2 class="display-6 fw-bold" data-aos="fade-up" data-aos-duration="500">Our Projects</h2>
+                        <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Kami berkomitmen untuk memberikan dampak positif dalam setiap langkah.</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-3">
-                    <div class="card text-light text-center bg-white pb-2">
+                    <div class="card text-light text-center bg-white pb-2" data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration="1000">
                         <div class="card-body text-dark">
                           <div class="img-area mb-4">
                               <img src="{{ asset('frontend/img/percetakkan.png') }}" class="img-fluid" alt="" width="500" height="300">
@@ -181,7 +185,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-3">
-                    <div class="card text-light text-center bg-white pb-2">
+                    <div class="card text-light text-center bg-white pb-2" data-aos="fade-up"
+                    data-aos-duration="1000">
                         <div class="card-body text-dark">
                           <div class="img-area mb-4">
                               <img src="{{ asset('frontend/img/gift-set.png') }}" class="img-fluid" alt="" width="500" height="300">
@@ -193,7 +198,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-3">
-                    <div class="card text-light text-center bg-white pb-2">
+                    <div class="card text-light text-center bg-white pb-2" data-aos="fade-down"
+                    data-aos-duration="1000">
                         <div class="card-body text-dark">
                           <div class="img-area mb-4">
                               <img src="{{ asset('frontend/img/percetakkan.png') }}" class="img-fluid" alt="" width="500" height="300">
@@ -205,7 +211,10 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-3">
-                    <div class="card text-light text-center bg-white pb-2">
+                    <div class="card text-light text-center bg-white pb-2" data-aos="fade-left"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration="1000">
                         <div class="card-body text-dark">
                           <div class="img-area mb-4">
                               <img src="{{ asset('frontend/img/gift-set.png') }}" class="img-fluid" alt="" width="500" height="300">
@@ -227,7 +236,7 @@
           <div class="container">
               <div class="row">
                   <div class="col-lg-6 col-md-12 col-12 mt-md-5">
-                      <div class="about-img">
+                      <div class="about-img" data-aos="fade-right" data-aos-duration="2000">
                           <img src="{{ asset('frontend/img/foto_bersama-removebg-preview.png') }}" alt="" class="img-fluid">
                       </div>
                   </div>
@@ -438,6 +447,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
 

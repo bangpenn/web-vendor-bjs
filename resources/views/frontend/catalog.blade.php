@@ -117,7 +117,7 @@
         ">
             <!-- Elemen mask -->
             <div class="mask" style="
-                background-color: rgba(0, 0, 0, 0.6);
+                background-color: rgba(29, 0, 0, 0.6);
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -129,13 +129,34 @@
             <div class="d-flex justify-content-center align-items-center h-100" style="position: relative; z-index: 1;">
                 <!-- Tambahkan properti position: relative; dan z-index untuk konten -->
                 <div class="text-white">
-                    <h1 class="mb-3">Tukuklik Vendor</h1>
+                    <h1 class="mb-3 display-6 fw-bold">Tukuklik Vendor</h1>
                     <h4 class="mb-3">Gabung bersama kami, untuk memperbesar usaha kita bersama</h4>
                     <a class="btn btn-outline-light btn" href="{{ url('frontend/form') }}" role="button">Daftar Vendor</a>
                 </div>
+
+            </div>
+            <div class="custom-shape-divider-bottom-1707186941">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
             </div>
         </div>
     </div>
+
+
+
+    <section id="video-ajakan">
+        <div class="container mt-5">
+              <div class="row">
+                <div class="title text-center">
+                    <h2 class="fw-semibold">apasih vendor tukuklik?</h2>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
 
 
 

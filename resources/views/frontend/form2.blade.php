@@ -38,9 +38,14 @@
 
                         } else if (result.isDenied) {
                             Swal.fire("Cari yang lain", "", "error")
-                            // .then(() => {
-                            //     window.location.href = "/";
-                            // });
+                            .then(() => {
+                                window.location.href = "catDetail2";
+                            });
+                        } else {
+                            Swal.fire("kembali", "", "warning")
+                            .then(() => {
+                                window.location.href = "catDetail2";
+                            });
                         }
                     });
                 });
@@ -141,7 +146,7 @@
 
                         <div class="form-group">
                             <label for="jenis_vendor">Jenis Vendor</label><br>
-                            <div class="form-check-inline">
+                            {{-- <div class="form-check-inline">
                                 <input type="radio" class="form-check-input" name="jenis_vendor" id="vendor_percetakkan" value="percetakkan" checked>
                                 <label class="form-check-label" for="vendor_percetakkan">Vendor Percetakkan</label>
                             </div>
@@ -152,7 +157,7 @@
                             <div class="form-check-inline">
                                 <input type="radio" class="form-check-input" name="jenis_vendor" id="vendor_atk" value="atk">
                                 <label class="form-check-label" for="vendor_atk">Vendor ATK</label>
-                            </div>
+                            </div> --}}
                             <div class="form-check-inline">
                                 <input type="radio" class="form-check-input" name="jenis_vendor" id="vendor_konveksi" value="konveksi">
                                 <label class="form-check-label" for="vendor_konveksi">Vendor Konveksi</label>
@@ -161,7 +166,8 @@
 
                         <div class="form-group" id="kategori-vendor">
                             <label>Kategori Vendor</label>
-                            <select class="form-control">
+                            <input type="email" name="email-distributor" class="form-control" placeholder="">
+                            {{-- <select class="form-control"> --}}
                             </select>
                         </div><br>
 

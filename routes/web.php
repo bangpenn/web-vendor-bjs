@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('frontend.home');
 });
 
+Route::get('/catalog2', function () {
+    return view('frontend.catalog2');
+});
+
+
 
 // Grouping frontend routes
 Route::prefix('frontend')->group(function () {
@@ -28,6 +33,14 @@ Route::prefix('frontend')->group(function () {
     Route::get('/home', function () {
         return view('frontend.home');
     });
+
+    Route::get('/catalog2', function () {
+        return view('frontend.catalog2');
+    })->name('frontend.catalog2');
+
+    Route::get('/catDetail2', function () {
+        return view('frontend.catDetail2');
+    })->name('frontend.catDetail2');
 
     Route::get('/catalog', function () {
         return view('frontend.catalog');

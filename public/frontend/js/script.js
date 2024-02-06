@@ -90,3 +90,42 @@ document.addEventListener("DOMContentLoaded", function () {
     // Populate kategori options on page load
     populateKategoriVendorOptions(jenisVendorRadios[0].value);
 });
+
+// spek & deskripsi
+document.getElementById("linkSpesifikasi").addEventListener("click", function(event) {
+    event.preventDefault(); // Menghentikan perilaku default tautan
+
+    document.getElementById("spesifikasi").style.display = "block";
+    document.getElementById("deskripsi").style.display = "none";
+});
+
+document.getElementById("linkDeskripsi").addEventListener("click", function(event) {
+    event.preventDefault(); // Menghentikan perilaku default tautan
+
+    document.getElementById("spesifikasi").style.display = "none";
+    document.getElementById("deskripsi").style.display = "block";
+});
+
+
+$(document).ready(function() {
+    // Menangani peristiwa klik pada tombol "Lihat Detail"
+    $('.view-details').on('click', function(e) {
+        e.preventDefault();
+
+        // Ambil data produk dari atribut data
+        var image = $(this).data('image');
+        var name = $(this).data('name');
+        var description = $(this).data('description');
+
+        // Tampilkan detail produk di dalam modal
+        $('#productModal').find('.modal-body').html(
+            '<img src="' + image + '" alt="Product Image" class="img-fluid">' +
+            '<h5 class="modal-title">' + name + '</h5>' +
+            '<p>' + description + '</p>'
+        );
+
+        // Tampilkan modal
+        $('#productModal').modal('show');
+    });
+});
+

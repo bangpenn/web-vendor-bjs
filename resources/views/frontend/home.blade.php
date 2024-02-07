@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ asset('auth/assets/tukuklik.png') }}" type="image/x-icon" />
 
     <title>Tukuklik | Website Vendor Management Systems</title>
 
@@ -49,7 +50,7 @@
                     <li><a class="dropdown-item" href="{{ url('frontend/catalog2') }}" >Konveksi</a></li>
                     <li><a class="dropdown-item" href="{{ url('frontend/form') }}" >Percetakan</a></li>
                     <li><a class="dropdown-item" href="{{ url('frontend/form') }}" >ATK</a></li>
-                    <li><a class="dropdown-item" href="{{ url('frontend/form') }}" >Souvenir</a></li>
+                    <li><a class="dropdown-item" href="{{ url('frontend/catalog3') }}" >Souvenir</a></li>
                   </ul>
                 {{-- <a class="nav-link" href="#team">Team</a> --}}
               </li>
@@ -383,7 +384,7 @@
                     </div>
                 </div>
                 <!-- Video Profil -->
-                <div class="col-lg-6 text-center mb-4 mb-lg-0 mt-2">
+                <div class="col-lg-6 text-center mb-4 mb-lg-0 mt-2" data-aos="fade-left" data-aos-duration="2000">
                     <div class="embed-responsive embed-responsive-16by9">
                         <video class="embed-responsive-item" width="300" height="532" controls>
                             <source src="{{ asset('frontend/img/tukuklik.mp4') }}" type="video/mp4">

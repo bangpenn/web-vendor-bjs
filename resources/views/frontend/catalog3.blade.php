@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>Tukuklik | Website Vendor Souvenir</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" href="{{ asset('auth/assets/tukuklik.png') }}" type="image/x-icon" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -73,7 +73,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-danger mt-auto view-details" href="{{ url('frontend/catDetail2') }}">Lihat Detail</a></div>
+                                <div class="text-center"><a class="btn btn-outline-danger mt-auto view-details" href="{{ url('frontend/catDetail3') }}">Lihat Detail</a></div>
                             </div>
                         </div>
                     </div>

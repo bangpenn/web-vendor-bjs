@@ -26,6 +26,16 @@ Route::get('/catalog3', function () {
     return view('frontend.catalog3');
 });
 
+// Auth
+Route::prefix('auth')->group(function () {
+    Route::get('/login', function () {
+        return view('auth.login');
+    });
+    Route::get('/register', function () {
+        return view('auth.register');
+    });
+
+});
 
 
 // Grouping frontend routes
@@ -41,6 +51,10 @@ Route::prefix('frontend')->group(function () {
     Route::get('/catalog2', function () {
         return view('frontend.catalog2');
     })->name('frontend.catalog2');
+
+    Route::get('/catalog3', function () {
+        return view('frontend.catalog3');
+    })->name('frontend.catalog3');
 
     Route::get('/catDetail2', function () {
         return view('frontend.catDetail2');

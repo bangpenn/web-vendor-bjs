@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+    <div id="progress">
+        <span id="progress-value">
+            &#x1F815;
+        </span>
+
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">

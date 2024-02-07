@@ -2,6 +2,39 @@
 * {
 	font-family: 'Montserrat', sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Progress */
+
+#progress{
+
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 50px;
+    width: 50px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    color: #001a2e;
+}
+
 body {
 	background: #f1fbff;
 }
@@ -284,3 +317,4 @@ body {
 .custom-shape-divider-bottom-1707186941 .shape-fill {
     fill: #FFFFFF;
 }
+

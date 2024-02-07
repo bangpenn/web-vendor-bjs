@@ -22,6 +22,10 @@ Route::get('/catalog2', function () {
     return view('frontend.catalog2');
 });
 
+Route::get('/catalog3', function () {
+    return view('frontend.catalog3');
+});
+
 
 
 // Grouping frontend routes
@@ -40,6 +44,10 @@ Route::prefix('frontend')->group(function () {
 
     Route::get('/catDetail2', function () {
         return view('frontend.catDetail2');
+    })->name('frontend.catDetail2');
+
+    Route::get('/catDetail3', function () {
+        return view('frontend.catDetail3');
     })->name('frontend.catDetail2');
 
     Route::get('/catalog', function () {

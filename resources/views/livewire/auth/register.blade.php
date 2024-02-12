@@ -58,7 +58,7 @@
                     <h4 class="mt-1 pb-1">Register</h4>
                   </div>
 
-                  <form>
+                  <form wire:submit.prevent="registerUser">
                     <p>Masukkan biodata</p>
 
                     <div class="form-outline mb-4">
@@ -97,7 +97,8 @@
                     </div>
 
                     <div class="text-center pt-1 mb-5 pb-1">
-                        <a class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" href="{{ url('/login') }}">Daftar</a>
+                        <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">Daftar</button>
+
                       <div class="d-flex align-items-center">
                         <p class="text-muted mb-0 me-2">Sudah punya akun?</p>
                         <a class="text-muted" href="{{ url('/login') }}" style="text-decoration: none;">Masuk</a>

@@ -62,7 +62,7 @@
                   <form wire:submit.prevent="loginUser">
                     <p>Silahkan Login dengan akun anda</p>
 
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 ">
                         <input type="email" id="email" class="form-control @error('email') is-invalid @enderror" placeholder="Phone number or email address" wire:model.defer="email"/>
                         <label class="form-label" for="email">Email</label>
                       @error('email')
@@ -72,7 +72,7 @@
                       @enderror
                     </div>
 
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 mt-2">
                         <input type="password" id="password" class="form-control @error('password') is-invalid @enderror" placeholder="*********" wire:model.defer="password" />
                         <label class="form-label" for="password">Password</label>
                         @error('password')

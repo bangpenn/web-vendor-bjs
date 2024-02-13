@@ -71,7 +71,7 @@
 
                     <div class="text-center pt-1 mb-5 pb-1">
                       <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Masuk</button>
-                      <a class="text-muted" href="#!">Lupa password?</a>
+                      <a class="text-muted" href={{ route('password.request') }}>Lupa password?</a>
                     </div>
 
                     <div class="d-flex align-items-center justify-content-center pb-4">

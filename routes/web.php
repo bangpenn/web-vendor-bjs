@@ -108,7 +108,7 @@ Route::prefix('admin')->group(function () {
 Route::post('/simpan-data', [FormController::class, 'simpanData'])->name('simpan-data');
 
 
-Auth::routes(['login' => false, 'register' => false]);
+Auth::routes(['login' => false, 'register' => false, 'verify' => true]);
 
 route::middleware('guest')->group(function(){
     Route::get('/login',Login::class)->name('login');

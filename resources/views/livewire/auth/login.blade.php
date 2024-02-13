@@ -15,36 +15,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
   <!-- MDB -->
   <link rel="stylesheet" href="{{ asset('auth/css/bootstrap-login-form.min.css') }}" />
+
+  <link rel="stylesheet" href="{{ asset('auth/css/style.css') }}">
 </head>
 
 
 <body>
   <!-- Start your project here-->
 
-  <style>
-    .gradient-custom-2 {
-      /* fallback for old browsers */
-      background: #fccb90;
-
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: -webkit-linear-gradient(to right, #8a0000, #f53f42, #e25252, #e61616);
-
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      background: linear-gradient(to right, #8a0000, #f53f42, #e25252, #e61616);
-    }
-
-    @media (min-width: 768px) {
-      .gradient-form {
-        height: 100vh !important;
-      }
-    }
-    @media (min-width: 769px) {
-      .gradient-custom-2 {
-        border-top-right-radius: .3rem;
-        border-bottom-right-radius: .3rem;
-      }
-    }
-  </style>
   <section class="h-100 gradient-form" style="background-color: #eee;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -98,14 +76,6 @@
 
                     <div class="d-flex align-items-center justify-content-center pb-4">
                       <p class="mb-0 me-2">Tidak punya akun?</p>
-                      <style>
-                        .btn.btn-outline-danger:hover {
-                          /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-                          background: linear-gradient(to right, #8a0000, #f53f42, #e25252, #e61616);
-                          color: white; /* Menjadikan warna teks putih saat tombol diklik */
-                        }
-
-                    </style>
                     <a href="{{ url('register') }}" class="btn btn-outline-danger">Buat Akun</a>
 
 

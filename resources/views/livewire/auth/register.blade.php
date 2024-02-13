@@ -15,35 +15,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
   <!-- MDB -->
   <link rel="stylesheet" href="{{ asset('auth/css/bootstrap-login-form.min.css') }}" />
+
+  <link rel="stylesheet" href="{{ asset('auth/css/style.css') }}">
 </head>
 
 <body>
   <!-- Start your project here-->
-
-  <style>
-    .gradient-custom-2 {
-      /* fallback for old browsers */
-      background: #fccb90;
-
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: -webkit-linear-gradient(to right, #8a0000, #f53f42, #e25252, #e61616);
-
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      background: linear-gradient(to right, #8a0000, #f53f42, #e25252, #e61616);
-    }
-
-    @media (min-width: 768px) {
-      .gradient-form {
-        height: 110vh !important;
-      }
-    }
-    @media (min-width: 769px) {
-      .gradient-custom-2 {
-        border-top-right-radius: .3rem;
-        border-bottom-right-radius: .3rem;
-      }
-    }
-  </style>
   <section class="h-100 gradient-form" style="background-color: #eee;">
     <div class="container py-4 h-150">
       <div class="row d-flex justify-content-center align-items-center h-150">
@@ -103,12 +80,6 @@
                         <p class="text-muted mb-0 me-2">Sudah punya akun?</p>
                         <a class="text-muted" href="{{ url('/login') }}" style="text-decoration: none;">Masuk</a>
 
-                        <style>
-                            a.text-muted:hover {
-                                font-weight: bold; Tambahkan tebal pada teks
-                            }
-
-                        </style>
                     </div>
 
                     </div>

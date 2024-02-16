@@ -21,6 +21,7 @@ html {
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 #progress-value {
@@ -35,8 +36,24 @@ html {
     color: #001a2e;
 }
 
+#progress:hover {
+    opacity: 0.8;
+}
+
+/* Animasi saat tombol scroll up muncul */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body {
-	background: #f1fbff;
+	background: #FFFFFF;
 }
 .section-padding {
 	padding: 100px 0;
@@ -69,11 +86,37 @@ body {
         height: 100%;
         top: 0;
         left: 0;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.555);
         z-index: 1;
     }
 }
 
+/* Banner */
+.judul-banner{
+    font-weight: 600;
+}
+
+
+.card-title{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.lead {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+.about-detail {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+
+}
+
+.video-detail {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+}
 .navbar .getstarted {
 	background: #106eea;
 	margin-left: 30px;
@@ -297,6 +340,75 @@ body {
       }
 }
 
+.custom-shape-divider-bottom-1708053876 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1708053876 svg {
+    position: relative;
+    display: block;
+    width: calc(109% + 1.3px);
+    height: 47px;
+}
+
+.custom-shape-divider-bottom-1708053876 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-bottom-1708053876 svg {
+        width: calc(100% + 1.3px);
+        height: 38px;
+    }
+}
+
+.custom-shape-divider-top-1708053017 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1708053017 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 70px;
+}
+
+.custom-shape-divider-top-1708053017 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+.custom-shape-divider-bottom-1708053522 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1708053522 svg {
+    position: relative;
+    display: block;
+    width: calc(109% + 1.3px);
+    height: 47px;
+}
+
+.custom-shape-divider-bottom-1708053522 .shape-fill {
+    fill: #FFFFFF;
+}
+
 .custom-shape-divider-bottom-1707186941 {
     position: absolute;
     bottom: 0;
@@ -317,4 +429,26 @@ body {
 .custom-shape-divider-bottom-1707186941 .shape-fill {
     fill: #FFFFFF;
 }
+
+.custom-shape-divider-top-1708058409 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1708058409 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 55px;
+}
+
+.custom-shape-divider-top-1708058409 .shape-fill {
+    fill: #FFFFFF;
+}
+
 

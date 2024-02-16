@@ -6,13 +6,18 @@ let calcScrollValue = () => {
     let scrollValue = Math.round((pos * 100) / calcHeight);
     if (pos > 100) {
         scrollProgress.style.display = "grid";
+        scrollProgress.classList.add("fadeIn");
     } else {
         scrollProgress.style.display = "none";
+        scrollProgress.classList.remove("fadeIn");
     }
     scrollProgress.addEventListener("click", () => {
-        document.documentElement.scrollTop = 0;
+       window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Membuat scroll menjadi mulus
     });
-    scrollProgress.style.background = `conic-gradient(#e61616 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+});
+    scrollProgress.style.background = `conic-gradient(#D24545 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
 };
 
 window.onscroll = calcScrollValue;

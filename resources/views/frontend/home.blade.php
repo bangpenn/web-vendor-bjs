@@ -134,13 +134,13 @@
                 </p>
             </div>
             <div class="logo-container crop-img" data-aos="fade-left" data-aos-duration="1000">
-                <img src="{{ asset('frontend/assets/LKPP.png') }}" alt="logo 1" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/belapengadaan.png') }}" alt="logo 2" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/padiumkm.svg') }}" alt="logo 3" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/lpse.png') }}" alt="logo 4" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/sikap.png') }}" alt="logo 5" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/simpel.png') }}" alt="logo 6" class="img-fluid" width="100" height="100">
-                <img src="{{ asset('frontend/assets/ecatalogue.png') }}" alt="logo 7" class="img-fluid" width="120" height="120">
+                <img src="{{ asset('frontend/assets/LKPP.svg') }}" alt="logo 1" class="img-fluid" width="250" height="150">
+                <img src="{{ asset('frontend/assets/belapengadaan.svg') }}" alt="logo 2" class="img-fluid" width="200" height="100">
+                <img src="{{ asset('frontend/assets/padiumkm.svg') }}" alt="logo 3" class="img-fluid" width="130" height="100">
+                <img src="{{ asset('frontend/assets/lpse.svg') }}" alt="logo 4" class="img-fluid" width="180" height="100">
+                <img src="{{ asset('frontend/assets/sikap.png') }}" alt="logo 5" class="img-fluid" width="120" height="100">
+                <img src="{{ asset('frontend/assets/simpel.png') }}" alt="logo 6" class="img-fluid" width="200" height="100">
+                <img src="{{ asset('frontend/assets/ecatalogue.svg') }}" alt="logo 7" class="img-fluid" width="220" height="120">
             </div>
         </div>
         <div class="container">
@@ -221,7 +221,7 @@
                               <img src="{{ asset('frontend/img/percetakkan.png') }}" class="img-fluid" alt="" width="500" height="300">
                           </div>
                             <h3 class="card-title">Percetakkan</h3>
-                            <p class="lead">Ingin bergabung sebagai vendor Percetekkan? Klik tombol di bawah untuk bergabung bersama kami!</p>
+                            <p class="lead">Ingin bergabung sebagai vendor Percetakan? Klik tombol di bawah untuk bergabung bersama kami!</p>
                             <a href="{{ url('frontend/form') }}"class="btn btn-danger text-white">Daftar</a>
                         </div>
                     </div>

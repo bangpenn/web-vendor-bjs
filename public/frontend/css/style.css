@@ -452,3 +452,138 @@ body {
 }
 
 
+#form-vendor {
+    background: #6990f2;
+
+}
+
+
+#form-vendor .wrapper{
+    width: 430px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 5px;
+    min-height: 10vh;
+    align-items: center;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#form-vendor .wrapper header{
+    color: #6990f2;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#form-vendor .wrapper form2{
+    height: 167px;
+    display: flex;
+    margin: 30px 0;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px dashed #6990f2;
+}
+
+#form-vendor form2 :where(i, p){
+    color: #6990f2;
+}
+
+#form-vendor form2 i{
+    font-size: 50px;
+}
+
+#form-vendor form2 p{
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+
+#form-vendor #progress .row {
+    background: #e9f0f2;
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#form-vendor #progress .row i{
+    font-size: 30px;
+    color: #6990f2;
+
+}
+
+#form-vendor #progress .details span {
+    font-size: 14px;
+}
+
+#form-vendor .progress-area .row .content{
+    width: 100%;
+    margin-left: 15px;
+}
+
+#form-vendor .progress-area .details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    justify-content: space-between;
+}
+
+#form-vendor .progress-area .progress-bar{
+    height: 6px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 30px;
+}
+
+
+#form-vendor .uploaded-area::-webkit-scrollbar{
+    width: 0px;
+}
+
+#form-vendor .progress-bar .progress{
+    height: 100%;
+    width: 0%;
+    background: #6990f2;
+    border-radius: inherit;
+}
+
+#form-vendor .uploaded-area{
+    max-height: 230px;
+    overflow-y: scroll;
+}
+
+#form-vendor .uploaded-area .onprogress{
+    max-height: 150px;
+}
+
+#form-vendor .uploaded-area .row .content{
+    display: flex;
+    align-items: center;
+}
+
+#form-vendor.uploaded-area .row .details{
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+}
+
+#form-vendor .uploaded-area .details .size{
+    font-size: 11px;
+    color: #404040;
+}
+
+#form-vendor .uploaded-area .fa-check{
+    color: #6990f2;
+    font-size: 16px;
+}

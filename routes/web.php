@@ -83,6 +83,10 @@ Route::prefix('frontend')->group(function () {
     Route::get('/form2', function () {
         return view('frontend.form2');
     })->name('frontend.form2');
+
+    Route::get('/upload', function () {
+        return view('frontend.upload');
+    })->name('frontend.upload');
 });
 
 // Grouping admin routes

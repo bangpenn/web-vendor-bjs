@@ -134,13 +134,13 @@
                 </p>
             </div>
             <div class="logo-container crop-img" data-aos="fade-left" data-aos-duration="1000">
-                <img src="{{ asset('frontend/assets/LKPP.svg') }}" alt="logo 1" class="img-fluid" width="250" height="150">
-                <img src="{{ asset('frontend/assets/belapengadaan.svg') }}" alt="logo 2" class="img-fluid" width="200" height="100">
-                <img src="{{ asset('frontend/assets/padiumkm.svg') }}" alt="logo 3" class="img-fluid" width="130" height="100">
-                <img src="{{ asset('frontend/assets/lpse.svg') }}" alt="logo 4" class="img-fluid" width="180" height="100">
+                <img src="{{ asset('frontend/assets/LKPP.png') }}" alt="logo 1" id="lkpp" class="img-fluid" width="200" height="150">
+                <img src="{{ asset('frontend/assets/belapengadaan.png') }}" alt="logo 2" class="img-fluid" width="200" height="100">
+                <img src="{{ asset('frontend/assets/padiumkm.png') }}" alt="logo 3" class="img-fluid" width="130" height="100">
+                <img src="{{ asset('frontend/assets/lpse.png') }}" alt="logo 4" class="img-fluid" width="180" height="100">
                 <img src="{{ asset('frontend/assets/sikap.png') }}" alt="logo 5" class="img-fluid" width="120" height="100">
                 <img src="{{ asset('frontend/assets/simpel.png') }}" alt="logo 6" class="img-fluid" width="200" height="100">
-                <img src="{{ asset('frontend/assets/ecatalogue.svg') }}" alt="logo 7" class="img-fluid" width="220" height="120">
+                <img src="{{ asset('frontend/assets/ecatalogue.png') }}" alt="logo 7" class="img-fluid" width="220" height="120">
             </div>
         </div>
         <div class="container">
@@ -174,7 +174,7 @@
 
 
        <!-- portfolio strats -->
-       <section id="portfolio" class="portfolio section-padding" style="position: relative; background-color: #D24545">
+       <section id="portfolio" class="portfolio section-padding" style="position: relative; background-color: #EE2B47">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -279,120 +279,6 @@
       </section>
 
 
-      {{-- <!-- team starts -->
-      <section class="team section-padding" id="team">
-          <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-4 mb-lg-0" style="text-align: right;">
-                    <div class="section-header text-center pb-5">
-                        <h2>Our Team</h2>
-                        <h6>Kami membantu Anda untuk bekerja sama, <br>untuk memperbesar usaha kita bersama</h6>
-                        <small>bersama-sama kita bisa mencapai kesuksesan yang lebih besar</small> <br>
-                        <a href="{{ url('frontend/form') }}" class="btn text-white btn-sm btn-info">Lihat Selengkapnya</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="video-text ps-4">
-                        <img src="{{ asset('frontend/img/foto_bersama-removebg-preview.png') }}" alt="" class="img-fluid">
-                    </div>
-                </div>
-            </div> --}}
-
-
-
-                    {{-- <div class="section-header text-center pb-5">
-                        <h2>Our Team</h2>
-                        <p>Tim Ahli <br>Hasil Luar Biasa</p>
-                        <div class="col-12 col-md-6 col-lg-3 mx-auto">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <img src="{{ asset('frontend/img/foto bersama.jpeg') }}" alt="" class="img-fluid rounded-circle">
-                                <h3 class="card-title py-2">Budi Santoso</h3>
-                                <p class="card-text">Project Director</p>
-
-
-                                <p class="socials">
-                                    <i class="bi bi-twitter text-dark mx-1"></i>
-                                <i class="bi bi-facebook text-dark mx-1"></i>
-                                <i class="bi bi-linkedin text-dark mx-1"></i>
-                                <i class="bi bi-instagram text-dark mx-1"></i>
-                                </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <img src="{{ asset('frontend/img/team-2.jpg') }}" alt="" class="img-fluid rounded-circle">
-                        <h3 class="card-title py-2">Eka</h3>
-                        <p class="card-text">Chief Operating Officer</p>
-                        <p class="socials">
-                            <i class="bi bi-twitter text-dark mx-1"></i>
-                        <i class="bi bi-facebook text-dark mx-1"></i>
-                        <i class="bi bi-linkedin text-dark mx-1"></i>
-                        <i class="bi bi-instagram text-dark mx-1"></i>
-                        </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <img src="{{ asset('frontend/img/team-2.jpg') }}" alt="" class="img-fluid rounded-circle">
-                        <h3 class="card-title py-2">Gido</h3>
-                        <p class="card-text">Chief Technology Officer</p>
-                        <p class="socials">
-                            <i class="bi bi-twitter text-dark mx-1"></i>
-                        <i class="bi bi-facebook text-dark mx-1"></i>
-                        <i class="bi bi-linkedin text-dark mx-1"></i>
-                        <i class="bi bi-instagram text-dark mx-1"></i>
-                        </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <img src="{{ asset('frontend/img/team-3.jpg') }}" alt="" class="img-fluid rounded-circle">
-                            <h3 class="card-title py-2">Fofo</h3>
-                            <p class="card-text">Chief Marketing Officer</p>
-                            <p class="socials">
-                                <i class="bi bi-twitter text-dark mx-1"></i>
-                                <i class="bi bi-facebook text-dark mx-1"></i>
-                                <i class="bi bi-linkedin text-dark mx-1"></i>
-                                <i class="bi bi-instagram text-dark mx-1"></i>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <img src="{{ asset('frontend/img/team-4.jpg') }}" alt="" class="img-fluid rounded-circle">
-                        <h3 class="card-title py-2">Dini</h3>
-                        <p class="card-text">Chief financial officer</p>
-                        <p class="socials">
-                            <i class="bi bi-twitter text-dark mx-1"></i>
-                        <i class="bi bi-facebook text-dark mx-1"></i>
-                        <i class="bi bi-linkedin text-dark mx-1"></i>
-                        <i class="bi bi-instagram text-dark mx-1"></i>
-                        </p>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-          {{-- </div>
-      </section> --}}
-
-      <!-- team ends -->
-
       <!-- Video Profil Start -->
       <section id="video-profil" class="video-profil section-padding">
         <div class="container">
@@ -453,7 +339,7 @@
 								<div class="mb-3">
 									<textarea class="form-control" placeholder="Message" required="" rows="3"></textarea>
 								</div>
-							</div><button class="btn btn-lg btn-block mt-3 text-white" type="button" style="background-color: #D24545">Kirim Sekarang</button>
+							</div><button class="btn btn-lg btn-block mt-3 text-white" type="button" style="background-color: #EE2B47">Kirim Sekarang</button>
 						</div>
 					</form>
 				</div>
@@ -575,7 +461,7 @@
             <!-- Section: Links  -->
 
             <!-- Copyright -->
-            <div class="text-center p-4 text-white" style="background-color: #D24545;">
+            <div class="text-center p-4 text-white" style="background-color: #EE2B47;">
             © 2024 Copyright:
             <a class="text-reset fw-bold text-white" href="https://tukuklik.com/">Tukuklik.com</a>
             </div>

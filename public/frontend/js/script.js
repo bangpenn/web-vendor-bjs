@@ -17,7 +17,7 @@ let calcScrollValue = () => {
         behavior: "smooth" // Membuat scroll menjadi mulus
     });
 });
-    scrollProgress.style.background = `conic-gradient(#D24545 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+    scrollProgress.style.background = `conic-gradient(#EE2B47 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
 };
 
 window.onscroll = calcScrollValue;

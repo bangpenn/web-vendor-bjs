@@ -122,7 +122,7 @@ body {
 	margin-left: 30px;
 	border-radius: 4px;
 	font-weight: 400;
-	color: #fff;
+	color: #F6F6F6;
 	text-decoration: none;
 	padding: .5rem 1rem;
 	line-height: 2.3;
@@ -457,6 +457,9 @@ body {
 
 }
 
+.btn{
+    background-color: #EE2B47;
+}
 
 #form-vendor .wrapper{
     width: 430px;

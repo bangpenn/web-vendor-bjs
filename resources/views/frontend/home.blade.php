@@ -134,7 +134,7 @@
                 </p>
             </div>
             <div class="logo-container crop-img" data-aos="fade-left" data-aos-duration="1000">
-                <img src="{{ asset('frontend/assets/LKPP.png') }}" alt="logo 1" id="lkpp" class="img-fluid" width="200" height="150">
+                <img src="{{ asset('frontend/assets/LKPP.png') }}" alt="logo 1" class="img-fluid" width="200" height="150">
                 <img src="{{ asset('frontend/assets/belapengadaan.png') }}" alt="logo 2" class="img-fluid" width="200" height="100">
                 <img src="{{ asset('frontend/assets/padiumkm.png') }}" alt="logo 3" class="img-fluid" width="130" height="100">
                 <img src="{{ asset('frontend/assets/lpse.png') }}" alt="logo 4" class="img-fluid" width="180" height="100">

@@ -119,4 +119,4 @@ route::middleware('guest')->group(function(){
     Route::get('/register',Register::class)->name('register');
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/frontend/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

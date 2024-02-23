@@ -6,7 +6,7 @@
     <link rel="icon" href="{{ asset('auth/assets/tukuklik.png') }}" type="image/x-icon" />
     <title>Tukuklik | Form Pendaftaran Vendor</title>
 
-    <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet"> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
@@ -24,33 +24,45 @@
         </div>
       </nav>
 
+      <div class="container">
+        <div class="form-group col-12 p-0">
+            <div>
+                @if (Session('success'))
+                <div class="alert alert-success">
+                    {{ Session('success') }}
+                </div>
+                @endif
+            </div>
+        </div>
+      </div>
+
 
       <section id="form-vendor">
         <div class="container">
             <h2 class="alert alert-primary text-center mt-3">
                 Formulir Pendaftaran Vendor
             </h2>
-            <form class="row g-3" action="{{ url('simpan-data') }}"  method="POST" enctype="multipart/form-data">
+            <form class="row g-3" action="{{ route('store') }}"  method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label>Nama Distributor</label>
-                    <input type="text" name="nama-distributor" class="form-control" placeholder="Masukkan Nama Lengkap">
+                    <input type="text" id="nama_distributor" name="nama_distributor" class="form-control" placeholder="Masukkan Nama Lengkap">
                 </div><br>
                 <div class="form-group">
                     <label>Nama UMKM</label>
-                    <input type="text" name="nama-umkm" class="form-control" placeholder="Masukkan Nama UMKM">
+                    <input type="text" id="nama_umkm" name="nama_umkm" class="form-control" placeholder="Masukkan Nama UMKM">
                 </div><br>
                 <div class="form-group">
                     <label>Alamat Distributor/Kantor</label>
-                    <input type="text" name="alamat-distributor" class="form-control" placeholder="Masukkan Alamat">
+                    <input type="text" id="alamat_distributor" name="alamat_distributor" class="form-control" placeholder="Masukkan Alamat">
                 </div><br>
                   <div class="col-md-6">
                     <label for="inputCity" class="form-label">Kota</label>
-                    <input type="text" class="form-control" id="inputKota">
+                    <input type="text" id="kota" name="kota" placeholder="Masukkan Kota" class="form-control" id="inputKota">
                   </div>
                   <div class="col-md-4">
                     <label for="inputProvinsi" class="form-label">Provinsi</label>
-                    <select id="inputProvinsi" class="form-select">
+                    <select id="inputProvinsi" id="provinsi" class="form-select" name="provinsi">
                         <option selected>Pilih...</option>
                         <option>Nanggroe Aceh Darussalam</option>
                         <option>Sumatera Utara</option>
@@ -90,20 +102,19 @@
                         <option>Papua Pegunungan</option>
                         <option>Papua Selatan</option>
                         <option>Papua Barat Daya</option>
-
                     </select>
                   </div>
                   <div class="col-md-2">
                     <label for="inputZip" class="form-label">Kode Pos</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <input type="text" id="kode_pos" name="kode_pos" class="form-control" id="inputZip">
                   </div>
                 <div class="form-group">
                     <label>No Handphone</label>
-                    <input type="text" name="no-handphone" class="form-control" placeholder="Masukkan No.Handphone">
+                    <input type="text" id="no_handphone" name="no_handphone" class="form-control" placeholder="Masukkan No.Handphone">
                 </div><br>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" name="email-distributor" class="form-control" placeholder="Masukkan Email">
+                    <input type="email" id="email_distributor" name="email_distributor" class="form-control" placeholder="Masukkan Email">
                 </div><br>
 
                 <div class="form-group">
@@ -126,53 +137,75 @@
                     </div>
                 </div><br>
 
-                <div class="form-group" id="kategori-vendor">
+                <div class="form-group" id="kategori_vendor">
                     <label>Kategori Vendor</label>
-                    <select class="form-control">
+                    <select class="form-control" name="kategori_vendor" id="kategori_vendor_select">
                     </select>
                 </div><br>
 
                 <div class="form-group">
                     <label>Jumlah Stock</label>
-                    <input type="text" name="harga" class="form-control" placeholder="Masukkan Jumlah Stock">
+                    <input type="text" name="jumlah_stock" class="form-control" placeholder="Masukkan Jumlah Stock">
                 </div><br>
 
                 <div class="form-group">
                     <label>Harga Pricelist/Katalog</label>
-                    <input type="text" name="harga" class="form-control" placeholder="Masukkan Harga">
+                    <input type="text" id="harga_pricelist" name="harga_pricelist" class="form-control" placeholder="Masukkan Harga">
                 </div><br>
 
                 <div class="form-group">
                     <label>Upload Gambar Produk</label>
-                    <input type="file" class="form-control-file" name="">
+                    <input type="file" id="file_path" name="file_path" class="form-control-file" name="">
                     <small>Upload file dengan ukuran maksimal 2 MB</small>
                 </div><br>
+
+                <div class="form-group">
+                    <label>Upload Video Produk</label>
+                    <input type="file" id="video_path" name="video_path" class="form-control-file" accept="video/*">
+                    <small>Upload file video dengan ukuran maksimal 100 MB</small>
+                </div><br>
+
+                <div class="col-12 text-end mb-2">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+                <div class="col-12 text-end">
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                </div>
+            </div>
             </form>
-            <div class="col-12 text-end">
-                <button type="submit" class="btn btn-primary">Simpan</button>
-            </div>
-            <div class="col-12 text-end">
-                <button type="reset" class="btn btn-danger">Reset</button>
-            </div>
-        </div>
-
-        <div class="wrapper">
-            <header>
-                Kirim Gambar Hasil Produk
-            </header>
-            <form2 class="upload-produk" action="#">
-                <input type="file" class="file-input" name="file" hidden>
-                <i class="fas fa-cloud-upload-alt"></i>
-                <p>Cari File untuk mengirim gambar produk</p>
-            </form2>
-            <section id="progress" class="progress-area"></section>
-
-            <section class="uploaded-area"></section>
-        </div>
 
       </section>
 
-    <script src="{{ asset('frontend/js/script2.js') }}"></script>
+      <div class="wrapper" style="margin-right: 150px;">
+        {{-- <header>
+            Kirim Gambar Hasil Produk
+        </header> --}}
+        <form class="upload-produk" action="#">
+            <input type="file" class="file-input" name="file_path" hidden>
+            {{-- <i class="fas fa-cloud-upload-alt"></i>
+            <p>Cari File untuk mengirim gambar produk</p> --}}
+        </form>
+        {{-- <section id="progress" class="progress-area"></section> --}}
+
+        <section class="uploaded-area"></section>
+    </div>
+    <div class="wrapper">
+        {{-- <header>
+            Kirim Video Gudang
+        </header> --}}
+        <form class="upload-produk" action="#">
+            <input type="file" class="file-input" name="file" hidden>
+            {{-- <i class="fas fa-cloud-upload-alt"></i>
+            <p>Cari File untuk mengirim gambar produk</p> --}}
+        </form>
+        <section id="progress" class="progress-area"></section>
+
+        <section class="uploaded-area"></section>
+    </div>
+
+
+
+    <script src="{{ asset('frontend/js/script.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
   </body>

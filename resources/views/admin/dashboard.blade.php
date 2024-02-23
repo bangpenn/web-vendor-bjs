@@ -121,14 +121,14 @@
 				<li>
 					<i class='bx bxs-calendar-check' ></i>
 					<span class="text">
-						<h3>50</h3>
+						<h3>{{ $totalVendors }}</h3>
 						<p>New Vendor</p>
 					</span>
 				</li>
 				<li>
 					<i class='bx bxs-group' ></i>
 					<span class="text">
-						<h3>1834</h3>
+						<h3 id="count">1834</h3>
 						<p>Visitors</p>
 					</span>
 				</li>
@@ -152,15 +152,16 @@
 					<table>
 						<thead>
 							<tr>
+                                <th>No.</th>
 								<th>Nama Distributor</th>
                                 <th>Nama UMKM</th>
-								<th>Date</th>
-								<th>Category</th>
+								<th>Jenis Vendor</th>
+								<th>Kategori Vendor</th>
 								<th>Status</th>
                                 <th>Action</th>
 							</tr>
 						</thead>
-						<tbody>
+						{{-- <tbody>
 							<tr>
 								<td>
 									<img src="{{ asset('admin/img/people.png') }}">
@@ -266,7 +267,24 @@
                                     </a>
                                 </td>
 							</tr>
-						</tbody>
+						</tbody> --}}
+
+                        <tbody>
+                            @foreach($data as $item)
+                                <tr>
+                                    <td scope="row">{{ $item->id }}</td>
+                                    <td>{{ $item->nama_distributor }}</td>
+                                    <td>{{ $item->nama_umkm }}</td>
+                                    <td>{{ $item->jenis_vendor }}</td>
+                                    <td>{{ $item->kategori_vendor }}</td>
+                                    <td>
+                                        <a href="{{ url('/admin/vendor_profile/'.$item->id) }}">
+                                            <i class='bx bx-show'></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
 					</table>
 				</div>
 				<!-- <div class="todo">

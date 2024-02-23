@@ -150,22 +150,22 @@
 				<div class="order">
 					<div class="head">
                         <img src="{{ asset('admin/img/people.png') }}">
-						<h3>John Doe</h3><br>
-                        <h3>PT. Percetakkan</h3>
+						<h3>{{ $vendor->nama_distributor }} - {{ $vendor->nama_umkm  }}</h3><br>
 
 					</div>
 					<table>
 						<thead>
 							<tr>
-								<th>Nama Distributor</th>
-                                <th>Nama UMKM</th>
-								<th>Alamat</th>
-								<th>No. Handphone</th>
-								<th>Email</th>
-                                <th>Status</th>
+                                <th class="judul-tabel">No.</th>
+								<th class="judul-tabel">Nama Distributor</th>
+                                <th class="judul-tabel">Nama UMKM</th>
+                                <th class="judul-tabel">Alamat Kantor</th>
+								<th class="judul-tabel">Jenis Vendor</th>
+								<th class="judul-tabel">Kategori Vendor</th>
+
 							</tr>
 						</thead>
-						<tbody>
+						{{-- <tbody>
 							<tr>
 								<td>
 									<img src="{{ asset('admin/img/people.png') }}">
@@ -178,8 +178,51 @@
                                 <td><span class="status completed">Completed</span></td>
 							</tr>
 
-						</tbody>
+						</tbody> --}}
+                        <tbody>
+
+                            <tr>
+                                <td scope="row"> {{ $vendor->id }} </td>
+                                <td>{{ $vendor->nama_distributor }}</td>
+                                <td>{{ $vendor->nama_umkm  }}</td>
+                                <td>{{ $vendor->alamat_distributor }}, {{ $vendor->kota }}, {{ $vendor->provinsi }}, {{ $vendor->kode_pos }}</td>
+
+                                <td>{{ $vendor->jenis_vendor  }}</td>
+                                <td>{{ $vendor->kategori_vendor }}</td>
+                                <!-- Tambahkan kolom lain sesuai kebutuhan -->
+                            </tr>
+
+                        </tbody>
 					</table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Gambar</th>
+                                <th>Video</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img class="image_detail" style="width: 70%; height: 70%; border-radius: 0%;" src="{{ Storage::url($vendor->file_path) }}" alt="Gambar">
+                                </td>
+                                <td>
+                                    <video width="100%" height="100%" controls>
+                                        <source src="{{ Storage::url($vendor->video_path) }}" type="video/mp4">
+                                    </video>
+
+                                </td>
+                            </tr>
+                        </tbody>
+
+
+                    </table>
+
+                    <!-- Menampilkan Gambar -->
+
+
+
+
 				</div>
 				<!-- <div class="todo">
 					<div class="head">

@@ -9,7 +9,7 @@ class FormDataController extends Controller
 {
     public function form()
     {
-        return view('form');
+        return view('frontend/form');
     }
 
     public function store(Request $request)
@@ -40,13 +40,13 @@ class FormDataController extends Controller
         // Penanganan unggahan file
         if ($request->hasFile('file_path')) {
             $file = $request->file('file_path');
-            $filePath = $file->store('public/img'); // Sesuaikan dengan path yang diinginkan
+            $filePath = $file->store('public/img');
             $data->file_path = $filePath;
         }
 
         if ($request->hasFile('video_path')) {
             $file = $request->file('video_path');
-            $video_path = $file->store('public/video'); // Sesuaikan dengan path yang diinginkan
+            $video_path = $file->store('public/video');
             $data->video_path = $video_path;
         }
 

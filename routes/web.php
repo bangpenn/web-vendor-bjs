@@ -120,8 +120,8 @@ Route::get('/admin/vendor_profile/{id}', [VendorController::class, 'showProfile'
 Route::get('/frontend/form', function () {
     return view('/frontend/form');
 })->name('form');
+Route::get('/frontend/form', [FormDataController::class, 'form']);
 Route::post('/frontend/form', [FormDataController::class, 'store'])->name('store');
-Route::post('/simpan-data', [FormController::class, 'simpanData'])->name('simpan-data');
 
 // Login
 Auth::routes(['login' => false, 'register' => false, 'verify' => true]);

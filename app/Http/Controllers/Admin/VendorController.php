@@ -24,11 +24,16 @@ class VendorController extends Controller
     //         return redirect()->back()->with('error', 'Data not found.');
     //     }
 
-    $imagePath = $vendor->image;
-    $videoPath = $vendor->video;
-    return view('admin.vendor_profile', compact('vendor', 'imagePath', 'videoPath'));
+        if ($vendor !== null) {
+            // Data vendor ditemukan
+            $imagePath = $vendor->image;
+            $videoPath = $vendor->video;
+            return view('admin.vendor_profile', compact('vendor', 'imagePath', 'videoPath'));
+        } else {
+            // Data vendor tidak ditemukan, lakukan penanganan yang sesuai
+            return redirect()->back()->with('error', 'Data vendor tidak ditemukan.');
+        }
+
     }
 
-
 }
-

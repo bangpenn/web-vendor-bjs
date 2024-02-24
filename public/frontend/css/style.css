@@ -19,9 +19,10 @@ html {
     display: none;
     place-items: center;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.397);
     cursor: pointer;
     transition: opacity 0.3s, transform 0.3s;
+    z-index: 99;
 }
 
 #progress-value {
@@ -213,7 +214,7 @@ body {
 /* About US */
 #partner {
     padding: 50px 0;
-    /* background-color: white; */
+    background-color: white;
     text-align: center;
 }
 
@@ -314,11 +315,11 @@ body {
 
       }
       .card {
-          padding: 20px; /* Atur ruang di dalam kartu */
-          margin: 0 10px; /* Atur jarak antara kartu */
-          box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1); /* Atur bayangan kartu */
-          border: none; /* Hapus garis batas kartu jika tidak diperlukan */
-          border-radius: 10px; /* Atur sudut lengkungan kartu */
+          padding: 20px;
+          margin: 0 10px;
+          box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+          border: none;
+          border-radius: 10px;
         }
       .carousel-inner {
         padding: 2em;
@@ -448,12 +449,12 @@ body {
 }
 
 .custom-shape-divider-top-1708058409 .shape-fill {
-    fill: #FFFFFF;
+    fill: #F6F6F6;
 }
 
 
 #form-vendor {
-    background: #6990f2;
+    background: #F6F6F6;
 
 }
 
@@ -474,12 +475,7 @@ body {
 
 }
 
-#form-vendor .wrapper header{
-    color: #6990f2;
-    font-size: 27px;
-    font-weight: 600;
-    text-align: center;
-}
+
 
 #form-vendor .wrapper form2{
     height: 167px;
@@ -507,7 +503,7 @@ body {
 }
 
 
-#form-vendor #progress .row {
+#form-vendor .row {
     background: #e9f0f2;
     margin-bottom: 10px;
     list-style: none;
@@ -590,3 +586,155 @@ body {
     color: #6990f2;
     font-size: 16px;
 }
+
+/* form upload gambar */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+#form-vendor .wrapper body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#form-vendor .wrapper {
+    width: 430px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#form-vendor .wrapper header{
+    color: #6990f2;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#form-vendor .wrapper {
+    height: 200px;
+    display: flex;
+    margin: 30px 0;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px dashed #6990f2;
+}
+
+#form-vendor .wrapper :where(i, p){
+    color: #6990f2;
+}
+
+#form-vendor .wrapper  i{
+    font-size: 50px;
+}
+
+#form-vendor .wrapper  p{
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+
+#form-vendor section .row i{
+    font-size: 30px;
+    color: #6990f2;
+}
+
+#form-vendor section .details span{
+    font-size: 14px;
+}
+#progress_loading .progress-area .progress_loading {
+    height: 6px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 30px;
+}
+
+#progress_loading .progress-area .row .content{
+    width: 100%;
+    margin-left: 15px;
+}
+
+#progress_loading .progress-area .details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    justify-content: space-between;
+}
+
+#progress_loading .progress-area .progress-bar{
+    height: 6px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 30px;
+}
+
+
+#form-vendor .uploaded-area::-webkit-scrollbar{
+    width: 0px;
+}
+#form-vendor .progress-bar .progress{
+    height: 100%;
+    width: 0%;
+    background: #6990f2;
+    border-radius: inherit;
+}
+
+#form-vendor .uploaded-area{
+    max-height: 230px;
+    overflow-y: scroll;
+}
+
+#form-vendor .uploaded-area .onprogress{
+    max-height: 150px;
+}
+
+#form-vendor .uploaded-area .row .content{
+    display: flex;
+    align-items: center;
+}
+
+#form-vendor .uploaded-area .row .details{
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+}
+
+#form-vendor .uploaded-area .details .size{
+    font-size: 11px;
+    color: #404040;
+}
+
+#form-vendor .uploaded-area .fa-check{
+    color: #6990f2;
+    font-size: 16px;
+}
+
+#form-vendor .custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+#form-vendor .custom-file-upload:hover {
+    background: #0057b317;
+}
+
+#form-vendor .file-input {
+    display: none;
+}
+

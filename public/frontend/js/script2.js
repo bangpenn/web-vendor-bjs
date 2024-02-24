@@ -1,32 +1,145 @@
-// form upload gambar
-const form2 = document.querySelector("form2"),
-fileInput = form2.querySelector(".file-input"),
-progressArea = document.querySelector(".progress-area"),
-uploadedArea = document.querySelector(".uploaded-area");
+document.addEventListener("DOMContentLoaded", function () {
+    // Get radio buttons
+    const jenisVendorRadios = document.querySelectorAll('input[name="jenis_vendor"]');
+    const kategoriVendorSelect = document.querySelector('#kategori_vendor select');
 
-form2.addEventListener("click", ()=>{
+    // Function to populate kategori vendor options
+    function populateKategoriVendorOptions(jenisVendor) {
+        // Clear existing options
+        kategoriVendorSelect.innerHTML = '';
+
+        // Populate options based on jenis_vendor
+        switch (jenisVendor) {
+            case 'percetakkan':
+                kategoriVendorSelect.innerHTML = `
+                    <option selected>Pilih vendor...</option>
+                    <option>Vendor Percetakkan Amplop</option>
+                    <option>Vendor Percetakkan Kalender</option>
+                    <option>Vendor Percetakkan Paper Bag</option>
+                    <option>Vendor Percetakkan Stiker</option>
+                    <option>Vendor Percetakkan Packaging</option>
+                    <option>Vendor Percetakkan Continuous Form</option>
+                `;
+                break;
+            case 'souvenir':
+                kategoriVendorSelect.innerHTML = `
+                    <option selected>Pilih vendor...</option>
+                    <option>Vendor Souvenir Thumbler Stainless & Plastik</option>
+                    <option>Vendor Souvenir Power Bank</option>
+                    <option>Vendor Souvenir Speaker Bluetooth</option>
+                    <option>Vendor Souvenir Flashdisk</option>
+                    <option>Vendor Souvenir Jam Meja</option>
+                    <option>Vendor Souvenir Jam Dinding</option>
+                    <option>Vendor Souvenir Payung Promosi</option>
+                    <option>Vendor Souvenir Alat Set Makan</option>
+                    <option>Vendor Souvenir Handuk</option>
+                    <option>Vendor Souvenir Agenda</option>
+                    <option>Vendor Souvenir Bolpoint Ekslusif</option>
+                    <option>Vendor Souvenir Tempat Tisue</option>
+                    <option>Vendor Souvenir Diffuser</option>
+                    <option>Vendor Souvenir Card Holder</option>
+                    <option>Vendor Souvenir Gift set</option>
+                    <option>Vendor Souvenir Bantal Leher</option>
+                    <option>Vendor Souvenir Bantal Mobil</option>
+                    <option>Vendor Souvenir ATK</option>
+                    <option>Vendor Souvenir Gantungan Kunci Mobil/Sepeda Motor Polos Tanpa Merk</option>
+                    <option>Vendor Souvenir Pen Holder</option>
+
+                `;
+                break;
+            case 'atk':
+                kategoriVendorSelect.innerHTML = `
+                    <option selected>Pilih vendor...</option>
+                    <option>Vendor ATK</option>
+                    <option>Vendor ATK Kertas HVS</option>
+                    <option>Vendor ATK Printer</option>
+                    <option>Vendor ATK Pemotong Kertas</option>
+                    <option>Vendor ATK Pemotong AC</option>
+                `;
+                break;
+            case 'konveksi':
+                kategoriVendorSelect.innerHTML = `
+                    <option selected>Pilih vendor...</option>
+                    <option>Vendor Konveksi Kaos</option>
+                    <option>Vendor Konveksi Jaket</option>
+                    <option>Vendor Konveksi Kemeja Dinas</option>
+                    <option>Vendor Konveksi Wear Pack</option>
+                    <option>Vendor Konveksi Batik Dinas/Costum</option>
+                    <option>Vendor Konveksi Celana</option>
+                    <option>Vendor Konveksi Topi</option>
+                    <option>Vendor Konveksi Slayer</option>
+                    <option>Vendor Konveksi Tas Gody Bag</option>
+                    <option>Vendor Konveksi Tas Pouch</option>
+                    <option>Vendor Konveksi Rompi</option>
+
+                `;
+                break;
+            default:
+                break;
+        }
+    }
+
+    // Event listener for radio button change
+    jenisVendorRadios.forEach(function (radio) {
+        radio.addEventListener('change', function () {
+            const selectedJenisVendor = this.value;
+            populateKategoriVendorOptions(selectedJenisVendor);
+        });
+    });
+
+    // Populate kategori options on page load
+    populateKategoriVendorOptions(jenisVendorRadios[0].value);
+});
+
+
+
+const fileInput = document.getElementById("file_path");
+const videoInput = document.getElementById("video_path");
+const progressArea = document.querySelector(".progress-area");
+const uploadedArea = document.querySelector(".uploaded-area");
+
+file_path.addEventListener("click", ()=>{
     fileInput.click();
 
 
 });
 
-fileInput.onchange = ({target}) =>{
-    let file = target.files[0];
-    if(file){
-        let fileName = file.name;
-        if(fileName.length >= 12){
-            let splitName = fileName.split('.');
-            fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
-        }
-        uploadFile(fileName);
+video_path.addEventListener("click", ()=>{
+    fileInput.click();
+})
 
-    }
+if (fileInput) {
+    fileInput.addEventListener("change", ({target}) => {
+        let file = target.files[0];
+        if(file){
+            let fileName = file.name;
+            if(fileName.length >= 12){
+                let splitName = fileName.split('.');
+                fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
+            }
+            uploadFile(fileName, file);
+        }
+    });
 }
 
-function uploadFile(name){
+if (videoInput) {
+    videoInput.addEventListener("change", ({target}) => {
+        let file = target.files[0];
+        if(file){
+            let fileName = file.name;
+            if(fileName.length >= 12){
+                let splitName = fileName.split('.');
+                fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
+            }
+            uploadFile(fileName, file);
+        }
+    });
+}
+
+function uploadFile(name, file){
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "php/upload.php");
-    xhr.upload.addEventListener("progress", ({loaded, total}) => {
+    xhr.open("POST", "/form");
+    xhr.upload.addEventListener("progress_loading", ({loaded, total}) => {
         let fileLoaded = Math.floor((loaded/total) * 100);
         let fileTotal = Math.floor(total / 1000);
         let fileSize;
@@ -39,11 +152,10 @@ function uploadFile(name){
                                         <span class="percent">${fileLoaded}%</span>
                                     </div>
                                     <div class="progress-bar">
-                                        <div class="progress" style="width: ${fileLoaded}%"></div>
+                                        <div class="progress_loading" style="width: ${fileLoaded}%"></div>
                                     </div>
                                 </div>
                             </li>`;
-        // uploadedArea.innerHTML = ""; // satu file
         uploadedArea.classList.add("onprogress");
         progressArea.innerHTML = progressHTML;
         if(loaded == total){
@@ -57,20 +169,14 @@ function uploadFile(name){
                                                 <span class="size">${fileSize}</span>
                                             </div>
                                         </div>
-
                                     </div>
                                     <i class="fas fa-check"></i>
                                 </li>`;
-                // uploadedArea.innerHTML = uploadedHTML; // satu file
-                uploadedArea.classList.remove("onprogress");
-            uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML); // lebih dari satu file
+            uploadedArea.classList.remove("onprogress");
+            uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
         }
-
-
-
     });
-    let formData = new FormData(form2);
-
+    let formData = new FormData();
+    formData.append('file', file);
     xhr.send(formData);
 }
-

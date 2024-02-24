@@ -36,13 +36,12 @@
         </div>
       </div>
 
-
       <section id="form-vendor">
         <div class="container">
             <h2 class="alert alert-primary text-center mt-3">
                 Formulir Pendaftaran Vendor
             </h2>
-            <form class="row g-3" action="{{ route('store') }}"  method="POST" enctype="multipart/form-data">
+            <form id="form-vendor" class="row g-3" action="{{ route('store') }}"  method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label>Nama Distributor</label>
@@ -63,7 +62,7 @@
                   <div class="col-md-4">
                     <label for="inputProvinsi" class="form-label">Provinsi</label>
                     <select id="inputProvinsi" id="provinsi" class="form-select" name="provinsi">
-                        <option selected>Pilih...</option>
+                        <option selected>Pilih provinsi...</option>
                         <option>Nanggroe Aceh Darussalam</option>
                         <option>Sumatera Utara</option>
                         <option>Sumatera Selatan</option>
@@ -106,7 +105,7 @@
                   </div>
                   <div class="col-md-2">
                     <label for="inputZip" class="form-label">Kode Pos</label>
-                    <input type="text" id="kode_pos" name="kode_pos" class="form-control" id="inputZip">
+                    <input type="text" id="kode_pos" name="kode_pos" class="form-control" placeholder="Masukkan Kode pos">
                   </div>
                 <div class="form-group">
                     <label>No Handphone</label>
@@ -139,7 +138,7 @@
 
                 <div class="form-group" id="kategori_vendor">
                     <label>Kategori Vendor</label>
-                    <select class="form-control" name="kategori_vendor" id="kategori_vendor_select">
+                    <select class="form-control" name="kategori_vendor" id="kategori_vendor">
                     </select>
                 </div><br>
 
@@ -153,59 +152,76 @@
                     <input type="text" id="harga_pricelist" name="harga_pricelist" class="form-control" placeholder="Masukkan Harga">
                 </div><br>
 
-                <div class="form-group">
-                    <label>Upload Gambar Produk</label>
-                    <input type="file" id="file_path" name="file_path" class="form-control-file" name="">
-                    <small>Upload file dengan ukuran maksimal 2 MB</small>
-                </div><br>
 
-                <div class="form-group">
-                    <label>Upload Video Produk</label>
-                    <input type="file" id="video_path" name="video_path" class="form-control-file" accept="video/*">
-                    <small>Upload file video dengan ukuran maksimal 100 MB</small>
-                </div><br>
-
-                <div class="col-12 text-end mb-2">
-                    <button type="submit" class="btn btn-primary">Simpan</button>
+                {{-- <div class="wrapper">
+                    <header>
+                        Kirim Gambar Hasil Produk
+                    </header>
+                    <label for="file_path" class="custom-file-upload">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>
+                            Cari File untuk mengirim gambar
+                        </p>
+                    </label>
+                    <input id="file_path" type="file" class="file-input" name="file_path" hidden>
+                    <section id="progress" class="progress-area"></section>
+                    <section class="uploaded-area"></section>
                 </div>
-                <div class="col-12 text-end">
+
+                <div class="wrapper">
+                    <header>
+                        Kirim Video Gudang
+                    </header>
+                    <label for="video_path" class="custom-file-upload">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>
+                            Cari File untuk mengirim video
+                        </p>
+                    </label>
+                    <input id="video_path" type="file" class="file-input" name="video_path" hidden>
+                    <section id="progress" class="progress-area"></section>
+                    <section class="uploaded-area"></section>
+                </div> --}}
+                  <div class="wrapper">
+                    <label for="file_path" class="custom-file-upload">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>
+                            Cari File untuk mengirim gambar
+                        </p>
+                    </label>
+                    <input id="file_path" type="file"  class="form-control-file" name="file_path" hidden>
+                    <small>Upload file dengan ukuran maksimal 2 MB</small>
+                    <section id="progress_loading" class="progress-area"></section>
+                    <section class="uploaded-area"></section>
+                </div>
+
+                <div class="wrapper">
+                    <label for="video_path" class="custom-file-upload">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>
+                            Cari File untuk mengirim video
+                        </p>
+                    </label>
+                    <input id="video_path" type="file" class="form-control-file" name="video_path" accept="video/*"  hidden>
+                    <small>Upload file video dengan ukuran maksimal 100 MB</small>
+                    <section id="progress_loading" class="progress-area"></section>
+                    <section class="uploaded-area"></section>
+                </div><br>
+
+
+
+                <div class="col-12 text-end mt-3">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
                     <button type="reset" class="btn btn-danger">Reset</button>
                 </div>
             </div>
+
             </form>
 
       </section>
 
-      <div class="wrapper" style="margin-right: 150px;">
-        {{-- <header>
-            Kirim Gambar Hasil Produk
-        </header> --}}
-        <form class="upload-produk" action="#">
-            <input type="file" class="file-input" name="file_path" hidden>
-            {{-- <i class="fas fa-cloud-upload-alt"></i>
-            <p>Cari File untuk mengirim gambar produk</p> --}}
-        </form>
-        {{-- <section id="progress" class="progress-area"></section> --}}
-
-        <section class="uploaded-area"></section>
-    </div>
-    <div class="wrapper">
-        {{-- <header>
-            Kirim Video Gudang
-        </header> --}}
-        <form class="upload-produk" action="#">
-            <input type="file" class="file-input" name="file" hidden>
-            {{-- <i class="fas fa-cloud-upload-alt"></i>
-            <p>Cari File untuk mengirim gambar produk</p> --}}
-        </form>
-        <section id="progress" class="progress-area"></section>
-
-        <section class="uploaded-area"></section>
-    </div>
-
-
-
     <script src="{{ asset('frontend/js/script.js') }}"></script>
+    <script src="{{ asset('frontend/js/script2.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
   </body>

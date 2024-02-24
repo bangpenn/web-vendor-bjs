@@ -8,29 +8,28 @@
 
 }
 
-body{
+#upload-produk body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #6990f2;
 }
 
-.wrapper{
+.wrapper #upload-produk{
     width: 430px;
     padding: 30px;
     background: #fff;
     border-radius: 5px;
 }
 
-.wrapper header{
+.wrapper #upload-produk header{
     color: #6990f2;
     font-size: 27px;
     font-weight: 600;
     text-align: center;
 }
 
-.wrapper form2{
+.wrapper #upload-produk{
     height: 167px;
     display: flex;
     margin: 30px 0;
@@ -42,15 +41,15 @@ body{
     border: 2px dashed #6990f2;
 }
 
-form :where(i, p){
+#upload-produk :where(i, p){
     color: #6990f2;
 }
 
-form i{
+#upload-produk  i{
     font-size: 50px;
 }
 
-form p{
+#upload-produk  p{
     font-size: 16px;
     margin-top: 15px;
 }
@@ -67,30 +66,30 @@ section .row{
 
 }
 
-section .row i{
+section #upload-produk .row i{
     font-size: 30px;
     color: #6990f2;
 
 
 }
 
-section .details span{
+section #upload-produk .details span{
     font-size: 14px;
 }
 
-.progress-area .row .content{
+#upload-produk .progress-area .row .content{
     width: 100%;
     margin-left: 15px;
 }
 
-.progress-area .details{
+#upload-produk .progress-area .details{
     display: flex;
     align-items: center;
     margin-bottom: 7px;
     justify-content: space-between;
 }
 
-.progress-area .progress-bar{
+#upload-produk .progress-area .progress-bar{
     height: 6px;
     width: 100%;
     background: #fff;
@@ -99,7 +98,7 @@ section .details span{
 }
 
 
-.uploaded-area::-webkit-scrollbar{
+#upload-produk .uploaded-area::-webkit-scrollbar{
     width: 0px;
 }
 .progress-bar .progress{
@@ -109,32 +108,32 @@ section .details span{
     border-radius: inherit;
 }
 
-.uploaded-area{
+#upload-produk .uploaded-area{
     max-height: 230px;
     overflow-y: scroll;
 }
 
-.uploaded-area .onprogress{
+#upload-produk .uploaded-area .onprogress{
     max-height: 150px;
 }
 
-.uploaded-area .row .content{
+#upload-produk .uploaded-area .row .content{
     display: flex;
     align-items: center;
 }
 
-.uploaded-area .row .details{
+#upload-produk .uploaded-area .row .details{
     display: flex;
     margin-left: 15px;
     flex-direction: column;
 }
 
-.uploaded-area .details .size{
+#upload-produk .uploaded-area .details .size{
     font-size: 11px;
     color: #404040;
 }
 
-.uploaded-area .fa-check{
+#upload-produk .uploaded-area .fa-check{
     color: #6990f2;
     font-size: 16px;
 }

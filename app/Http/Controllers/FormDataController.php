@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class FormDataController extends Controller
 {
+
     public function form()
     {
         return view('frontend/form');

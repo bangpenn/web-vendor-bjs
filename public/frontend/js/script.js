@@ -200,7 +200,7 @@ if (videoInput) {
 
 function uploadFile(name, file){
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "/form");
+    xhr.open("POST", "/form/store");
     xhr.upload.addEventListener("progress_loading", ({loaded, total}) => {
         let fileLoaded = Math.floor((loaded/total) * 100);
         let fileTotal = Math.floor(total / 1000);

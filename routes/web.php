@@ -111,18 +111,18 @@ Route::prefix('admin')->group(function () {
 
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
-Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
+Route::get('/admin/dashboard', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
 // admin.vendor_profile
 Route::get('/admin/vendor_profile/{id}', [VendorController::class, 'showProfile'])->name('admin.vendor_profile');
 
 
 // Formulir
-Route::get('/frontend/form', function () {
-    return view('/frontend/form');
-})->name('form');
+// Route::get('/frontend/form', function () {
+//     return view('/frontend/form');
+// })->name('form');
 Route::get('/frontend/form', [FormDataController::class, 'form']);
 Route::post('/frontend/form', [FormDataController::class, 'store'])->name('store');
-
+Route::get('/frontend/form', [FormController::class, 'index'])->name('form');
 // Login
 Auth::routes(['login' => false, 'register' => false, 'verify' => true]);
 

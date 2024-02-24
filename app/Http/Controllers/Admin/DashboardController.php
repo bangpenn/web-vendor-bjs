@@ -19,6 +19,14 @@ class DashboardController extends Controller
 
     }
 
+    public function dashboard()
+    {
+        $data = Data::all();
+        $totalVendors = Data::count();
+        return view('admin.dashboard', compact('data', 'totalVendors'));
+
+    }
+
 
 
 

@@ -80,7 +80,7 @@
 
                         <div class="d-flex">
                             {{-- <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" /> --}}
-                            <button class="btn btn-danger flex-shrink-0 mt-3" type="button" onclick="window.location.href='{{ url('frontend/form2') }}'">
+                            <button class="btn btn-danger flex-shrink-0 mt-3" type="button" onclick="window.location.href='{{ url('frontend/form') }}'">
                                 <i class="bi bi-box-arrow-right me-1"></i>
                                 Daftar Vendor Konveksi
                             </button>

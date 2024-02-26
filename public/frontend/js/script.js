@@ -160,49 +160,48 @@ const videoInput = document.getElementById("video_path");
 const progressArea = document.querySelector(".progress-area");
 const uploadedArea = document.querySelector(".uploaded-area");
 
-file_path.addEventListener("click", ()=>{
+file_path.addEventListener("click", () => {
     fileInput.click();
-
-
 });
 
-video_path.addEventListener("click", ()=>{
-    fileInput.click();
-})
+video_path.addEventListener("click", () => {
+    videoInput.click();
+});
 
 if (fileInput) {
-    fileInput.addEventListener("change", ({target}) => {
+    fileInput.addEventListener("change", ({ target }) => {
         let file = target.files[0];
-        if(file){
+        if (file) {
             let fileName = file.name;
-            if(fileName.length >= 12){
+            if (fileName.length >= 12) {
                 let splitName = fileName.split('.');
                 fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
             }
-            uploadFile(fileName, file);
+            uploadFile(fileName, file, 'image');
         }
     });
 }
 
 if (videoInput) {
-    videoInput.addEventListener("change", ({target}) => {
+    videoInput.addEventListener("change", ({ target }) => {
         let file = target.files[0];
-        if(file){
+        if (file) {
             let fileName = file.name;
-            if(fileName.length >= 12){
+            if (fileName.length >= 12) {
                 let splitName = fileName.split('.');
                 fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
             }
-            uploadFile(fileName, file);
+            uploadFile(fileName, file, 'video');
         }
     });
 }
 
-function uploadFile(name, file){
+function uploadFile(name, file, type) {
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "/form/store");
-    xhr.upload.addEventListener("progress_loading", ({loaded, total}) => {
-        let fileLoaded = Math.floor((loaded/total) * 100);
+    let url = type === 'image' ? '/upload/image' : '/upload/video';
+    xhr.open("POST", url);
+    xhr.upload.addEventListener("progress", ({ loaded, total }) => {
+        let fileLoaded = Math.floor((loaded / total) * 100);
         let fileTotal = Math.floor(total / 1000);
         let fileSize;
         (fileTotal < 1024) ? fileSize = fileTotal + " KB" : fileSize = (loaded / (1024 * 1024)).toFixed(2) + " MB";
@@ -214,31 +213,48 @@ function uploadFile(name, file){
                                         <span class="percent">${fileLoaded}%</span>
                                     </div>
                                     <div class="progress-bar">
-                                        <div class="progress_loading" style="width: ${fileLoaded}%"></div>
+                                        <div class="progress" style="width: ${fileLoaded}%"></div>
                                     </div>
                                 </div>
                             </li>`;
-        uploadedArea.classList.add("onprogress");
         progressArea.innerHTML = progressHTML;
-        if(loaded == total){
-            progressArea.innerHTML = "";
-            let uploadedHTML = `<li class="row">
+    });
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                let response = JSON.parse(xhr.responseText);
+                let uploadedHTML = `<li class="row">
                                     <div class="content">
                                         <i class="fas fa-file-alt"></i>
                                         <div class="content">
                                             <div class="details">
-                                                <span class="name">${name} . Uploaded</span>
-                                                <span class="size">${fileSize}</span>
+                                                <span class="name">${response.fileName} . Uploaded</span>
+                                                <span class="size">${response.fileSize}</span>
                                             </div>
                                         </div>
                                     </div>
                                     <i class="fas fa-check"></i>
                                 </li>`;
-            uploadedArea.classList.remove("onprogress");
-            uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
+                uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
+            } else {
+                console.error('Error uploading file:', xhr.statusText);
+            }
         }
-    });
+    };
+
     let formData = new FormData();
     formData.append('file', file);
     xhr.send(formData);
+}
+
+function resetAndScroll() {
+    // Mengakses formulir berdasarkan ID atau kelas
+    var form = document.getElementById('form-vendor'); // Ganti 'myForm' dengan ID formulir Anda
+
+    // Mengatur ulang nilai-nilai input dalam formulir
+    form.reset();
+
+    // Mengatur scroll halaman kembali ke atas
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }

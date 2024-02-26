@@ -61,10 +61,14 @@
 				</a>
 			</li>
 			<li>
-				<a href="{{ route('admin.dashboard') }}" class="logout">
-					<i class='bx bxs-log-out-circle' ></i>
-					<span class="text">Logout</span>
-				</a>
+                <form method="post" action="{{ route('logout') }}">
+                    @csrf
+                    <a href="{{ route('admin.dashboard') }}" class="logout">
+                        <i class='bx bx-power-off '></i>
+                        <span class="text">Logout</span>
+                    </a>
+                </form>
+
 			</li>
 		</ul>
 	</section>

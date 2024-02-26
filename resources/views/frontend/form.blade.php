@@ -45,23 +45,29 @@
                 @csrf
                 <div class="form-group">
                     <label>Nama Distributor</label>
-                    <input type="text" id="nama_distributor" name="nama_distributor" class="form-control" placeholder="Masukkan Nama Lengkap">
+                    <input type="text" id="nama_distributor" name="nama_distributor" class="form-control @error('nama_distributor') is-invalid @enderror" placeholder="Masukkan Nama Lengkap" required autofocus>
+
+                    @error('nama_distributor')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div><br>
                 <div class="form-group">
                     <label>Nama UMKM</label>
-                    <input type="text" id="nama_umkm" name="nama_umkm" class="form-control" placeholder="Masukkan Nama UMKM">
+                    <input type="text" id="nama_umkm" name="nama_umkm" class="form-control" placeholder="Masukkan Nama UMKM" required>
                 </div><br>
                 <div class="form-group">
                     <label>Alamat Distributor/Kantor</label>
-                    <input type="text" id="alamat_distributor" name="alamat_distributor" class="form-control" placeholder="Masukkan Alamat">
+                    <input type="text" id="alamat_distributor" name="alamat_distributor" class="form-control" placeholder="Masukkan Alamat" required>
                 </div><br>
                   <div class="col-md-6">
                     <label for="inputCity" class="form-label">Kota</label>
-                    <input type="text" id="kota" name="kota" placeholder="Masukkan Kota" class="form-control" id="inputKota">
+                    <input type="text" id="kota" name="kota" placeholder="Masukkan Kota" class="form-control" id="inputKota" required>
                   </div>
                   <div class="col-md-4">
                     <label for="inputProvinsi" class="form-label">Provinsi</label>
-                    <select id="inputProvinsi" id="provinsi" class="form-select" name="provinsi">
+                    <select id="inputProvinsi" id="provinsi" class="form-select" name="provinsi" required>
                         <option selected>Pilih provinsi...</option>
                         <option>Nanggroe Aceh Darussalam</option>
                         <option>Sumatera Utara</option>
@@ -105,15 +111,21 @@
                   </div>
                   <div class="col-md-2">
                     <label for="inputZip" class="form-label">Kode Pos</label>
-                    <input type="text" id="kode_pos" name="kode_pos" class="form-control" placeholder="Masukkan Kode pos">
+                    <input type="text" id="kode_pos" name="kode_pos" class="form-control" placeholder="Masukkan Kode pos" required>
                   </div>
                 <div class="form-group">
                     <label>No Handphone</label>
-                    <input type="text" id="no_handphone" name="no_handphone" class="form-control" placeholder="Masukkan No.Handphone">
+                    <input type="text" id="no_handphone" name="no_handphone" class="form-control" placeholder="Masukkan No.Handphone" required>
                 </div><br>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" id="email_distributor" name="email_distributor" class="form-control" placeholder="Masukkan Email">
+                    <input type="email" id="email_distributor" name="email_distributor" class="form-control @error('email_distributor') is-invalid @enderror" placeholder="Masukkan Email" required autocomplete="email" autofocus>
+
+                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                 </div><br>
 
                 <div class="form-group">
@@ -144,12 +156,12 @@
 
                 <div class="form-group">
                     <label>Jumlah Stock</label>
-                    <input type="text" name="jumlah_stock" class="form-control" placeholder="Masukkan Jumlah Stock">
+                    <input type="text" name="jumlah_stock" class="form-control" placeholder="Masukkan Jumlah Stock" required>
                 </div><br>
 
                 <div class="form-group">
                     <label>Harga Pricelist/Katalog</label>
-                    <input type="text" id="harga_pricelist" name="harga_pricelist" class="form-control" placeholder="Masukkan Harga">
+                    <input type="text" id="harga_pricelist" name="harga_pricelist" class="form-control" placeholder="Masukkan Harga" required>
                 </div><br>
 
 
@@ -183,27 +195,33 @@
                     <section class="uploaded-area"></section>
                 </div> --}}
                   <div class="wrapper">
+                    <header>
+                        Kirim Gambar Hasil Produk
+                    </header>
                     <label for="file_path" class="custom-file-upload">
                         <i class="fas fa-cloud-upload-alt"></i>
                         <p>
                             Cari File untuk mengirim gambar
                         </p>
                     </label>
-                    <input id="file_path" type="file"  class="form-control-file" name="file_path" hidden>
+                    <input id="file_path" type="file"  class="form-control-file" name="file_path" hidden required>
                     <small>Upload file dengan ukuran maksimal 2 MB</small>
                     <section id="progress_loading" class="progress-area"></section>
                     <section class="uploaded-area"></section>
                 </div>
 
                 <div class="wrapper">
+                    <header>
+                        Kirim Video Gudang
+                    </header>
                     <label for="video_path" class="custom-file-upload">
                         <i class="fas fa-cloud-upload-alt"></i>
                         <p>
                             Cari File untuk mengirim video
                         </p>
                     </label>
-                    <input id="video_path" type="file" class="form-control-file" name="video_path" accept="video/*"  hidden>
-                    <small>Upload file video dengan ukuran maksimal 100 MB</small>
+                    <input id="video_path" type="file" class="form-control-file" name="video_path" accept="video/*"  hidden required>
+                    <small>Upload file video dengan ukuran maksimal 20 MB</small>
                     <section id="progress_loading" class="progress-area"></section>
                     <section class="uploaded-area"></section>
                 </div><br>
@@ -212,11 +230,13 @@
 
                 <div class="col-12 text-end mt-3">
                     <button type="submit" class="btn btn-primary">Simpan</button>
-                    <button type="reset" class="btn btn-danger">Reset</button>
+                    <button type="reset" class="btn btn-danger" onclick="resetAndScroll()">Reset</button>
+
                 </div>
             </div>
 
             </form>
+            <div id="error-msg" style="color: red;"></div>
 
       </section>
 

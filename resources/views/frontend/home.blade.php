@@ -26,7 +26,7 @@
 
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-header">
         <div class="container">
           <a class="navbar-brand" href="{{ url('/') }}"><span class="text-danger">Tukuklik</span>Vendor</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,6 +66,12 @@
               </li>
 
             </ul>
+            <form class="d-flex">
+                <button class="btn btn-outline-danger" type="submit">
+                    <i class="bi bi-person-circle me-1" style="color: white"></i>
+                    <p style="color: white">{{ $user->name }}</p>
+                </button>
+            </form>
           </div>
         </div>
       </nav>

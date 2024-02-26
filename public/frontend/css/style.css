@@ -158,6 +158,14 @@ body {
 	line-height: 0.3;
 	background: #fff;
 }
+
+.sticky-header{
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+ }
 .portfolio .card {
 	box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
 }
@@ -515,13 +523,13 @@ body {
 }
 
 
-#form-vendor #progress .row i{
+#form-vendor .progress .row i{
     font-size: 30px;
     color: #6990f2;
 
 }
 
-#form-vendor #progress .details span {
+#form-vendor .progress .details span {
     font-size: 14px;
 }
 
@@ -629,7 +637,7 @@ body {
     border: 1px dashed #6990f2;
 }
 
-#form-vendor .wrapper :where(i, p){
+#form-vendor .wrapper :where(i, p, small){
     color: #6990f2;
 }
 
@@ -704,7 +712,7 @@ body {
     align-items: center;
 }
 
-#form-vendor .uploaded-area .row .details{
+#form-vendor .uploaded-area .row .details
     display: flex;
     margin-left: 15px;
     flex-direction: column;

@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Tukuklik | Website Vendor Konveksi</title>
-        <!-- Favicon-->
-        <link rel="icon" href="{{ asset('auth/assets/tukuklik.png') }}" type="image/x-icon" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
-    </head>
-    <body>
+@extends('frontend/layouts/main')
+
+@section('content')
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
@@ -220,12 +206,4 @@
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Tukuklik 2024</p></div>
         </footer>
         <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
-        <script src="{{ asset('frontend/js/script.js') }}"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-    </body>
-</html>
+        @endsection

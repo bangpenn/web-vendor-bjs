@@ -10846,18 +10846,6 @@ textarea.form-control-lg {
   }
 }
 
-.product-link {
-    text-decoration: none; /* Menghapus garis bawah pada tautan */
-    color: #333; /* Warna teks untuk tautan */
-    margin-right: 10px; /* Menambahkan jarak di sebelah kanan setiap tautan */
-    font-size: medium;
-  }
-
-  .product-link:active {
-    color: red; /* Warna teks saat tautan sedang diklik */
-    font-weight: bold; /* Tebal teks saat tautan sedang diklik */
-    text-decoration: underline; /* Garis bawah saat tautan sedang diklik */
-  }
 
 
 

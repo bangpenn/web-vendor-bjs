@@ -169,7 +169,7 @@ video_path.addEventListener("click", () => {
 });
 
 if (fileInput) {
-    fileInput.addEventListener("change", ({ target }) => {
+    fileInput.onchange = ({ target }) => {
         let file = target.files[0];
         if (file) {
             let fileName = file.name;
@@ -179,11 +179,11 @@ if (fileInput) {
             }
             uploadFile(fileName, file, 'image');
         }
-    });
+    };
 }
 
 if (videoInput) {
-    videoInput.addEventListener("change", ({ target }) => {
+    videoInput.onchange =  ({ target }) => {
         let file = target.files[0];
         if (file) {
             let fileName = file.name;
@@ -193,7 +193,7 @@ if (videoInput) {
             }
             uploadFile(fileName, file, 'video');
         }
-    });
+    };
 }
 
 function uploadFile(name, file, type) {
@@ -217,7 +217,28 @@ function uploadFile(name, file, type) {
                                     </div>
                                 </div>
                             </li>`;
+        uploadedArea.classList.add("onprogress");
         progressArea.innerHTML = progressHTML;
+
+        if(loaded == total){
+            progressArea.innerHTML = "";
+            let uploadedHTML = `<li class="row">
+                                    <div class="content">
+                                        <i class="fas fa-file-alt"></i>
+                                        <div class="content">
+                                            <div class="details">
+                                                <span class="name">${name} . Uploaded</span>
+                                                <span class="size">${fileSize}</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <i class="fas fa-check"></i>
+                                </li>`;
+                // uploadedArea.innerHTML = uploadedHTML; // satu file
+                uploadedArea.classList.remove("onprogress");
+            uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML); // lebih dari satu file
+        }
     });
 
     xhr.onreadystatechange = function () {
@@ -250,8 +271,7 @@ function uploadFile(name, file, type) {
 
 function resetAndScroll() {
     // Mengakses formulir berdasarkan ID atau kelas
-    var form = document.getElementById('form-vendor'); // Ganti 'myForm' dengan ID formulir Anda
-
+    var form = document.getElementById('form-vendor');
     // Mengatur ulang nilai-nilai input dalam formulir
     form.reset();
 

@@ -483,8 +483,6 @@ body {
 
 }
 
-
-
 #form-vendor .wrapper form2{
     height: 167px;
     display: flex;
@@ -579,7 +577,7 @@ body {
     align-items: center;
 }
 
-#form-vendor.uploaded-area .row .details{
+#form-vendor .uploaded-area .row .details{
     display: flex;
     margin-left: 15px;
     flex-direction: column;
@@ -604,29 +602,29 @@ body {
     font-family: "Poppins", sans-serif;
 
 }
-#form-vendor .wrapper body {
+.wrapper body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
 }
 
-#form-vendor .wrapper {
+.wrapper {
     width: 430px;
     padding: 30px;
     background: #fff;
     border-radius: 5px;
 }
 
-#form-vendor .wrapper header{
+.wrapper header{
     color: #6990f2;
-    font-size: 27px;
+    font-size: 22px;
     font-weight: 600;
     text-align: center;
 }
 
-#form-vendor .wrapper {
-    height: 200px;
+.wrapper .form{
+    height: 167px;
     display: flex;
     margin: 30px 0;
     cursor: pointer;
@@ -637,49 +635,55 @@ body {
     border: 1px dashed #6990f2;
 }
 
-#form-vendor .wrapper :where(i, p, small){
+ .form :where(i, p, small){
     color: #6990f2;
+    text-align: center;
 }
 
-#form-vendor .wrapper  i{
+ .form  i{
     font-size: 50px;
 }
 
-#form-vendor .wrapper  p{
-    font-size: 16px;
+ .form  p{
+    font-size: 15px;
     margin-top: 15px;
 }
 
+.form section .row{
+    background:   #e9f0f2;
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-#form-vendor section .row i{
-    font-size: 30px;
+
+.wrapper section .row i{
+    font-size: 20px;
     color: #6990f2;
 }
 
-#form-vendor section .details span{
+.wrapper section .details span{
     font-size: 14px;
 }
-#progress_loading .progress-area .progress_loading {
-    height: 6px;
-    width: 100%;
-    background: #fff;
-    margin-bottom: 4px;
-    border-radius: 30px;
-}
 
-#progress_loading .progress-area .row .content{
+
+.progress-area .row .content{
     width: 100%;
     margin-left: 15px;
 }
 
-#progress_loading .progress-area .details{
+.progress-area .details{
     display: flex;
     align-items: center;
     margin-bottom: 7px;
     justify-content: space-between;
 }
 
-#progress_loading .progress-area .progress-bar{
+.progress-area .progress-bar{
     height: 6px;
     width: 100%;
     background: #fff;
@@ -688,47 +692,47 @@ body {
 }
 
 
-#form-vendor .uploaded-area::-webkit-scrollbar{
+.uploaded-area::-webkit-scrollbar{
     width: 0px;
 }
-#form-vendor .progress-bar .progress{
+.progress-bar .progress{
     height: 100%;
     width: 0%;
     background: #6990f2;
     border-radius: inherit;
 }
 
-#form-vendor .uploaded-area{
+.uploaded-area{
     max-height: 230px;
     overflow-y: scroll;
 }
 
-#form-vendor .uploaded-area .onprogress{
+.uploaded-area.onprogress{
     max-height: 150px;
 }
 
-#form-vendor .uploaded-area .row .content{
+.uploaded-area .row .content{
     display: flex;
     align-items: center;
 }
 
-#form-vendor .uploaded-area .row .details
+.uploaded-area .row .details{
     display: flex;
     margin-left: 15px;
     flex-direction: column;
 }
 
-#form-vendor .uploaded-area .details .size{
+.uploaded-area .details .size{
     font-size: 11px;
     color: #404040;
 }
 
-#form-vendor .uploaded-area .fa-check{
+.uploaded-area .fa-check{
     color: #6990f2;
     font-size: 16px;
 }
 
-#form-vendor .custom-file-upload {
+.custom-file-upload {
     display: inline-block;
     padding: 10px 20px;
     color: #fff;
@@ -738,11 +742,25 @@ body {
     text-align: center;
 }
 
-#form-vendor .custom-file-upload:hover {
+.custom-file-upload:hover {
     background: #0057b317;
 }
 
-#form-vendor .file-input {
+.file-input {
     display: none;
 }
+
+
+.product-link {
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    color: #333; /* Warna teks untuk tautan */
+    margin-right: 10px; /* Menambahkan jarak di sebelah kanan setiap tautan */
+    font-size: medium;
+  }
+
+  .product-link:active {
+    color: #EE2B47; /* Warna teks saat tautan sedang diklik */
+    font-weight: bold; /* Tebal teks saat tautan sedang diklik */
+    text-decoration: underline; /* Garis bawah saat tautan sedang diklik */
+  }
 

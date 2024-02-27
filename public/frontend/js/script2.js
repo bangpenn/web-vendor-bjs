@@ -91,59 +91,47 @@ document.addEventListener("DOMContentLoaded", function () {
     populateKategoriVendorOptions(jenisVendorRadios[0].value);
 });
 
-
-
 const fileInput = document.getElementById("file_path");
 const videoInput = document.getElementById("video_path");
-const progressArea = document.querySelector(".progress-area");
-const uploadedArea = document.querySelector(".uploaded-area");
+const imageProgressArea = document.querySelector(".image-progress-area");
+const imageUploadedArea = document.querySelector(".image-uploaded-area");
+const videoProgressArea = document.querySelector(".video-progress-area");
+const videoUploadedArea = document.querySelector(".video-uploaded-area");
 
-file_path.addEventListener("click", ()=>{
-    fileInput.click();
 
-
+fileInput.addEventListener("change", () => {
+    let file = fileInput.files[0];
+    if (file) {
+        let fileName = file.name;
+        if (fileName.length >= 12) {
+            let splitName = fileName.split('.');
+            fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
+        }
+        uploadFile(fileName, file, 'image');
+    }
 });
 
-video_path.addEventListener("click", ()=>{
-    fileInput.click();
-})
-
-if (fileInput) {
-    fileInput.addEventListener("change", ({target}) => {
-        let file = target.files[0];
-        if(file){
-            let fileName = file.name;
-            if(fileName.length >= 12){
-                let splitName = fileName.split('.');
-                fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
-            }
-            uploadFile(fileName, file);
+videoInput.addEventListener("change", () => {
+    let file = videoInput.files[0];
+    if (file) {
+        let fileName = file.name;
+        if (fileName.length >= 12) {
+            let splitName = fileName.split('.');
+            fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
         }
-    });
-}
+        uploadFile(fileName, file, 'video');
+    }
+});
 
-if (videoInput) {
-    videoInput.addEventListener("change", ({target}) => {
-        let file = target.files[0];
-        if(file){
-            let fileName = file.name;
-            if(fileName.length >= 12){
-                let splitName = fileName.split('.');
-                fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
-            }
-            uploadFile(fileName, file);
-        }
-    });
-}
-
-function uploadFile(name, file){
+function uploadFile(name, file, type) {
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "/form");
-    xhr.upload.addEventListener("progress_loading", ({loaded, total}) => {
-        let fileLoaded = Math.floor((loaded/total) * 100);
+    let url = type === 'image' ? '/frontend/form/store/img' : '/frontend/form/store/video';
+    xhr.open("POST", url);
+    xhr.upload.addEventListener("progress", ({ loaded, total }) => {
+        let fileLoaded = Math.floor((loaded / total) * 100);
         let fileTotal = Math.floor(total / 1000);
-        let fileSize;
-        (fileTotal < 1024) ? fileSize = fileTotal + " KB" : fileSize = (loaded / (1024 * 1024)).toFixed(2) + " MB";
+        let fileSize = (fileTotal < 1024) ? fileTotal + " KB" : (loaded / (1024 * 1024)).toFixed(2) + " MB";
+
         let progressHTML = `<li class="row">
                                 <i class="fas fa-file-alt"></i>
                                 <div class="content">
@@ -152,31 +140,66 @@ function uploadFile(name, file){
                                         <span class="percent">${fileLoaded}%</span>
                                     </div>
                                     <div class="progress-bar">
-                                        <div class="progress_loading" style="width: ${fileLoaded}%"></div>
+                                        <div class="progress" style="width: ${fileLoaded}%"></div>
                                     </div>
                                 </div>
                             </li>`;
-        uploadedArea.classList.add("onprogress");
-        progressArea.innerHTML = progressHTML;
-        if(loaded == total){
-            progressArea.innerHTML = "";
-            let uploadedHTML = `<li class="row">
-                                    <div class="content">
-                                        <i class="fas fa-file-alt"></i>
+
+        if (type === 'image') {
+            imageUploadedArea.classList.add("onprogress");
+            imageProgressArea.innerHTML = progressHTML;
+        } else {
+            videoUploadedArea.classList.add("onprogress");
+            videoProgressArea.innerHTML = progressHTML;
+        }
+
+        if (loaded === total) {
+            if (type === 'image') {
+                imageProgressArea.innerHTML = "";
+                let uploadedHTML = `<li class="row">
                                         <div class="content">
-                                            <div class="details">
-                                                <span class="name">${name} . Uploaded</span>
-                                                <span class="size">${fileSize}</span>
+                                            <i class="fas fa-file-alt"></i>
+                                            <div class="content">
+                                                <div class="details">
+                                                    <span class="name">${name} . Uploaded</span>
+                                                    <span class="size">${fileSize}</span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <i class="fas fa-check"></i>
-                                </li>`;
-            uploadedArea.classList.remove("onprogress");
-            uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
+                                        <i class="fas fa-check"></i>
+                                    </li>`;
+                imageUploadedArea.classList.remove("onprogress");
+                imageUploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
+            } else {
+                videoProgressArea.innerHTML = "";
+                let uploadedHTML = `<li class="row">
+                                        <div class="content">
+                                            <i class="fas fa-file-alt"></i>
+                                            <div class="content">
+                                                <div class="details">
+                                                    <span class="name">${name} . Uploaded</span>
+                                                    <span class="size">${fileSize}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <i class="fas fa-check"></i>
+                                    </li>`;
+                videoUploadedArea.classList.remove("onprogress");
+                videoUploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
+            }
         }
     });
+
     let formData = new FormData();
     formData.append('file', file);
     xhr.send(formData);
+}
+function reset() {
+    // Mengakses formulir berdasarkan ID atau kelas
+    var form = document.getElementById('form-vendor');
+    // Mengatur ulang nilai-nilai input dalam formulir
+    form.reset();
+
+    // // Mengatur scroll halaman kembali ke atas
+    // window.scrollTo({ top: 0, behavior: 'smooth' });
 }

@@ -66,12 +66,12 @@
               </li>
 
             </ul>
-            <form class="d-flex">
+            {{-- <form class="d-flex">
                 <button class="btn btn-outline-danger" type="submit">
                     <i class="bi bi-person-circle me-1" style="color: white"></i>
                     <p style="color: white">{{ $user->name }}</p>
                 </button>
-            </form>
+            </form> --}}
           </div>
         </div>
       </nav>
@@ -88,7 +88,7 @@
               <div class="carousel-item active">
                 <img src="{{ asset('frontend/img/showroom1.jpg') }}" class="d-block w-100" alt="...">
                 <div class="carousel-caption">
-                    <h5 class="judul-banner">Kolaborasi yang Menguntungkan</h5>
+                    <h5 class="judul-banner" data-aos="fade-up" data-aos-duration="1000">Kolaborasi yang Menguntungkan</h5>
                     <p class="detail-banner">Di perusahaan kami, kami percaya pada kerjasama yang saling menguntungkan. Bergabunglah dengan jaringan vendor kami dan nikmati peluang kolaborasi yang luas.</p>
                     <p><a href="{{ url('frontend/form') }}" class="btn btn-danger mt-3">Daftar</a></p>
                 </div>
@@ -96,7 +96,7 @@
               <div class="carousel-item">
                 <img src="{{ asset('frontend/img/showroom2.jpg') }}" class="d-block w-100" alt="...">
                 <div class="carousel-caption">
-                    <h5 class="judul-banner">Peluang Pertumbuhan Bersama</h5>
+                    <h5 class="judul-banner "data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="200">Peluang Pertumbuhan Bersama</h5>
                     <p class="detail-banner">Bergabunglah dengan perusahaan kami untuk mendapatkan peluang pertumbuhan bersama yang tak terbatas.</p>
                     <p><a href="{{ url('frontend/form') }}" class="btn btn-danger mt-3">Daftar</a></p>
                 </div>
@@ -104,7 +104,7 @@
               <div class="carousel-item">
                 <img src="{{ asset('frontend/img/showroom3.jpg') }}" class="d-block w-100" alt="...">
                 <div class="carousel-caption">
-                  <h5 class="judul-banner">Networking yang Luas dan Peluang Ekspansi</h5>
+                  <h5 class="judul-banner" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300">Networking yang Luas dan Peluang Ekspansi</h5>
                     <p class="detail-banner">Dengan bergabung bersama kami, Anda akan mendapatkan akses ke jaringan yang luas dan peluang ekspansi yang tak terbatas.</p>
                     <p><a href="{{ url('frontend/form') }}" class="btn btn-danger mt-3">Daftar</a></p>
                 </div>
@@ -368,19 +368,19 @@
 
             <!-- Right -->
             <div>
-                <a href="https://www.instagram.com/tukuklik/" class="me-4 text-reset">
+                <a href="https://www.instagram.com/tukuklik/" class="me-4 text-reset" target="_blank">
                 <i class="bi bi-instagram"></i>
                 </a>
-                <a href="https://www.tiktok.com/@tukuklik.com" class="me-4 text-reset">
+                <a href="https://www.tiktok.com/@tukuklik.com" class="me-4 text-reset" target="_blank">
                 <i class="bi bi-tiktok"></i>
                 </a>
-                <a href="https://www.facebook.com/tukuklikofficial" class="me-4 text-reset">
+                <a href="https://www.facebook.com/tukuklikofficial" class="me-4 text-reset" target="_blank">
                 <i class="bi bi-facebook"></i>
                 </a>
-                <a href="https://www.tukuklik.com/" class="me-4 text-reset">
+                <a href="https://www.tukuklik.com/" class="me-4 text-reset" target="_blank">
                 <i class="bi bi-google"></i>
                 </a>
-                <a href="https://www.linkedin.com/company/tukuklik/about/" class="me-4 text-reset">
+                <a href="https://www.linkedin.com/company/tukuklik/about/" class="me-4 text-reset" target="_blank">
                 <i class="bi bi-linkedin"></i>
                 </a>
             </div>
@@ -469,7 +469,7 @@
             <!-- Copyright -->
             <div class="text-center p-4 text-white" style="background-color: #EE2B47;">
             © 2024 Copyright:
-            <a class="text-reset fw-bold text-white" href="https://tukuklik.com/">Tukuklik.com</a>
+            <a class="text-reset fw-bold text-white" href="https://tukuklik.com/" target="_blank">Tukuklik.com</a>
             </div>
             <!-- Copyright -->
         </footer>

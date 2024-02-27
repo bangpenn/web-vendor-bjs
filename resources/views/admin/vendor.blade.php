@@ -160,7 +160,7 @@
                                 <th>Action</th>
 							</tr>
 						</thead>
-						<tbody>
+						{{-- <tbody>
 							<tr>
 								<td>
 									<img src="{{ asset('admin/img/people.png') }}">
@@ -266,7 +266,23 @@
                                     </a>
                                 </td>
 							</tr>
-						</tbody>
+						</tbody> --}}
+                        <tbody>
+                            @foreach($data as $item)
+                                <tr>
+                                    <td scope="row">{{ $item->id }}</td>
+                                    <td>{{ $item->nama_distributor }}</td>
+                                    <td>{{ $item->nama_umkm }}</td>
+                                    <td>{{ $item->jenis_vendor }}</td>
+                                    <td>{{ $item->kategori_vendor }}</td>
+                                    <td>
+                                        <a href="{{ url('/admin/vendor_profile/'.$item->id) }}">
+                                            <i class='bx bx-show'></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
 					</table>
 				</div>
 				<!-- <div class="todo">

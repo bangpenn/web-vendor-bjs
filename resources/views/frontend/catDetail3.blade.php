@@ -12,7 +12,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('frontend/css/style2.css') }}" rel="stylesheet">
+        <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
     </head>
     <body>
         <!-- Navigation-->
@@ -35,7 +35,7 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-danger" type="submit">
+                        <button class="btn btn-outline-danger text-white" type="submit">
                             <i class="bi bi-person-circle me-1"></i>
                             User
                             <!-- <span class="badge bg-danger text-white ms-1 rounded-pill">-></span> -->

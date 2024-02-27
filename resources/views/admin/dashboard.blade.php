@@ -18,8 +18,8 @@
 	<!-- SIDEBAR -->
 	<section id="sidebar">
 		<a href="#" class="brand">
-			<i class='bx bxs-smile'></i>
-			<span class="text">Hello, Admin</span>
+			<i class='bx bxs-smile'></i><br>
+            <span class="text">Hello, {{ $user->name }}</span>
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
@@ -28,12 +28,12 @@
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
-			<li>
-				<a href="{{ route('admin.vendor') }}">
+			{{-- <li>
+				<a href="{{ route('admin.vendor_po') }}">
 					<i class='bx bxs-group' ></i>
 					<span class="text">My Vendor</span>
 				</a>
-			</li>
+			</li> --}}
 			<li>
 				<a href="{{ route('admin.dashboard') }}">
 					<i class='bx bxs-doughnut-chart' ></i>
@@ -82,7 +82,7 @@
 		<nav>
 			<i class='bx bx-menu' ></i>
 			<a href="#" class="nav-link">Categories</a>
-			<form action="#">
+			<form action="{{ route('admin.dashboard.search') }}" method="GET">
 				<div class="form-input">
 					<input type="search" placeholder="Search...">
 					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
@@ -290,6 +290,7 @@
                             @endforeach
                         </tbody>
 					</table>
+
 				</div>
 				<!-- <div class="todo">
 					<div class="head">

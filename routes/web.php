@@ -92,37 +92,41 @@ Route::prefix('frontend')->group(function () {
     })->name('frontend.upload');
 });
 
-// Grouping admin routes
 Route::prefix('admin')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    })->name('admin.dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
-    Route::prefix('dashboard/vendor')->group(function () {
+    Route::prefix('vendor_profile/')->group(function () {
         Route::get('/', function () {
             return view('admin.vendor');
         })->name('admin.vendor');
 
-        Route::get('/profile', function () {
-            return view('admin.vendor_profile');
-        })->name('admin.vendor.profile');
+
     });
+
+    Route::get('/vendor_profile/{id}', [VendorController::class, 'showProfile'])->name('admin.vendor_profile');
+
 });
 
-Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+Route::get('/admin/dashboard/search', [DashboardController::class, 'search'])->name('admin.dashboard.search');
 
-Route::get('/admin/dashboard', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
-// admin.vendor_profile
-Route::get('/admin/vendor_profile/{id}', [VendorController::class, 'showProfile'])->name('admin.vendor_profile');
+
+
 
 
 // Formulir
 // Route::get('/frontend/form', function () {
 //     return view('/frontend/form');
 // })->name('form');
-Route::get('/frontend/form', [FormDataController::class, 'form']);
-Route::post('/frontend/form', [FormDataController::class, 'store'])->name('store');
-Route::get('/frontend/form', [FormController::class, 'index'])->name('form');
+// Rute untuk menampilkan formulir
+Route::get('/frontend/form', [FormDataController::class, 'form'])->name('form');
+
+// Rute untuk memproses data formulir yang disubmit
+Route::post('/frontend/form/store', [FormDataController::class, 'store'])->name('store');
+
+Route::post('/frontend/form/store/img', [FormDataController::class, 'storeImage'])->name('store.image');
+Route::post('/frontend/form/store/video', [FormDataController::class, 'storeVideo'])->name('store.video');
+
+
 // Login
 Auth::routes(['login' => false, 'register' => false, 'verify' => true]);
 

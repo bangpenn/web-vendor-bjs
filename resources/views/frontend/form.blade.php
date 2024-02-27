@@ -122,10 +122,10 @@
                     <input type="email" id="email_distributor" name="email_distributor" class="form-control @error('email_distributor') is-invalid @enderror" placeholder="Masukkan Email" required autocomplete="email" autofocus>
 
                     @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div><br>
 
                 <div class="form-group">
@@ -164,83 +164,59 @@
                     <input type="text" id="harga_pricelist" name="harga_pricelist" class="form-control" placeholder="Masukkan Harga" required>
                 </div><br>
 
-
-                {{-- <div class="wrapper">
-                    <header>
-                        Kirim Gambar Hasil Produk
-                    </header>
-                    <label for="file_path" class="custom-file-upload">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                        <p>
-                            Cari File untuk mengirim gambar
-                        </p>
-                    </label>
-                    <input id="file_path" type="file" class="file-input" name="file_path" hidden>
-                    <section id="progress" class="progress-area"></section>
-                    <section class="uploaded-area"></section>
-                </div>
-
                 <div class="wrapper">
                     <header>
-                        Kirim Video Gudang
-                    </header>
-                    <label for="video_path" class="custom-file-upload">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                        <p>
-                            Cari File untuk mengirim video
-                        </p>
-                    </label>
-                    <input id="video_path" type="file" class="file-input" name="video_path" hidden>
-                    <section id="progress" class="progress-area"></section>
-                    <section class="uploaded-area"></section>
-                </div> --}}
-                  <div class="wrapper">
-                    <header>
                         Kirim Gambar Hasil Produk
                     </header>
-                    <label for="file_path" class="custom-file-upload">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                        <p>
-                            Cari File untuk mengirim gambar
-                        </p>
-                    </label>
+                    <div class="form">
+                        <label for="file_path" class="custom-file-upload">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>
+                                Cari File untuk mengirim gambar
+                            </p>
+                            <small>Upload file dengan ukuran maksimal 2 MB</small>
+                        </label>
+                    </div>
+
                     <input id="file_path" type="file"  class="form-control-file" name="file_path" hidden required>
-                    <small>Upload file dengan ukuran maksimal 2 MB</small>
-                    <section id="progress_loading" class="progress-area"></section>
-                    <section class="uploaded-area"></section>
+
+                    <section class="image-progress-area"></section>
+                    <section class="image-uploaded-area"></section>
                 </div>
 
                 <div class="wrapper">
                     <header>
                         Kirim Video Gudang
                     </header>
-                    <label for="video_path" class="custom-file-upload">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                        <p>
-                            Cari File untuk mengirim video
-                        </p>
-                    </label>
+                    <div class="form">
+                        <label for="video_path" class="custom-file-upload">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>
+                                Cari File untuk mengirim video
+                            </p>
+                            <small>Upload file video dengan ukuran maksimal 20 MB</small>
+                        </label>
+                    </div>
+
                     <input id="video_path" type="file" class="form-control-file" name="video_path" accept="video/*"  hidden required>
-                    <small>Upload file video dengan ukuran maksimal 20 MB</small>
-                    <section id="progress_loading" class="progress-area"></section>
-                    <section class="uploaded-area"></section>
+
+                    <section class="video-progress-area"></section>
+                    <section class="video-uploaded-area"></section>
                 </div><br>
-
-
 
                 <div class="col-12 text-end mt-3">
                     <button type="submit" class="btn btn-primary">Simpan</button>
-                    <button type="reset" class="btn btn-danger" onclick="resetAndScroll()">Reset</button>
+                    <button type="reset" class="btn btn-danger" onclick="reset()">Reset</button>
 
                 </div>
             </div>
 
             </form>
-            <div id="error-msg" style="color: red;"></div>
+            <div id="error-msg" style="color: #EE2B47;"></div>
 
       </section>
 
-    <script src="{{ asset('frontend/js/script.js') }}"></script>
+    <script src="{{ asset('frontend/js/script2.js') }}"></script>
     {{-- <script src="{{ asset('frontend/js/script2.js') }}"></script> --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 

@@ -9,10 +9,10 @@
         <!-- Favicon-->
         <link rel="icon" href="{{ asset('auth/assets/tukuklik.png') }}" type="image/x-icon" />
         <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('frontend/css/style2.css') }}" rel="stylesheet">
+        <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
     </head>
     <body>
         <!-- Navigation-->
@@ -35,7 +35,7 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-danger" type="submit">
+                        <button class="btn btn-outline-danger text-white" type="submit">
                             <i class="bi bi-person-circle me-1"></i>
                             User
                             <!-- <span class="badge bg-danger text-white ms-1 rounded-pill">-></span> -->
@@ -118,7 +118,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-danger mt-auto" href="#">Lihat Detail</a></div>
+                                <div class="text-center"><a class="btn btn-outline-danger mt-auto text-white" href="#">Lihat Detail</a></div>
                             </div>
                         </div>
                     </div>
@@ -149,7 +149,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-danger mt-auto" href="#">Lihat Detail</a></div>
+                                <div class="text-center"><a class="btn btn-outline-danger mt-auto text-white" href="#">Lihat Detail</a></div>
                             </div>
                         </div>
                     </div>
@@ -180,7 +180,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-danger mt-auto" href="#">Lihat Detail</a></div>
+                                <div class="text-center"><a class="btn btn-outline-danger mt-auto text-white" href="#">Lihat Detail</a></div>
                             </div>
                         </div>
                     </div>
@@ -208,7 +208,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-danger mt-auto" href="#">Lihat Detail</a></div>
+                                <div class="text-center"><a class="btn btn-outline-danger mt-auto text-white" href="#">Lihat Detail</a></div>
                             </div>
                         </div>
                     </div>

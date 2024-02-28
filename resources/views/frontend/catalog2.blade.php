@@ -20,14 +20,14 @@
             <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Product image-->
-                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/test1.jpg') }}" alt="..." />
+                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/coba 1.jpg') }}" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Kemeja Kantor</h5>
+                            <h5 class="fw-bolder">Jaket</h5>
                             <!-- Product price-->
-                            Kemeja Kantor Bahan Taipan
+                            Jaket
                         </div>
                     </div>
                     <!-- Product actions-->
@@ -41,12 +41,64 @@
                     <!-- Sale badge-->
                     {{-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div> --}}
                     <!-- Product image-->
-                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/test3.jpg')}}" alt="..." />
+                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/coba 2.jpg')}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Jaket Kantor</h5>
+                            <!-- Product reviews-->
+                            {{-- <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div> --}}
+                            <!-- Product price-->
+                            Jaket Kantor Taslan
+                            {{-- <span class="text-muted text-decoration-line-through">$20.00</span>
+                            $18.00 --}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-danger mt-auto view-details text-white" href="{{ url('frontend/catDetail2') }}">Lihat Detail</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    {{-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div> --}}
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/coba 3.jpg')}}" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
                             <h5 class="fw-bolder">Kaos Jersey</h5>
+                            <!-- Product price-->
+                            {{-- <span class="text-muted text-decoration-line-through">$50.00</span>
+                            $25.00 --}}
+                            Kaos Jersey
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-danger mt-auto view-details text-white" href="{{ url('frontend/catDetail2') }}">Lihat Detail</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/coba 4.jpg')}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Seragam Kantor</h5>
                             <!-- Product reviews-->
                             {{-- <div class="d-flex justify-content-center small text-warning mb-2">
                                 <div class="bi-star-fill"></div>
@@ -56,9 +108,7 @@
                                 <div class="bi-star-fill"></div>
                             </div> --}}
                             <!-- Product price-->
-                            Kaos Jersey Custom
-                            {{-- <span class="text-muted text-decoration-line-through">$20.00</span>
-                            $18.00 --}}
+                            Seragam Kantor
                         </div>
                     </div>
                     <!-- Product actions-->
@@ -72,16 +122,16 @@
                     <!-- Sale badge-->
                     {{-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div> --}}
                     <!-- Product image-->
-                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/test5.jpg')}}" alt="..." />
+                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/coba 5.jpg')}}" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Kaos Katun</h5>
+                            <h5 class="fw-bolder">Baju Polo</h5>
                             <!-- Product price-->
                             {{-- <span class="text-muted text-decoration-line-through">$50.00</span>
                             $25.00 --}}
-                            Kaos Katun
+                            Baju Polo CVC
                         </div>
                     </div>
                     <!-- Product actions-->
@@ -93,22 +143,14 @@
             <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Product image-->
-                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/test7.jpg')}}" alt="..." />
+                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/coba 6.jp')}}g" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Jaket Kantor</h5>
-                            <!-- Product reviews-->
-                            {{-- <div class="d-flex justify-content-center small text-warning mb-2">
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                            </div> --}}
+                            <h5 class="fw-bolder">Baju Polo</h5>
                             <!-- Product price-->
-                            Jaket Kantor
+                            Baju Polo
                         </div>
                     </div>
                     <!-- Product actions-->
@@ -122,54 +164,12 @@
                     <!-- Sale badge-->
                     {{-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div> --}}
                     <!-- Product image-->
-                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/test9.jpg')}}" alt="..." />
+                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/coba 7.jpg')}}" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Baju Batik</h5>
-                            <!-- Product price-->
-                            {{-- <span class="text-muted text-decoration-line-through">$50.00</span>
-                            $25.00 --}}
-                            Baju Batik
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-danger mt-auto view-details text-white" href="{{ url('frontend/catDetail2') }}">Lihat Detail</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Product image-->
-                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/test10.jp')}}g" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Baju Batik</h5>
-                            <!-- Product price-->
-                            Baju Batik
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-danger mt-auto view-details text-white" href="{{ url('frontend/catDetail2') }}">Lihat Detail</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                    {{-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div> --}}
-                    <!-- Product image-->
-                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/test7.jpg')}}" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Jaket Kantor</h5>
+                            <h5 class="fw-bolder">Kaos Custom</h5>
                             <!-- Product reviews-->
                             {{-- <div class="d-flex justify-content-center small text-warning mb-2">
                                 <div class="bi-star-fill"></div>
@@ -181,7 +181,7 @@
                             <!-- Product price-->
                             {{-- <span class="text-muted text-decoration-line-through">$20.00</span>
                             $18.00 --}}
-                            Jaket Kantor
+                            Kaos Custom
                         </div>
                     </div>
                     <!-- Product actions-->
@@ -193,12 +193,12 @@
             <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Product image-->
-                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/test1.jpg')}}" alt="..." />
+                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/coba 8.jpg')}}" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Kemeja Kantor</h5>
+                            <h5 class="fw-bolder">Baju Polo</h5>
                             <!-- Product reviews-->
                             {{-- <div class="d-flex justify-content-center small text-warning mb-2">
                                 <div class="bi-star-fill"></div>
@@ -208,7 +208,115 @@
                                 <div class="bi-star-fill"></div>
                             </div> --}}
                             <!-- Product price-->
-                            Kemeja Kantor Bahan Taipan
+                            Baju Polo Combed
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-danger mt-auto view-details text-white" href="{{ url('frontend/catDetail2') }}">Lihat Detail</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/coba 9.jpg')}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Topi Drill</h5>
+                            <!-- Product reviews-->
+                            {{-- <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div> --}}
+                            <!-- Product price-->
+                            Topi Drill Bordir
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-danger mt-auto view-details text-white" href="{{ url('frontend/catDetail2') }}">Lihat Detail</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/coba 10.jpg')}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Topi Golf</h5>
+                            <!-- Product reviews-->
+                            {{-- <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div> --}}
+                            <!-- Product price-->
+                            Topi Golf Bordir
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-danger mt-auto view-details text-white" href="{{ url('frontend/catDetail2') }}">Lihat Detail</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/coba 11.jpg')}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Topi Dinas</h5>
+                            <!-- Product reviews-->
+                            {{-- <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div> --}}
+                            <!-- Product price-->
+                            Topi Dinas Bordir
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-danger mt-auto view-details text-white" href="{{ url('frontend/catDetail2') }}">Lihat Detail</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{ asset('frontend/img/konveksi/coba 12.jpg')}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Topi Rimba</h5>
+                            <!-- Product reviews-->
+                            {{-- <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div> --}}
+                            <!-- Product price-->
+                            Topi Rimba Sablon
                         </div>
                     </div>
                     <!-- Product actions-->

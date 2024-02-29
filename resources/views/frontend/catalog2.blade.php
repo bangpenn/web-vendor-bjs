@@ -14,7 +14,10 @@
     </div>
 </header>
 <!-- Section-->
+
 <section class="py-5">
+{{-- @isset($categoryProducts) --}}
+    @foreach($categoryProducts as $product)
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <div class="col mb-5">
@@ -25,9 +28,10 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Jaket</h5>
+                            <h5 class="fw-bolder">{{ $product->name }}</h5>
                             <!-- Product price-->
-                            Jaket
+                            {{ $product->name }}
+                            {{ $product->name }}
                         </div>
                     </div>
                     <!-- Product actions-->
@@ -36,6 +40,8 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Sale badge-->
@@ -46,7 +52,7 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Jaket Kantor</h5>
+                            <h5 class="fw-bolder">{{ $product->name }}</h5>
                             <!-- Product reviews-->
                             {{-- <div class="d-flex justify-content-center small text-warning mb-2">
                                 <div class="bi-star-fill"></div>
@@ -56,7 +62,7 @@
                                 <div class="bi-star-fill"></div>
                             </div> --}}
                             <!-- Product price-->
-                            Jaket Kantor Taslan
+                            {{ $product->name }} Taslan
                             {{-- <span class="text-muted text-decoration-line-through">$20.00</span>
                             $18.00 --}}
                         </div>
@@ -67,6 +73,8 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Sale badge-->
@@ -327,6 +335,9 @@
             </div>
         </div>
     </div>
+    @endforeach
+{{-- @endisset --}}
 </section>
+
 
 @endsection

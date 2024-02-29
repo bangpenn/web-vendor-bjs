@@ -14,7 +14,13 @@ class Product extends Model
     // one to one
     public function product_detail()
     {
-        return $this->hasOne('App\Models\ProductDetail', 'products_id');
+        return $this->hasOne(ProductDetail::class, 'products_id', 'id');
+    }
+
+    // many to one
+    public function categories()
+    {
+        return $this->belongsTo(Category::class, 'categories_id', 'id');
     }
 
 }

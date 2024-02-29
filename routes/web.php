@@ -29,9 +29,9 @@ Route::get('/', function () {
 // });
 
 
-Route::get('/catalog2', function () {
-    return view('frontend.catalog2');
-});
+// Route::get('/catalog2', function () {
+//     return view('frontend.catalog2');
+// });
 
 Route::get('/catalog3', function () {
     return view('frontend.catalog3');
@@ -59,9 +59,24 @@ Route::prefix('frontend')->group(function () {
         return view('frontend.home');
     });
 
-    Route::get('/catalog2', function () {
-        return view('frontend.catalog2');
-    })->name('frontend.catalog2');
+    // Route::get('/catalog2', function () {
+    //     return view('frontend.catalog2');
+    // })->name('frontend.catalog2');
+
+    // // Route::get('/frontend/catalog2', 'HomeController@showKonveksi')->name('frontend.catalog2');
+    // Route::get('/frontend/catalog2', [App\Http\Controllers\HomeController::class, 'showCatalog'])->name('catalog2');
+
+
+
+    // Route::get('/frontend/catalog2', [App\Http\Controllers\HomeController::class, 'showKonveksi'])->name('catalog2');
+
+    // Route::get('/frontend/catalog2', [App\Http\Controllers\HomeController::class, 'showSouvenir'])->name('catalog2');
+
+    // Route::get('/frontend/catalog2', [App\Http\Controllers\SouvenirController::class, 'showSouvenir'])->name('catalog2');
+
+
+
+
 
     Route::get('/catalog3', function () {
         return view('frontend.catalog3');
@@ -73,7 +88,7 @@ Route::prefix('frontend')->group(function () {
 
     Route::get('/catDetail3', function () {
         return view('frontend.catDetail3');
-    })->name('frontend.catDetail2');
+    })->name('frontend.catDetail3');
 
     Route::get('/catalog', function () {
         return view('frontend.catalog');
@@ -91,6 +106,16 @@ Route::prefix('frontend')->group(function () {
         return view('frontend.upload');
     })->name('frontend.upload');
 });
+
+// Route::get('/frontend/catalog2', [App\Http\Controllers\SouvenirController::class, 'showSouvenir'])->name('catalog2');
+Route::get('/frontend/catalog/{categoryId}', [App\Http\Controllers\HomeController::class, 'showCategory'])->name('catalog.category');
+
+Route::get('/frontend/catalog/{productId}/productDetail/{productDetailId}', [App\Http\Controllers\HomeController::class, 'showProductDetail'])->name('catalog.product.detail');
+
+
+
+
+
 
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');

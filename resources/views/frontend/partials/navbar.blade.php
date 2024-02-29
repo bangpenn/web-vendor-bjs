@@ -26,10 +26,10 @@
                     Vendor
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ url('frontend/catalog2') }}" >Konveksi</a></li>
-                        <li><a class="dropdown-item" href="{{ url('frontend/form') }}" >Percetakan</a></li>
-                        <li><a class="dropdown-item" href="{{ url('frontend/form') }}" >ATK</a></li>
-                        <li><a class="dropdown-item" href="{{ url('frontend/catalog3') }}" >Souvenir</a></li>
+                        <li><a class="dropdown-item" href="{{ route('catalog.category', 1) }}" >Konveksi</a></li>
+                        <li><a class="dropdown-item" href="{{ route('catalog.category', 2) }}" >Percetakan</a></li>
+                        <li><a class="dropdown-item" href="{{ route('catalog.category', 3) }}" >ATK</a></li>
+                        <li><a class="dropdown-item" href="{{ route('catalog.category', 4) }}" >Souvenir</a></li>
                     </ul>
                     {{-- <a class="nav-link" href="#team">Team</a> --}}
                 </li>

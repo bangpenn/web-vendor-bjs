@@ -7,34 +7,34 @@
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ asset('frontend/img/konveksi/test1.jpg') }}" alt="..." /></div>
+                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ asset('uploads') }}/{{ $productDetail->image }}" alt="..." /></div>
                     <div class="col-md-6">
                         <div class="small mb-1">12-07 | Tukuklik</div>
-                        <h1 class="display-5 fw-bolder">Kemeja Kantor</h1>
+                        <h1 class="display-5 fw-bolder">{{ $productDetail->name }}</h1>
                         <div class="fs-5 mb-3">
                             {{-- <span class="text-decoration-line-through">$45.00</span>
                             <span>$40.00</span> --}}
                             <a href="#" id="linkSpesifikasi" class="product-link">Spesifikasi</a>|
-                            <a href="#" id="linkDeskripsi" class="product-link"> Deskripsi Produk</a>
+                            <a href="#" id="linkDeskripsi" class="product-link">Deskripsi</a>
                         </div>
                         <div id="spesifikasi">
                             <!-- Konten Spesifikasi -->
                             <div class="kontenSpek lead" style="text-align: justify;">
                                 <p>
-                                    Spesifikasi: Kemeja Kantor $45.00 $40.00
+                                    {{ $productDetail->spesifikasi }}
                                 </p>
-                                <ul>
+                                {{-- <ul>
                                     <li>Spesifikasi 1</li>
                                     <li>Spesifikasi 2</li>
                                     <li>Spesifikasi 3</li>
-                                </ul>
+                                </ul> --}}
                             </div>
 
                         </div>
 
                         <div id="deskripsi" style="display: none;">
                             <p class="lead" style="text-align: justify;">
-                                Kemeja kantor dengan bahan taipan adalah pilihan yang populer untuk lingkungan kerja formal. Dikenal karena tampilannya yang profesional dan klasik, kemeja ini terbuat dari bahan ringan dan bernapas yang membuatnya nyaman sepanjang hari. Didesain dengan kerah kemeja kaku dan manset di pergelangan tangan, kemeja taipan mudah dirawat dan cocok untuk berbagai kesempatan di kantor, dari pertemuan formal hingga kegiatan sehari-hari.</p>
+                                {{ $productDetail->deskripsi }}</p>
                         </div>
 
                         <div class="d-flex">
@@ -51,17 +51,18 @@
         <!-- Related items section-->
         <section class="py-5 bg-light">
             <div class="container px-4 px-lg-5 mt-5">
-                <h2 class="fw-bolder mb-4">Related products</h2>
+                <h2 class="fw-bolder">Related products</h2>
+                <hr class="hr mb-4"/>
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top" src="img/konveksi/test3.jpg" alt="..." />
+                            <img class="card-img-top" src="{{ asset('uploads') }}/{{ $productDetail->image }}" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Kaos Jersey</h5>
+                                    <h5 class="fw-bolder">{{ $product->name }}</h5>
                                     <!-- Product reviews-->
                                     {{-- <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -72,7 +73,7 @@
                                     </div>
                                     <!-- Product price--> --}}
                                     {{-- $40.00 - $80.00 --}}
-                                    Kaos Jersey Custom
+                                    {{ $product->name }}
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -86,12 +87,12 @@
                             <!-- Sale badge-->
                             {{-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div> --}}
                             <!-- Product image-->
-                            <img class="card-img-top" src="img/konveksi/test5.jpg" alt="..." />
+                            <img class="card-img-top" src="{{ asset('uploads') }}/{{ $productDetail->image }}" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Kaos Katun</h5>
+                                    <h5 class="fw-bolder">{{ $product->name }}</h5>
                                     <!-- Product reviews-->
                                     {{-- <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -103,7 +104,7 @@
                                     <!-- Product price-->
                                     {{-- <span class="text-muted text-decoration-line-through">$20.00</span>
                                     $18.00 --}}
-                                    Kaos Katun Custom
+                                    {{ $product->name }}
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -117,12 +118,12 @@
                             <!-- Sale badge-->
                             {{-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div> --}}
                             <!-- Product image-->
-                            <img class="card-img-top" src="img/konveksi/test7.jpg" alt="..." />
+                            <img class="card-img-top" src="{{ asset('uploads') }}/{{ $productDetail->image }}" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Jaket Kantor</h5>
+                                    <h5 class="fw-bolder">{{ $product->name }}</h5>
                                     <!-- Product reviews-->
                                     {{-- <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -134,6 +135,7 @@
                                     <!-- Product price-->
                                     {{-- <span class="text-muted text-decoration-line-through">$50.00</span>
                                     $25.00 --}}
+                                    {{ $product->name }}
 
                                 </div>
                             </div>
@@ -146,12 +148,12 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top" src="img/konveksi/test9.jpg" alt="..." />
+                            <img class="card-img-top" src="{{ asset('uploads') }}/{{ $productDetail->image }}" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Baju Batik</h5>
+                                    <h5 class="fw-bolder">{{ $product->name }}</h5>
                                     <!-- Product reviews-->
                                     {{-- <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -162,7 +164,7 @@
                                     </div> --}}
                                     <!-- Product price-->
                                     {{-- $40.00 --}}
-                                    Baju Batik
+                                    {{ $product->name }}
                                 </div>
                             </div>
                             <!-- Product actions-->

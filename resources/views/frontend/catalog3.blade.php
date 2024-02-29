@@ -14,6 +14,7 @@
     </div>
 </header>
 <!-- Section-->
+@foreach($souvenirProducts as $product)
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
@@ -25,8 +26,10 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Agenda Eksklusif A5</h5>
+                            <h5 class="fw-bolder">{{ $product->name }} Agenda Eksklusif A5</h5>
                             <!-- Product price-->
+                            {{ $product->name }}
+                            {{ $product->image }}
                             Agenda Eksklusif A5 AE001
                         </div>
                     </div>
@@ -330,4 +333,7 @@
         </div>
     </div>
 </section>
+
+@endforeach
+
 @endsection

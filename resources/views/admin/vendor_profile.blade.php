@@ -147,122 +147,93 @@
 						<p>Total Sales</p>
 					</span>
 				</li> -->
-			</ul>
+			{{-- </ul> --}}
 
 
 			<div class="table-data">
 				<div class="order">
 					<div class="head">
                         <img src="{{ asset('admin/img/people.png') }}">
-						<h3>{{ $vendor->nama_distributor }} - {{ $vendor->nama_umkm  }}</h3><br>
-
+						<h3>{{ $vendor->nama_distributor }} - {{ $vendor->nama_umkm  }}</h3>
 					</div>
 					<table>
-						<thead>
-							<tr>
-                                <th class="judul-tabel">No.</th>
-								<th class="judul-tabel">Nama Distributor</th>
-                                <th class="judul-tabel">Nama UMKM</th>
-                                <th class="judul-tabel">Alamat Kantor</th>
-								<th class="judul-tabel">Jenis Vendor</th>
-								<th class="judul-tabel">Kategori Vendor</th>
+                            <thead>
+                                <tr>
+                                    <th class="judul-tabel">Alamat Kantor</th>
+                                    <th class="judul-tabel">Kategori Vendor</th>
 
-							</tr>
-						</thead>
-						{{-- <tbody>
-							<tr>
-								<td>
-									<img src="{{ asset('admin/img/people.png') }}">
-									<p>John Doe</p>
-								</td>
-                                <td>PT. Percetakkan</td>
-								<td>Surabaya</td>
-								<td>08192929292</td>
-								<td>Johndoe@mail.com</td>
-                                <td><span class="status completed">Completed</span></td>
-							</tr>
+                                </tr>
+                            </thead>
+                            <tbody>
 
-						</tbody> --}}
-                        <tbody>
+                                <tr>
+                                    <td>{{ $vendor->alamat_distributor }}, {{ $vendor->kota }}, {{ $vendor->provinsi }}, {{ $vendor->kode_pos }}</td>
+                                    <td>{{ $vendor->kategori_vendor }}</td>
+                                </tr>
 
-                            <tr>
-                                <td scope="row"> {{ $vendor->id }} </td>
-                                <td>{{ $vendor->nama_distributor }}</td>
-                                <td>{{ $vendor->nama_umkm  }}</td>
-                                <td>{{ $vendor->alamat_distributor }}, {{ $vendor->kota }}, {{ $vendor->provinsi }}, {{ $vendor->kode_pos }}</td>
+                            </tbody>
 
-                                <td>{{ $vendor->jenis_vendor  }}</td>
-                                <td>{{ $vendor->kategori_vendor }}</td>
-                                <!-- Tambahkan kolom lain sesuai kebutuhan -->
-                            </tr>
 
-                        </tbody>
-					</table>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Gambar</th>
-                                <th>Video</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <img class="image_detail" style="width: 70%; height: 70%; border-radius: 0%;" src="{{ Storage::url($vendor->file_path) }}" alt="Gambar">
-                                </td>
-                                <td>
-                                    <video width="100%" height="100%" controls>
-                                        <source src="{{ Storage::url($vendor->video_path) }}" type="video/mp4">
-                                    </video>
+                            <thead>
+                                <tr>
+                                    <th class="judul-tabel">No. Handphone</th>
+                                    <th class="judul-tabel">Email</th>
 
-                                </td>
-                            </tr>
-                        </tbody>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>{{ $vendor->no_handphone }}</td>
+                                    <td>{{ $vendor->email_distributor }}</td>
+                                </tr>
+
+                            </tbody>
+
+
+                            <thead>
+                                <tr>
+                                    <th class="judul-tabel">Jumlah Stock</th>
+                                    <th class="judul-tabel">Harga</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{ number_format($vendor->jumlah_stock, 0, ',', '.') }}</td>
+                                    <td>{{ number_format($vendor->harga_pricelist, 0, ',', '.') }}</td>
+                                </tr>
+                            </tbody>
+
+                            <thead>
+                                <tr>
+                                    <th>Gambar</th>
+                                    <th>Video</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img class="image_detail" style="width: 70%; height: 70%; border-radius: 0%;" src="{{ Storage::url($vendor->file_path) }}" alt="Gambar">
+                                    </td>
+                                    <td>
+                                        <video width="100%" height="100%" controls>
+                                            <source src="{{ Storage::url($vendor->video_path) }}" type="video/mp4">
+                                        </video>
+
+                                    </td>
+                                </tr>
+                            </tbody>
 
 
                     </table>
 
-                    <!-- Menampilkan Gambar -->
-
-
-
-
 				</div>
-				<!-- <div class="todo">
-					<div class="head">
-						<h3>Todos</h3>
-						<i class='bx bx-plus' ></i>
-						<i class='bx bx-filter' ></i>
-					</div>
-					<ul class="todo-list">
-						<li class="completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="not-completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="not-completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-					</ul>
-				</div> -->
 			</div>
 		</main>
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
-
 
 	<script src="{{ asset('admin/js/script.js') }}"></script>
 </body>

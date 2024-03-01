@@ -112,7 +112,8 @@ Route::get('/frontend/catalog/{categoryId}', [App\Http\Controllers\HomeControlle
 
 Route::get('/frontend/catalog/{productId}/productDetail/{productDetailId}', [App\Http\Controllers\HomeController::class, 'showProductDetail'])->name('catalog.product.detail');
 
-
+// Route::get('/frontend/catalog/{categoryId}', [App\Http\Controllers\HomeController::class, 'showCategory'])->name('catalog.category');
+// Route::get('/frontend/catalog/{productId}/productDetail/{productDetailId}', [App\Http\Controllers\HomeController::class, 'showProductDetail'])->name('catalog.product.detail');
 
 
 

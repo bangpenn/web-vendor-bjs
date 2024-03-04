@@ -55,12 +55,15 @@ html {
 
 body {
 	background: #FFFFFF;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 .section-padding {
 	padding: 100px 0;
 }
 .carousel-item {
-	height: 100vh;
+	/* height: 100vh; */
 	min-height: 300px;
 }
 .carousel-caption {
@@ -90,6 +93,12 @@ body {
         background: rgba(0, 0, 0, 0.555);
         z-index: 1;
     }
+}
+
+.landscape-image {
+    width: 100%; /* Atur lebar gambar agar sesuai dengan lebar elemen induk */
+    height: auto; /* Biarkan tinggi gambar mengikuti proporsi aslinya */
+    object-fit: cover; /* Atur gambar untuk menutupi kotak gambar dengan mempertahankan aspek rasio */
 }
 
 /* Banner */

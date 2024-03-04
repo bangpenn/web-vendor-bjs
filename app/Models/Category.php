@@ -12,7 +12,7 @@ class Category extends Model
     public $table = 'categories';
 
     // one to many
-    public function products()
+    public function product()
     {
         return $this->hasMany(Product::class, 'categories_id', 'id');
     }

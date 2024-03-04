@@ -19,7 +19,8 @@
 	<section id="sidebar">
 		<a href="#" class="brand">
 			<i class='bx bxs-smile'></i><br>
-            <span class="text">Hello, {{ $user->name }}</span>
+            {{-- <span class="text">Hello, {{ $user->name }}</span> --}}
+            <span class="text">Hello, Admin</span>
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
@@ -165,114 +166,6 @@
                                 <th>Action</th>
 							</tr>
 						</thead>
-						{{-- <tbody>
-							<tr>
-								<td>
-									<img src="{{ asset('admin/img/people.png') }}">
-									<p>John Doe</p>
-								</td>
-                                <td>PT. Percetakkan</td>
-								<td>25-01-2024</td>
-								<td>Vendor Percetakkan</td>
-								<td><span class="status completed">Completed</span></td>
-                                <td>
-                                    <a href="{{ url('/admin/dashboard/vendor/profile') }}">
-                                        <i class='bx bx-show'></i>
-                                    </a>
-                                </td>
-							</tr>
-							<tr>
-								<td>
-									<img src="{{ asset('admin/img/people.png') }}">
-									<p>John Doe</p>
-								</td>
-                                <td>PT. Konveksi</td>
-								<td>25-01-2024</td>
-								<td>Vendor Konveksi</td>
-								<td><span class="status pending">Pending</span></td>
-                                <td>
-                                    <a href="{{ url('/admin/dashboard/vendor/profile') }}">
-                                        <i class='bx bx-show'></i>
-                                    </a>
-                                </td>
-							</tr>
-							<tr>
-								<td>
-									<img src="{{ asset('admin/img/people.png') }}">
-									<p>John Doe</p>
-								</td>
-                                <td>PT. Souvenir</td>
-								<td>25-01-2024</td>
-								<td>Vendor Souvenir</td>
-								<td><span class="status process">Process</span></td>
-                                <td>
-                                    <a href="{{ url('/admin/dashboard/vendor/profile') }}">
-                                        <i class='bx bx-show'></i>
-                                    </a>
-                                </td>
-							</tr>
-                            <tr>
-								<td>
-									<img src="{{ asset('admin/img/people.png') }}">
-									<p>John Doe</p>
-								</td>
-                                <td>PT. Percetakkan</td>
-								<td>25-01-2024</td>
-								<td>Vendor Percetakkan</td>
-								<td><span class="status completed">Completed</span></td>
-                                <td>
-                                    <a href="{{ url('/admin/dashboard/vendor/profile') }}">
-                                        <i class='bx bx-show'></i>
-                                    </a>
-                                </td>
-							</tr>
-							<tr>
-								<td>
-									<img src="{{ asset('admin/img/people.png') }}">
-									<p>John Doe</p>
-								</td>
-                                <td>PT. ATK</td>
-								<td>25-01-2024</td>
-								<td>Vendor ATK</td>
-								<td><span class="status pending">Pending</span></td>
-                                <td>
-                                    <a href="{{ url('/admin/dashboard/vendor/profile') }}">
-                                        <i class='bx bx-show'></i>
-                                    </a>
-                                </td>
-							</tr>
-                            <tr>
-								<td>
-									<img src="{{ asset('admin/img/people.png') }}">
-									<p>John Doe</p>
-								</td>
-                                <td>PT Percetakkan</td>
-								<td>25-01-2024</td>
-								<td>Vendor Percetakkan</td>
-								<td><span class="status completed">Completed</span></td>
-                                <td>
-                                    <a href="{{ url('/admin/dashboard/vendor/profile') }}">
-                                        <i class='bx bx-show'></i>
-                                    </a>
-                                </td>
-							</tr>
-							<tr>
-								<td>
-									<img src="{{ asset('admin/img/people.png') }}">
-									<p>John Doe</p>
-								</td>
-                                <td>PT Souvenir</td>
-								<td>25-01-2024</td>
-								<td>Vendor Souvenir</td>
-								<td><span class="status pending">Pending</span></td>
-                                <td>
-                                    <a href="{{ url('/admin/dashboard/vendor/profile') }}">
-                                        <i class='bx bx-show'></i>
-                                    </a>
-                                </td>
-							</tr>
-						</tbody> --}}
-
                         <tbody>
                             @foreach($data as $item)
                                 <tr>

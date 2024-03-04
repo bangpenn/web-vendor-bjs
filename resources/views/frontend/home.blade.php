@@ -5,7 +5,7 @@
 @section('content')
 
       <section id="banner" style="position: relative;">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide container-fluid" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -13,7 +13,7 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="{{ asset('frontend/img/showroom1.jpg') }}" class="d-block w-100" alt="...">
+                <img src="{{ asset('frontend/img/showroom1.jpg') }}" class="d-block w-100 landscape-image" alt="...">
                 <div class="carousel-caption">
                     <h5 class="judul-banner" data-aos="fade-up" data-aos-duration="1000">Kolaborasi yang Menguntungkan</h5>
                     <p class="detail-banner">Di perusahaan kami, kami percaya pada kerjasama yang saling menguntungkan. Bergabunglah dengan jaringan vendor kami dan nikmati peluang kolaborasi yang luas.</p>
@@ -21,7 +21,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="{{ asset('frontend/img/showroom2.jpg') }}" class="d-block w-100" alt="...">
+                <img src="{{ asset('frontend/img/showroom2.jpg') }}" class="d-block w-100 landscape-image" alt="...">
                 <div class="carousel-caption">
                     <h5 class="judul-banner "data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="200">Peluang Pertumbuhan Bersama</h5>
                     <p class="detail-banner">Bergabunglah dengan perusahaan kami untuk mendapatkan peluang pertumbuhan bersama yang tak terbatas.</p>
@@ -29,7 +29,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="{{ asset('frontend/img/showroom3.jpg') }}" class="d-block w-100" alt="...">
+                <img src="{{ asset('frontend/img/showroom3.jpg') }}" class="d-block w-100 landscape-image" alt="...">
                 <div class="carousel-caption">
                   <h5 class="judul-banner" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300">Networking yang Luas dan Peluang Ekspansi</h5>
                     <p class="detail-banner">Dengan bergabung bersama kami, Anda akan mendapatkan akses ke jaringan yang luas dan peluang ekspansi yang tak terbatas.</p>

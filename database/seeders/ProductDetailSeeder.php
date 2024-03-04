@@ -15,19 +15,25 @@ class ProductDetailSeeder extends Seeder
     {
         $product_detail = [
             [
+                'products_id'           => 1,
                 'name'                  => 'Jaket Kantor',
                 'image'                 => 'coba 1.jpg',
-                'spesifikasi'           => 'Material Taslan anti air',
-                'deskripsi'             => 'Jaket Kantor dengan bahan material taslan anti air. Terdapat 2 saku bagian luar dan 1 saku bagian dalam.',
+                'spesifikasi'           => <<<SPEC
+                                            Material Taslan anti air
+                                            Ukuran M, L, XL, XXL
+                                            Terdapat 2 saku bagian Luar dan 1 saku bagian dalam
+                                            Pada bagian bahu dilengkapi spuring
+                                        SPEC,
+                'deskripsi'             =>  'Material Taslan anti air',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
 
             ],
             [
+                'products_id'           => 2,
                 'name'                  => 'Amplop HVS',
                 'image'                 => 'AH 002-2.jpg',
-                'spesifikasi'           => 'Kertas HVS 100 gsm dan Kertas HVS 100 gsm',
-                'deskripsi'             => <<<SPEC
+                'spesifikasi'           => <<<SPEC
                                             Bahan Leather
                                             Ukuran A5
                                             Dimensi 15 x 21 cm ( P x L )
@@ -40,24 +46,44 @@ class ProductDetailSeeder extends Seeder
                                             Berat 465 gr
                                             Packaging Box Ivory
                                         SPEC,
+                'deskripsi'             =>  'Kertas HVS 100 gsm dan Kertas HVS 100 gsm',
 
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
 
             ],
             [
+                'products_id'           => 3,
                 'name'                  => 'Cartridge',
                 'image'                 => 'Cartridge CF276A-2.jpg',
-                'spesifikasi'           => 'Type : Toner Catridge',
-                'deskripsi'             => 'Catridge digunakan pada bebearapa macam tipe printer, seperti HP Laserjet Pro M404dn',
+                'spesifikasi'           => <<<SPEC
+                                            Type : Toner Cartridge
+                                            Colour : Black
+                                            Capacity : 9.000 page
+                                            Berat 1.286gr
+
+                                            Digunakan pada tipe printer berikut :
+                                            HP LaserJet M506
+                                            HP LaserJet M527
+                                            SPEC,
+                'deskripsi'             => 'Type : Toner Catridge',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
 
             ],
             [
+                'products_id'           => 4,
                 'name'                  => 'Agenda Eksklusif',
                 'image'                 => 'AE001_1.jpg',
-                'spesifikasi'           => 'Material Leather Glosy',
+                'spesifikasi'           => <<<SPEC
+                                            Material Leather Glosy
+                                            Isi HVS 100 Lembar
+                                            Ukuran A5
+                                            Dimensi 16 x 21 cm  ( P x L )
+                                            Spiral
+                                            Pengunci Magnet
+                                            Berat 1007 gr
+                                            SPEC,
                 'deskripsi'             => 'Agenda dengan isi HVS 100 Lembar dan berukuran A5',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
@@ -65,9 +91,15 @@ class ProductDetailSeeder extends Seeder
             ],
 
             [
+                'products_id'           => 5,
                 'name'                  => 'Kaos Jersey',
                 'image'                 => 'coba 3.jpg',
-                'spesifikasi'           => 'Bahan Jersey Dri Fit',
+                'spesifikasi'           => <<<SPEC
+                                            Bahan Jersey Dri Fit
+                                            Kualitas Distro
+                                            Ukuran S, M, L, XL, XXL
+                                            Berat 164 g
+                                            SPEC,
                 'deskripsi'             => 'Kaos Jersey Berbahan Dri Fit dan berkualitas Distro',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
@@ -75,9 +107,15 @@ class ProductDetailSeeder extends Seeder
             ],
 
             [
+                'products_id'           => 6,
                 'name'                  => 'Jaket Kantor',
                 'image'                 => 'coba 2.jpg',
-                'spesifikasi'           => 'Material Taslan anti air',
+                'spesifikasi'           => <<<SPEC
+                                                Material Taslan anti air
+                                                Ukuran M, L, XL, XXL
+                                                Terdapat 2 saku bagian Luar dan 1 saku bagian dalam
+                                                Pada bagian bahu dilengkapi spuring
+                                            SPEC,
                 'deskripsi'             => 'Terdapat 2 saku bagian Luar dan 1 saku bagian dalam. Pada bagian bahu dilengkapi spuring',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
@@ -85,85 +123,141 @@ class ProductDetailSeeder extends Seeder
             ],
 
             [
+                'products_id'           => 7,
                 'name'                  => 'Kaos Polo CVC Pique Hexagon',
                 'image'                 => 'coba 5.jpg',
-                'spesifikasi'           => 'Material CVC Pique Hexagon',
+                'spesifikasi'           => <<<SPEC
+                                                Material CVC Pique Hexagon
+                                                Ukuran M, L, XL, XXL
+                                                Rajutan Bercorak Segi 6 (Hexagon)
+                                                Ketebalan 24s
+                                                Dilengkapi Karet dibagian ujung lengan
+                                                Jahitan rantai
+                                                Dilengkapi 2 Kancing
+                                                Berat 263 gr
+                                            SPEC,
                 'deskripsi'             => 'Kaos Polo CVC Pique Rajutan Bercorak Segi 6 (Hexagon)',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
 
             ],
             [
+                'products_id'           => 8,
                 'name'                  => 'Topi Drill',
                 'image'                 => 'coba 9.jpg',
-                'spesifikasi'           => 'Material Drill',
+                'spesifikasi'           => <<<SPEC
+                                                Material Drill
+                                                Ukuran 27 x 18 cm
+                                                Pengait topi model resleting
+                                                Berat 108 gr
+                                            SPEC,
                 'deskripsi'             => 'Topi Material Drill',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
 
             ],
             [
+                'products_id'           => 9,
                 'name'                  => 'Kaos Katun 30s',
                 'image'                 => 'coba 4.jpg',
-                'spesifikasi'           => 'Material Katun 30s/ cotton combed 30s',
+                'spesifikasi'           => <<<SPEC
+                                                Material Katun 30s/ cotton combed 30s
+                                                Kualitas Distro
+                                                Jahit rantai
+                                                Ukuran S, M, L, XL, XXL
+                                                Berat 208 gr
+                                            SPEC,
                 'deskripsi'             => 'Kaos Katun berbahan material katun 30s/ cotton combed 30s',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
 
             ],
             [
+                'products_id'           => 10,
                 'name'                  => 'Topi Rimba',
                 'image'                 => 'coba 12.jpg',
-                'spesifikasi'           => 'Topi Rimba Sablon',
+                'spesifikasi'           => <<<SPEC
+                                                - Bahan topi dari Cotton Ripstop Premium
+                                                - Jahitan topi Woven Bordir
+                                                - Memiliki 4 Ventilasi Udara
+                                                - Tali topi bisa diatur / disesuaikan dengan keinginan
+                                                - Dapat dilipat seperti pouch kecil sehingga aman saat dibawa travelling / travel size
+
+                                                Ukuran topi :
+                                                Lingkar Topi : 50 cm
+                                                Panjang Topi : 32 cm
+                                                Panjang Tali : 48 cm
+                                            SPEC,
                 'deskripsi'             => 'Topi Rimba Sablon',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
 
             ],
             [
+                'products_id'           => 11,
                 'name'                  => 'Kaos Polo Lengan Panjang',
                 'image'                 => 'coba 7.jpg',
-                'spesifikasi'           => 'Material CVC Pique',
+                'spesifikasi'           => <<<SPEC
+                                                Material CVC Pique
+                                                Ukuran M, L, XL, XXL
+                                                Ketebalan 24s
+                                                Dilengkapi Karet dibagian ujung lengan
+                                                Jahitan rantai
+                                                Dilengkapi 2 Kancing
+                                                Berat 263 gr
+                                            SPEC,
                 'deskripsi'             => 'Kaos Polo CVC Pique Lengan Panjang',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
 
             ],
             [
+                'products_id'           => 12,
                 'name'                  => 'Amplop HVS Mika',
                 'image'                 => 'AMH 004-2.jpg',
-                'spesifikasi'           => 'Kertas HVS dan Mika Transparan',
+                'spesifikasi'           => <<<SPEC
+                                                Kertas HVS 100 gsm
+                                                Ukuran 12 x 26 cm
+                                                Terdapat Mika Transparan
+                                                Berat 8 gr
+                                            SPEC,
                 'deskripsi'             => 'Kertas HVS 100 gsm Ukuran 12 x 26 cm dan Terdapat Mika Transparan',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
 
             ],
             [
+                'products_id'           => 13,
                 'name'                  => 'Amplop Samson',
                 'image'                 => 'AMP 001-2.jpg',
-                'spesifikasi'           => 'Kertas Samson 80 gsm',
+                'spesifikasi'           => <<<SPEC
+                                                Kertas Samson 80 gsm
+                                                Ukuran 27 x 40 cm
+                                                Berat 21 gr
+                                            SPEC,
                 'deskripsi'             => 'Kertas Samson 80 gsm dan Ukuran 27 x 40 cm',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
 
             ],
             [
+                'products_id'           => 14,
                 'name'                  => 'Kalendar Meja Landscape',
                 'image'                 => 'KML 002.jpg',
                 'spesifikasi'           => <<<SPEC
-                                        Ukuran : 20 x 20 cm (Potrait)
-                                        Isi 1 Bulan : 13 Lembar / 26 Halaman
-                                        Isi 2 Bulan : 7 Lembar / 14 Halaman
-                                        Bahan : Art Paper 260 gr
-                                        Finishing : Laminasi Doff – Spiral Atas
-                                        Warna : Full Color Printing
-                                        Packaging : Amplop
+                                                Ukuran : 20 x 20 cm (Potrait)
+                                                Isi 1 Bulan : 13 Lembar / 26 Halaman
+                                                Isi 2 Bulan : 7 Lembar / 14 Halaman
+                                                Bahan : Art Paper 260 gr
+                                                Finishing : Laminasi Doff – Spiral Atas
+                                                Warna : Full Color Printing
+                                                Packaging : Amplop
 
-                                        Spesifikasi Tatakan :
-                                        Ukuran : 24 x 24 cm
-                                        Bahan : Hard Cover
-                                        Finishing : Laminasi Doff
-                                        SPEC,
+                                                Spesifikasi Tatakan :
+                                                Ukuran : 24 x 24 cm
+                                                Bahan : Hard Cover
+                                                Finishing : Laminasi Doff
+                                            SPEC,
                 'deskripsi'             => 'Kalendar Meja Landscape',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
@@ -171,50 +265,54 @@ class ProductDetailSeeder extends Seeder
             ],
 
             [
+                'products_id'           => 15,
                 'name'                  => 'Kalender Dinding Spiral Gantung Atas',
                 'image'                 => 'KDSGA 001.jpg',
                 'spesifikasi'           => <<<SPEC
-                                        Ukuran : A3 31 x 47 cm
-                                        Isi 1 Bulan : 13 Lembar / 26 Halaman
-                                        Isi 2 Bulan : 7 Lembar / 14 Halaman
-                                        Bahan : Art Paper 260 gr
-                                        Finishing : Spiral Atas
-                                        Warna : Full Color Printing
-                                        SPEC,
+                                                Ukuran : A3 31 x 47 cm
+                                                Isi 1 Bulan : 13 Lembar / 26 Halaman
+                                                Isi 2 Bulan : 7 Lembar / 14 Halaman
+                                                Bahan : Art Paper 260 gr
+                                                Finishing : Spiral Atas
+                                                Warna : Full Color Printing
+                                             SPEC,
                 'deskripsi'             => 'Kalender Dinding Spiral Gantung Atas',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
 
             ],
             [
+                'products_id'           => 16,
                 'name'                  => 'Leaflet Lipat 3',
                 'image'                 => 'LL3 001.jpg',
                 'spesifikasi'           => <<<SPEC
-                                        Material Art Paper 150 gr
-                                        Ukuran 29,7 x 21 cm
-                                        Laminasi glossy
-                                        Berat 8 gr
-                                        SPEC,
+                                                Material Art Paper 150 gr
+                                                Ukuran 29,7 x 21 cm
+                                                Laminasi glossy
+                                                Berat 8 gr
+                                             SPEC,
                 'deskripsi'             => 'Leaflet Lipat 3',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
 
             ],
             [
+                'products_id'           => 17,
                 'name'                  => 'Leaflet Lipat 4',
                 'image'                 => 'LL4002 1.png',
                 'spesifikasi'           => <<<SPEC
-                                        Material Art Paper 150 gr
-                                        Ukuran 39 x 21 cm
-                                        Laminasi glossy
-                                        Berat 8 gr
-                                        SPEC,
+                                                Material Art Paper 150 gr
+                                                Ukuran 39 x 21 cm
+                                                Laminasi glossy
+                                                Berat 8 gr
+                                              SPEC,
                 'deskripsi'             => 'Leaflet Lipat 4',
                 'created_at'            => date('Y-m-d h:i:s'),
                 'updated_at'            => date('Y-m-d h:i:s'),
 
             ],
             [
+                'products_id'           => 18,
                 'name'                  => 'Agenda Premium ',
                 'image'                 => 'AP001_1.jpg',
                 'spesifikasi'           => <<<SPEC
@@ -236,6 +334,7 @@ class ProductDetailSeeder extends Seeder
 
             ],
             [
+                'products_id'           => 19,
                 'name'                  => 'Agenda Standard',
                 'image'                 => 'AS 003_1.jpg',
                 'spesifikasi'           => <<<SPEC
@@ -256,6 +355,7 @@ class ProductDetailSeeder extends Seeder
 
             ],
             [
+                'products_id'           => 20,
                 'name'                  => 'Alat Set Makan',
                 'image'                 => 'SSG003.jpg',
                 'spesifikasi'           => <<<SPEC
@@ -274,6 +374,7 @@ class ProductDetailSeeder extends Seeder
 
             ],
             [
+                'products_id'           => 21,
                 'name'                  => 'Tatakan Gelas',
                 'image'                 => 'Tatakan Gelas.jpg',
                 'spesifikasi'           => <<<SPEC
@@ -288,6 +389,7 @@ class ProductDetailSeeder extends Seeder
 
             ],
             [
+                'products_id'           => 22,
                 'name'                  => 'Bantal Kotak',
                 'image'                 => 'Bantal Kotak.jpg',
                 'spesifikasi'           => <<<SPEC
@@ -304,6 +406,7 @@ class ProductDetailSeeder extends Seeder
 
             ],
             [
+                'products_id'           => 23,
                 'name'                  => 'Bantal Mobil',
                 'image'                 => 'Bantal Mobil.jpg',
                 'spesifikasi'           => <<<SPEC
@@ -321,6 +424,7 @@ class ProductDetailSeeder extends Seeder
 
             ],
             [
+                'products_id'           => 24,
                 'name'                  => 'Bantal Leher',
                 'image'                 => 'Bantal Leher.jpg',
                 'spesifikasi'           => <<<SPEC
@@ -336,6 +440,7 @@ class ProductDetailSeeder extends Seeder
 
             ],
             [
+                'products_id'           => 25,
                 'name'                  => 'Ballpoint Stainless',
                 'image'                 => 'bolpoint.jpg',
                 'spesifikasi'           => <<<SPEC
@@ -350,6 +455,7 @@ class ProductDetailSeeder extends Seeder
 
             ],
             [
+                'products_id'           => 26,
                 'name'                  => 'Card Holder',
                 'image'                 => 'card holder.jpg',
                 'spesifikasi'           => <<<SPEC
@@ -365,6 +471,7 @@ class ProductDetailSeeder extends Seeder
 
             ],
             [
+                'products_id'           => 27,
                 'name'                  => 'Card Holder',
                 'image'                 => 'card holder 2.jpg',
                 'spesifikasi'           => <<<SPEC
@@ -381,6 +488,7 @@ class ProductDetailSeeder extends Seeder
 
             ],
             [
+                'products_id'           => 28,
                 'name'                  => 'Gantungan Kunci Premium',
                 'image'                 => 'GKP_BARU_1.png',
                 'spesifikasi'           => <<<SPEC
@@ -396,6 +504,7 @@ class ProductDetailSeeder extends Seeder
 
             ],
             [
+                'products_id'           => 29,
                 'name'                  => 'Gantungan Kunci STNK',
                 'image'                 => 'GKST 003-2.jpg',
                 'spesifikasi'           => <<<SPEC
@@ -413,6 +522,7 @@ class ProductDetailSeeder extends Seeder
 
             ],
             [
+                'products_id'           => 30,
                 'name'                  => 'Giftset 2 In',
                 'image'                 => 'Giftset 2 In.jpg',
                 'spesifikasi'           => <<<SPEC
@@ -426,6 +536,7 @@ class ProductDetailSeeder extends Seeder
 
             ],
             [
+                'products_id'           => 31,
                 'name'                  => 'Giftset 3 In',
                 'image'                 => 'Giftset 3 In.jpg',
                 'spesifikasi'           => <<<SPEC
@@ -440,6 +551,7 @@ class ProductDetailSeeder extends Seeder
 
             ],
             [
+                'products_id'           => 32,
                 'name'                  => 'Handuk Sport',
                 'image'                 => 'GKST 003-2.jpg',
                 'spesifikasi'           => <<<SPEC

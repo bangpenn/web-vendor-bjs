@@ -32,9 +32,14 @@
                         </div>
                     </div>
                     <!-- Product actions-->
-                    {{-- <div class="text-center">
-                        <a class="btn btn-outline-danger mt-auto view-details text-white" href="{{ route('catalog.product.detail', ['categoryId' => $category->id, 'productId' => $product->id]) }}">Lihat Detail</a>
-                    </div> --}}
+                    <div class="text-center">
+                        @if(isset($productDetail))
+
+                            <a class="btn btn-outline-danger mt-auto view-details text-white" href="{{ route('catalog.product.detail', ['productId' => $product->id, 'productDetailId' => $product->productDetail->id]) }}">Lihat Detail Produk</a>
+
+                        @endif
+                    </div>
+
                 </div>
             </div>
             @endforeach

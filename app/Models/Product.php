@@ -12,13 +12,13 @@ class Product extends Model
     public $table = 'products';
 
     // one to one
-    public function product_detail()
+    public function productDetail()
     {
         return $this->hasOne(ProductDetail::class, 'products_id', 'id');
     }
 
     // many to one
-    public function categories()
+    public function category()
     {
         return $this->belongsTo(Category::class, 'categories_id', 'id');
     }

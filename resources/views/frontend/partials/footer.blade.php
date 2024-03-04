@@ -11,21 +11,22 @@
             <!-- Left -->
             <!-- Right -->
             <div>
-                <a href="https://www.instagram.com/tukuklik/" class="me-4 text-reset">
-                <i class="bi bi-instagram"></i>
+                <a href="https://www.instagram.com/tukuklik/" target="_blank" class="me-4 text-reset">
+                    <i class="bi bi-instagram"></i>
                 </a>
-                <a href="https://www.tiktok.com/@tukuklik.com" class="me-4 text-reset">
-                <i class="bi bi-tiktok"></i>
+                <a href="https://www.tiktok.com/@tukuklik.com" target="_blank" class="me-4 text-reset">
+                    <i class="bi bi-tiktok"></i>
                 </a>
-                <a href="https://www.facebook.com/tukuklikofficial" class="me-4 text-reset">
-                <i class="bi bi-facebook"></i>
+                <a href="https://www.facebook.com/tukuklikofficial" target="_blank" class="me-4 text-reset">
+                    <i class="bi bi-facebook"></i>
                 </a>
-                <a href="https://www.tukuklik.com/" class="me-4 text-reset">
-                <i class="bi bi-google"></i>
+                <a href="https://www.tukuklik.com/" target="_blank" class="me-4 text-reset">
+                    <i class="bi bi-google"></i>
                 </a>
-                <a href="https://www.linkedin.com/company/tukuklik/about/" class="me-4 text-reset">
-                <i class="bi bi-linkedin"></i>
+                <a href="https://www.linkedin.com/company/tukuklik/about/" target="_blank" class="me-4 text-reset">
+                    <i class="bi bi-linkedin"></i>
                 </a>
+
             </div>
             <!-- Right -->
         </section>
@@ -53,16 +54,16 @@
                             Produk Kami
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">Konveksi</a>
+                            <a href="{{ route('catalog.category', 1) }}" class="text-reset">Konveksi</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Souvenir</a>
+                            <a href="{{ route('catalog.category', 4) }}" class="text-reset">Souvenir</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">ATK</a>
+                            <a href="{{ route('catalog.category', 3) }}" class="text-reset">ATK</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Percetakkan</a>
+                            <a href="{{ route('catalog.category', 2) }}" class="text-reset">Percetakan</a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -76,14 +77,15 @@
                             <a href="{{ url('/') }}" class="text-reset">Beranda</a>
                         </p>
                         <p>
-                            <a href="#partner" class="text-reset">Partner</a>
+                            <a href="{{ url('/') }}#partner" class="text-reset">Partner</a>
                         </p>
                         <p>
-                            <a href="#portofolio" class="text-reset">Produk</a>
+                            <a href="{{ url('/') }}#portofolio" class="text-reset">Produk</a>
                         </p>
                         <p>
-                            <a href="#about" class="text-reset">Tentang</a>
+                            <a href="{{ url('/') }}#about" class="text-reset">Tentang</a>
                         </p>
+
                     </div>
                     <!-- Grid column -->
                     <!-- Grid column -->

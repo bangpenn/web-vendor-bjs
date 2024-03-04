@@ -121,14 +121,6 @@ class ProductSeeder extends Seeder
             ],
             [
                 'categories_id'         => 2,
-                'name'                  => 'Map Putih',
-                'image'                 => 'MAC 003-2.jpg',
-                'created_at'            => date('Y-m-d h:i:s'),
-                'updated_at'            => date('Y-m-d h:i:s'),
-
-            ],
-            [
-                'categories_id'         => 2,
                 'name'                  => 'Kalendar Meja',
                 'image'                 => 'KML 002.jpg',
                 'created_at'            => date('Y-m-d h:i:s'),

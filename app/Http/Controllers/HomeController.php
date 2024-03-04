@@ -37,10 +37,14 @@ class HomeController extends Controller
     public function showCategory($categoryId)
     {
         $categoryProducts = Product::where('categories_id', $categoryId)->get();
+        $category = Category::findOrFail($categoryId);
 
-        $category = Category::where('id', $categoryId)->first();
+        // Misalnya, ambil detail produk pertama dari kategori
+        $productDetail = $categoryProducts->firstOrFail()->productDetail;
 
-        return view('frontend.catalog', compact('categoryProducts', 'category'));
+        // dd($productDetail);
+
+        return view('frontend.catalog', compact('categoryProducts', 'category', 'productDetail'));
     }
 
     public function showProductDetail($productId, $productDetailId)
@@ -54,4 +58,6 @@ class HomeController extends Controller
         // Kemudian, Anda bisa mengirimkan data ke view atau melakukan operasi lain sesuai kebutuhan Anda
         return view('frontend.catDetail2', compact('product', 'productDetail'));
     }
+
+
 }

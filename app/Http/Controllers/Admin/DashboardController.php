@@ -27,19 +27,33 @@ class DashboardController extends Controller
 
     }
 
-    // public function search(Request $request)
-    // {
-    //     $query = $request->input('query');
+    public function search(Request $request)
+    {
+        $keyword = $request->search;
 
-    //     // Lakukan logika pencarian sesuai dengan kebutuhan aplikasi Anda
-    //     $results = Data::where(function($queryBuilder) use ($query) {
-    //         $queryBuilder->where('nama_distributor', 'like', '%'.$query.'%')
-    //                     ->orWhere('nama_umkm', 'like', '%'.$query.'%')
-    //                     ->orWhere('jenis_vendor', 'like', '%'.$query.'%')
-    //                     ->orWhere('kategori_vendor', 'like', '%'.$query.'%');
-    //     })->get();
+        $results = Data::where('nama_distributor', 'like', '%' . $keyword . '%')
+        ->orWhere('nama_umkm', 'like', '%'.$keyword.'%')
+        ->orWhere('jenis_vendor', 'like', '%'.$keyword.'%')
+        ->orWhere('kategori_vendor', 'like', '%'.$keyword.'%')
+        ->orWhere('kota', 'like', '%'.$keyword.'%')
+        ->orWhere('provinsi', 'like', '%'.$keyword.'%')
+        ->get();
+        return view('admin.result', [
+            'keyword' => $keyword,
+            'data' => $results
+        ]);
 
-    //     return view('admin.dashboard', compact('results'));
-    // }
+        // $query = $request->input('search');
+
+        // // Lakukan logika pencarian sesuai dengan kebutuhan aplikasi Anda
+        // $results = Data::where(function($queryBuilder) use ($query) {
+        //     $queryBuilder->where('nama_distributor', 'like', '%'.$query.'%')
+        //                 ->orWhere('nama_umkm', 'like', '%'.$query.'%')
+        //                 ->orWhere('jenis_vendor', 'like', '%'.$query.'%')
+        //                 ->orWhere('kategori_vendor', 'like', '%'.$query.'%');
+        // })->get();
+
+        // return view('admin.result', compact('results'));
+    }
 
 }

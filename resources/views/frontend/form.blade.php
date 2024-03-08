@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ asset('auth/assets/tukuklik.png') }}" type="image/x-icon" />
-    <title>Tukuklik | Form Pendaftaran Vendor</title>
+    <title>BJS | Form Pendaftaran Vendor</title>
 
     {{-- <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet"> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -16,7 +16,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="{{ url('/') }}"><span class="text-danger">Tukuklik</span>Vendor</a>
+          <a class="navbar-brand" href="{{ url('/') }}"><span style="color: #233E8B">BJS</span>Vendor</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -169,7 +169,7 @@
                         Kirim Gambar Hasil Produk
                     </header>
                     <div class="form">
-                        <label for="file_path" class="custom-file-upload">
+                        <label for="image_path" class="custom-file-upload">
                             <i class="fas fa-cloud-upload-alt"></i>
                             <p>
                                 Cari File untuk mengirim gambar
@@ -178,7 +178,7 @@
                         </label>
                     </div>
 
-                    <input id="file_path" type="file"  class="form-control-file" name="file_path" hidden required>
+                    <input id="image_path" type="file"  class="form-control-file" name="image_path" hidden required>
 
                     <section class="image-progress-area"></section>
                     <section class="image-uploaded-area"></section>
@@ -202,7 +202,28 @@
 
                     <section class="video-progress-area"></section>
                     <section class="video-uploaded-area"></section>
-                </div><br>
+                </div>
+
+                <div class="wrapper">
+                    <header>
+                        Kirim File Pricelist / Katalog
+                    </header>
+                    <div class="form">
+                        <label for="file_path" class="custom-file-upload">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>
+                                Cari File untuk mengirim Pricelist / Katalog
+                            </p>
+                            <small>Upload file dengan ukuran maksimal 20 MB</small>
+                        </label>
+                    </div>
+
+                    <input id="file_path" type="file" class="form-control-file" name="file_path" accept="file/*"  hidden required>
+
+                    <section class="file-progress-area"></section>
+                    <section class="file-uploaded-area"></section>
+                </div>
+                <br>
 
                 <div class="col-12 text-end mt-3">
                     <button type="submit" class="btn btn-primary">Simpan</button>

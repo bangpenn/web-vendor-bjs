@@ -120,7 +120,7 @@
 					</ul>
 				</div>
 				<!-- <a href="#" class="btn-download">
-					<i class='bx bxs-cloud-download' ></i>
+
 					<span class="text">Download PDF</span>
 				</a> -->
 			</div>
@@ -214,12 +214,40 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <img class="image_detail" style="width: 70%; height: 70%; border-radius: 0%;" src="{{ Storage::url($vendor->file_path) }}" alt="Gambar">
+                                        <img class="image_detail" style="width: 70%; height: 70%; border-radius: 0%;" src="{{ Storage::url($vendor->image_path) }}" alt="Gambar">
                                     </td>
                                     <td>
-                                        <video width="100%" height="100%" controls>
+                                        <video width="70%" height="70%" controls>
                                             <source src="{{ Storage::url($vendor->video_path) }}" type="video/mp4">
                                         </video>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th>File Katalog</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <style>
+                                                 .download-link {
+                                                    color: #0174BE;
+                                                    font-size: 15px;
+                                                }
+
+                                                .download-link:hover {
+                                                    color: #E21818;
+                                                    font-size: 18px;
+                                                }
+
+                                        </style>
+
+                                        <a class="download-link" style="color: #0174BE" href="{{ Storage::url($vendor->file_path) }}" target="_blank">
+                                            <span><i class='bx bxs-cloud-download'></i></span> &nbsp; Pratinjau File
+                                        </a>
 
                                     </td>
                                 </tr>

@@ -29,8 +29,9 @@ class Data extends Model
         'kategori_vendor',
         'jumlah_stock',
         'harga_pricelist',
-        'file_path',
-        'video_path'
+        'image_path',
+        'video_path',
+        'file_path'
     ];
 
     // Method untuk mendapatkan path lengkap gambar

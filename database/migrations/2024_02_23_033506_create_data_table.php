@@ -25,8 +25,9 @@ return new class extends Migration
             $table->string('kategori_vendor')->nullable();
             $table->integer('jumlah_stock');
             $table->decimal('harga_pricelist', 8, 2);
-            $table->longText('file_path')->nullable();
+            $table->longText('image_path')->nullable();
             $table->longText('video_path')->nullable();
+            $table->longText('file_path')->nullable();
             $table->timestamps();
         });
     }

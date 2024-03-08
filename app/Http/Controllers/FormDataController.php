@@ -20,8 +20,9 @@ class FormDataController extends Controller
             'nama_umkm' => 'required',
             'no_handphone' => 'required',
             'email_distributor' => 'required',
-            'file_path' => 'required|mimes:jpeg,png|max:2048',
-            'video_path' => 'required|mimes:mp4,mov,avi|max:102400'
+            'image_path' => 'required|mimes:jpeg,png|max:2048',
+            'video_path' => 'required|mimes:mp4,mov,avi|max:102400',
+            'file_path' => 'required|file|mimes:pdf,xlsx,xls,doc,docx|max:20480' // maks 2MB
 
         ]);
 
@@ -41,26 +42,53 @@ class FormDataController extends Controller
             $data->harga_pricelist = $request->input('harga_pricelist');
 
             // Penanganan unggahan file
-            if ($request->hasFile('file_path')) {
-                $file = $request->file('file_path');
-                $filePath = $file->store('public/img');
-                $data->file_path = $filePath;
+            if ($request->hasFile('image_path')) {
+                $file = $request->file('image_path');
+                $image_path = $file->store('public/img');
+                $data->image_path = $image_path;
+                if (!$image_path) {
+                    return redirect()->back()->with('error', 'Gagal Menyimpan gambar produk');
+                }
             }
 
             if ($request->hasFile('video_path')) {
                 $file = $request->file('video_path');
                 $video_path = $file->store('public/video');
                 $data->video_path = $video_path;
+                if (!$video_path) {
+                    return redirect()->back()->with('error', 'Gagal Menyimpan video');
+                }
+            }
+            if ($request->hasFile('file_path')) {
+                $file = $request->file('file_path');
+                $file_path = $file->store('public/file');
+                $data->file_path = $file_path;
+                if (!$file_path) {
+                    return redirect()->back()->with('error', 'Gagal Menyimpan file');
+                }
             }
 
             $data->save();
 
             return redirect()->route('form')
-                             ->with('imagePath', $data->file_path)
+                             ->with('imagePath', $data->image_path)
                              ->with('videoPath', $data->video_path)
+                             ->with('videoPath', $data->file_path)
                              ->with('success','Data sukses tersimpan.');
         } catch (\Exception $e) {
+            // Penanganan kesalahan jika penyimpanan data gagal
+            if (isset($image_path)) {
+                Storage::delete($image_path); // Hapus gambar produk jika penyimpanan data gagal
+            }
+            if (isset($video_path)) {
+                Storage::delete($video_path); // Hapus video jika penyimpanan data gagal
+            }
+            if (isset($file_path)) {
+                Storage::delete($file_path); // Hapus file jika penyimpanan data gagal
+            }
             return redirect()->back()->withInput()->withErrors(['error' => 'Gagal menyimpan data.']);
         }
-}
+
+        return redirect()->back()->with('success', 'Data berhasil disimpan!');
+    }
 }

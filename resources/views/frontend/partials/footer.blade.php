@@ -98,7 +98,7 @@
                         <p>
                             <i class="fas fa-envelope me-3"></i>official@tukuklik.com
                         </p>
-                        <p><i class="fas fa-phone me-3"></i> + 62 234 567 88</p>
+                        <p><i class="fas fa-phone me-3"></i> + 62 812 1656 6690</p>
                     </div>
                     <!-- Grid column -->
                 </div>
@@ -107,9 +107,9 @@
         </section>
         <!-- Section: Links  -->
         <!-- Copyright -->
-        <div class="text-center p-4 text-white" style="background-color: #EE2B47;">
+        <div class="text-center p-4 text-white" style="background-color: #153462;">
             © 2024 Copyright:
-            <a class="text-reset fw-bold text-white" href="https://tukuklik.com/">Tukuklik.com</a>
+            <a class="text-reset fw-bold text-white" href="https://tukuklik.com/">CV. Budi Jaya Sentosa</a>
         </div>
         <!-- Copyright -->
     </footer>

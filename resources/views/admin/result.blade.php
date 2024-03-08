@@ -85,7 +85,7 @@
 			<a href="#" class="nav-link">Categories</a>
 			<form action="{{ route('admin.search') }}" method="GET">
 				<div class="form-input">
-					<input type="search" placeholder="Search...">
+					<input type="search" name="search" placeholder="Search...">
 					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 				</div>
 			</form>
@@ -105,44 +105,19 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Dashboard</h1>
+					<h1>Hasil Pencarian dari {{ $keyword }}</h1>
 					<ul class="breadcrumb">
 						<li>
-							<a href="#">Dashboard</a>
+							<a href="{{ url('/admin/dahsboard') }}">Dashboard</a>
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a class="active" href="#">Home</a>
+							<a class="active" href="{{ route('admin.dashboard') }}">Home</a>
 						</li>
 					</ul>
 				</div>
 
 			</div>
-
-			<ul class="box-info">
-				<li>
-					<i class='bx bxs-calendar-check' ></i>
-					<span class="text">
-						<h3>{{ $totalVendors }}</h3>
-						<p>New Vendor</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-group' ></i>
-					<span class="text">
-						<h3 id="count">1834</h3>
-						<p>Visitors</p>
-					</span>
-				</li>
-				<!-- <li>
-					<i class='bx bxs-dollar-circle' ></i>
-					<span class="text">
-						<h3>$2543</h3>
-						<p>Total Sales</p>
-					</span>
-				</li> -->
-			</ul>
-
 
 			<div class="table-data">
 				<div class="order">
@@ -168,22 +143,22 @@
 						</thead>
                         <tbody>
                             @foreach($data as $item)
-                                <tr>
-                                    <td scope="row">{{ $item->id }}</td>
-                                    <td>{{ $item->nama_distributor }}</td>
-                                    <td>{{ $item->nama_umkm }}</td>
-                                    <td>{{ $item->jenis_vendor }}</td>
-                                    <td>{{ $item->kategori_vendor }}</td>
+                            <tr>
+                                <td scope="row">{{ $item->id }}</td>
+                                <td>{{ $item->nama_distributor }}</td>
+                                <td>{{ $item->nama_umkm }}</td>
+                                <td>{{ $item->jenis_vendor }}</td>
+                                <td>{{ $item->kategori_vendor }}</td>
 
-                                    <td>{{ $item->kota }}</td>
-                                    <td>{{ $item->provinsi }}</td>
-                                    <td style="text-align: center">
-                                        <a href="{{ url('/admin/vendor_profile/'.$item->id) }}">
-                                            <i class='bx bx-show'></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            @endforeach
+                                <td>{{ $item->kota }}</td>
+                                <td>{{ $item->provinsi }}</td>
+                                <td style="text-align: center">
+                                    <a href="{{ url('/admin/vendor_profile/'.$item->id) }}">
+                                        <i class='bx bx-show'></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
                         </tbody>
 					</table>
 

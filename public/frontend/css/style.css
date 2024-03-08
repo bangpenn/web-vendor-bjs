@@ -63,7 +63,7 @@ body {
 	padding: 100px 0;
 }
 .carousel-item {
-	/* height: 100vh; */
+	height: 100vh;
 	min-height: 300px;
 }
 .carousel-caption {
@@ -480,7 +480,7 @@ body {
 }
 
 #form-vendor .wrapper{
-    width: 430px;
+    width: 400px;
     padding: 30px;
     background: #fff;
     border-radius: 5px;
@@ -526,7 +526,7 @@ body {
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
@@ -771,5 +771,9 @@ body {
     color: #EE2B47; /* Warna teks saat tautan sedang diklik */
     font-weight: bold; /* Tebal teks saat tautan sedang diklik */
     text-decoration: underline; /* Garis bawah saat tautan sedang diklik */
+  }
+
+  .text-danger {
+    color: #233E8B !important;
   }
 

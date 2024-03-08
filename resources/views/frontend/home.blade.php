@@ -62,7 +62,7 @@
                     Partnership
                 </h2>
                 <p class="display-6 mt-lg-2" style="font-size: 16px" data-aos="fade" data-aos-duration="500">
-                    Tukuklik.com telah terdaftar dan terkualifikasi pada Layanan Pengadaan Secara Elektronik (LPSE) dan Sistem Informasi Pengadaan Barang/Jasa Pemerintah (SIKaP), serta menjadi mitra resmi
+                    CV. Budi Jaya Santosa telah terdaftar dan terkualifikasi pada Layanan Pengadaan Secara Elektronik (LPSE) dan Sistem Informasi Pengadaan Barang/Jasa Pemerintah (SIKaP), serta menjadi mitra resmi
                     E-Catalogue, Toko Daring, SIMPeL Kemenkeu, dan PaDI UMKM.
                 </p>
             </div>
@@ -107,7 +107,7 @@
 
 
        <!-- portfolio strats -->
-       <section id="portfolio" class="portfolio section-padding" style="position: relative; background-color: #EE2B47">
+       <section id="portfolio" class="portfolio section-padding" style="position: relative; background-color: #263159">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -129,7 +129,7 @@
                           </div>
                             <h3 class="card-title">Konveksi</h3>
                             <p class="lead">Ingin bergabung sebagai vendor Konveksi? Klik tombol di bawah untuk bergabung bersama kami!</p>
-                            <a href="{{ url('frontend/form') }}"class="btn btn-danger text-white">Daftar</a>
+                            <a href="{{ route('catalog.category', 1) }}"class="btn btn-danger text-white">Lihat Contoh Produk</a>
                         </div>
                     </div>
                 </div>
@@ -142,7 +142,7 @@
                           </div>
                             <h3 class="card-title">ATK</h3>
                             <p class="lead">Ingin bergabung sebagai vendor ATK? Klik tombol di bawah untuk bergabung bersama kami!</p>
-                            <a href="{{ url('frontend/form') }}"class="btn btn-danger text-white">Daftar</a>
+                            <a href="{{ route('catalog.category', 3) }}"class="btn btn-danger text-white">Lihat Contoh Produk</a>
                         </div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
                           </div>
                             <h3 class="card-title">Percetakkan</h3>
                             <p class="lead">Ingin bergabung sebagai vendor Percetakan? Klik tombol di bawah untuk bergabung bersama kami!</p>
-                            <a href="{{ url('frontend/form') }}"class="btn btn-danger text-white">Daftar</a>
+                            <a  href="{{ route('catalog.category', 2) }}"class="btn btn-danger text-white">Lihat Contoh Produk</a>
                         </div>
                     </div>
                 </div>
@@ -170,7 +170,7 @@
                           </div>
                             <h3 class="card-title">Souvenir</h3>
                             <p class="lead">Ingin bergabung sebagai vendor Souvenir? Klik tombol di bawah untuk bergabung bersama kami!</p>
-                            <a href="{{ url('frontend/form') }}"class="btn btn-danger text-white">Daftar</a>
+                            <a href="{{ route('catalog.category', 4) }}" class="btn btn-danger text-white">Lihat Contoh Produk</a>
                         </div>
                     </div>
                 </div>

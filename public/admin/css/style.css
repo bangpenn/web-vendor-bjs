@@ -400,7 +400,7 @@ body {
 	color: var(--dark);
 }
 #content main .box-info li .text p {
-	color: var(--dark);	
+	color: var(--dark);
 }
 
 
@@ -452,7 +452,7 @@ body {
 }
 #content main .table-data .order table th {
 	padding-bottom: 12px;
-	font-size: 13px;
+	font-size: 18px;
 	text-align: left;
 	border-bottom: 1px solid var(--grey);
 }
@@ -475,7 +475,7 @@ body {
 	background: var(--grey);
 }
 #content main .table-data .order table tr td .status {
-	font-size: 10px;
+	font-size: 16px;
 	padding: 6px 16px;
 	color: var(--light);
 	border-radius: 20px;

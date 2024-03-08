@@ -28,7 +28,8 @@ class VendorController extends Controller
             // Data vendor ditemukan
             $imagePath = $vendor->image;
             $videoPath = $vendor->video;
-            return view('admin.vendor_profile', compact('vendor', 'imagePath', 'videoPath'));
+            $filePath = $vendor->file;
+            return view('admin.vendor_profile', compact('vendor', 'imagePath', 'videoPath', 'filePath'));
         } else {
             // Data vendor tidak ditemukan, lakukan penanganan yang sesuai
             return redirect()->back()->with('error', 'Data vendor tidak ditemukan.');

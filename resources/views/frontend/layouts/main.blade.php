@@ -6,7 +6,7 @@
 
 
 
-    <title>@yield('title') | Tukuklik Vendor</title>
+    <title>@yield('title') | BJS Vendor</title>
 
 
     @stack('before-style')

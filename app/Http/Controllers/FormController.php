@@ -31,7 +31,8 @@ class FormController extends Controller
             'jumlah_stock' => 'required|integer',
             'harga_pricelist' => 'required|numeric',
             'gambar_produk' => 'image|max:2048', // maks 2MB
-            'video' => 'mimetypes:video/mp4/max:20480' // maks 20MB
+            'video' => 'mimetypes:video/mp4/max:20480', // maks 20MB
+            'file' => 'required|file|mimes:pdf,xlsx,xls,doc,docx|max:2048' // maks 2MB
 
         ]);
 
@@ -40,8 +41,14 @@ class FormController extends Controller
             $gambar_produk = $request->file('gambar_produk')->store('public/gambar_produk');
         }
 
+        // Simpan video
         if ($request->hasFile('video')) {
             $video = $request->file('video')->store('public/video');
+        }
+
+        // Simpan file
+        if ($request->hasFile('file')) {
+            $file = $request->file('file')->store('public/file');
         }
 
         // Simpan data ke dalam database
@@ -59,7 +66,8 @@ class FormController extends Controller
             'jumlah_stock' => $validatedData['jumlah_stock'],
             'harga_pricelist' => $validatedData['harga_pricelist'],
             'gambar_produk' => $gambar_produk ?? null,
-            'video' => $video ?? null
+            'video' => $video ?? null,
+            'file' => $file ?? null
         ]);
 
         return redirect()->back()->with('success', 'Data berhasil disimpan!');

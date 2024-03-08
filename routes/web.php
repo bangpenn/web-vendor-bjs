@@ -133,7 +133,7 @@ Route::prefix('admin')->group(function () {
 
 });
 
-Route::get('/admin/dashboard/search', [DashboardController::class, 'search'])->name('admin.dashboard.search');
+Route::get('/admin/search', [DashboardController::class, 'search'])->name('admin.search');
 
 
 
@@ -151,6 +151,7 @@ Route::post('/frontend/form/store', [FormDataController::class, 'store'])->name(
 
 Route::post('/frontend/form/store/img', [FormDataController::class, 'storeImage'])->name('store.image');
 Route::post('/frontend/form/store/video', [FormDataController::class, 'storeVideo'])->name('store.video');
+Route::post('/frontend/form/store/file', [FormDataController::class, 'storeFile'])->name('store.file');
 
 
 // Login

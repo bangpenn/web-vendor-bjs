@@ -91,16 +91,20 @@ document.addEventListener("DOMContentLoaded", function () {
     populateKategoriVendorOptions(jenisVendorRadios[0].value);
 });
 
-const fileInput = document.getElementById("file_path");
+const imageInput = document.getElementById("image_path");
 const videoInput = document.getElementById("video_path");
+const fileInput = document.getElementById("file_path");
+
 const imageProgressArea = document.querySelector(".image-progress-area");
 const imageUploadedArea = document.querySelector(".image-uploaded-area");
 const videoProgressArea = document.querySelector(".video-progress-area");
 const videoUploadedArea = document.querySelector(".video-uploaded-area");
+const fileProgressArea = document.querySelector(".file-progress-area");
+const fileUploadedArea = document.querySelector(".file-uploaded-area");
 
 
-fileInput.addEventListener("change", () => {
-    let file = fileInput.files[0];
+imageInput.addEventListener("change", () => {
+    let file = imageInput.files[0];
     if (file) {
         let fileName = file.name;
         if (fileName.length >= 12) {
@@ -123,9 +127,31 @@ videoInput.addEventListener("change", () => {
     }
 });
 
+fileInput.addEventListener("change", () => {
+    let file = fileInput.files[0];
+    if (file) {
+        let fileName = file.name;
+        if (fileName.length >= 12) {
+            let splitName = fileName.split('.');
+            fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
+        }
+        uploadFile(fileName, file, 'file');
+    }
+});
+
 function uploadFile(name, file, type) {
     let xhr = new XMLHttpRequest();
-    let url = type === 'image' ? '/frontend/form/store/img' : '/frontend/form/store/video';
+    // let url = type === 'image' ? '/frontend/form/store/img' : (type === 'video' ? '/frontend/form/store/video' : '/frontend/form/store/file');
+    let url = '';
+
+    if (type === 'image') {
+        url = '/frontend/form/store/img';
+    } else if (type === 'video') {
+        url = '/frontend/form/store/video';
+    } else {
+        url = '/frontend/form/store/file';
+    }
+
     xhr.open("POST", url);
     xhr.upload.addEventListener("progress", ({ loaded, total }) => {
         let fileLoaded = Math.floor((loaded / total) * 100);
@@ -148,9 +174,12 @@ function uploadFile(name, file, type) {
         if (type === 'image') {
             imageUploadedArea.classList.add("onprogress");
             imageProgressArea.innerHTML = progressHTML;
-        } else {
+        } else if (type === 'video') {
             videoUploadedArea.classList.add("onprogress");
             videoProgressArea.innerHTML = progressHTML;
+        } else {
+            fileUploadedArea.classList.add("onprogress");
+            fileProgressArea.innerHTML = progressHTML;
         }
 
         if (loaded === total) {
@@ -170,7 +199,7 @@ function uploadFile(name, file, type) {
                                     </li>`;
                 imageUploadedArea.classList.remove("onprogress");
                 imageUploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
-            } else {
+            } else if (type === 'video') {
                 videoProgressArea.innerHTML = "";
                 let uploadedHTML = `<li class="row">
                                         <div class="content">
@@ -186,6 +215,22 @@ function uploadFile(name, file, type) {
                                     </li>`;
                 videoUploadedArea.classList.remove("onprogress");
                 videoUploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
+            } else {
+                fileProgressArea.innerHTML = "";
+                let uploadedHTML = `<li class="row">
+                                        <div class="content">
+                                            <i class="fas fa-file-alt"></i>
+                                            <div class="content">
+                                                <div class="details">
+                                                    <span class="name">${name} . Uploaded</span>
+                                                    <span class="size">${fileSize}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <i class="fas fa-check"></i>
+                                    </li>`;
+                fileUploadedArea.classList.remove("onprogress");
+                fileUploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
             }
         }
     });

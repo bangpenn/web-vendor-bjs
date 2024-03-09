@@ -40,6 +40,18 @@
                   <form wire:submit.prevent="loginUser">
                     <p>Silahkan Login dengan akun anda</p>
 
+                    @if(Session::has("success"))
+                        <p class="alert alert-sucess my-2">
+                            {{ Session::get("success") }}
+                        </p>
+                    @endif
+
+                    @if($error)
+                        <p class="alert alert-danger my-2">
+                            {{ $error }}
+                        </p>
+                    @endif
+
                     <div class="form-outline mb-4 ">
                         <input type="email" id="email" class="form-control @error('email') is-invalid @enderror" placeholder="Phone number or email address" wire:model.defer="email"/>
                         <label class="form-label" for="email">Email</label>

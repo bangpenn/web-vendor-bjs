@@ -35,8 +35,15 @@ class Register extends Component
             'password' => bcrypt($this->password),
         ]);
 
-        Auth::login($user, true);
-        event(new Registered($user));
-        return redirect()->to(RouteServiceProvider::HOME);
+        if($user){
+            session()->flash('success', 'You are registered successfully!');
+            return redirect(route("login"));
+        }else{
+            return $this->error = "Something went wrong!";
+         };
+
+        // Auth::login($user, true);
+        // event(new Registered($user));
+        // return redirect()->to(RouteServiceProvider::HOME);
     }
 }

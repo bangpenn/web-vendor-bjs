@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\RateLimiter;
 
 class Login extends Component
 {
+    public $error = '';
     public $email, $password, $remember;
     public function render()
     {
@@ -45,6 +46,7 @@ class Login extends Component
             return null;
         }
 
-        return redirect()->to(RouteServiceProvider::HOME);
+        // return redirect()->to(RouteServiceProvider::HOME);
+        return redirect()->to('/admin/dashboard');
     }
 }

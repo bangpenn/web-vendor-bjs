@@ -104,40 +104,51 @@ const fileUploadedArea = document.querySelector(".file-uploaded-area");
 
 
 imageInput.addEventListener("change", () => {
-    let file = imageInput.files[0];
-    if (file) {
-        let fileName = file.name;
-        if (fileName.length >= 12) {
-            let splitName = fileName.split('.');
-            fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
-        }
-        uploadFile(fileName, file, 'image');
-    }
+
+    checkSize("image_path");
 });
 
 videoInput.addEventListener("change", () => {
-    let file = videoInput.files[0];
-    if (file) {
-        let fileName = file.name;
-        if (fileName.length >= 12) {
-            let splitName = fileName.split('.');
-            fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
-        }
-        uploadFile(fileName, file, 'video');
-    }
+
+    checkSize("video_path");
 });
 
 fileInput.addEventListener("change", () => {
-    let file = fileInput.files[0];
-    if (file) {
-        let fileName = file.name;
-        if (fileName.length >= 12) {
-            let splitName = fileName.split('.');
-            fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
-        }
-        uploadFile(fileName, file, 'file');
-    }
+
+    checkSize("file_path");
 });
+
+function checkSize(inputId) {
+    var inputElement = document.getElementById(inputId);
+    var fileLimit = 25000; // Limit ukuran file (dalam kilobita) yang diizinkan
+    var files = inputElement.files; // Ini merupakan array
+    var fileSize = files[0].size; // Ukuran file dalam byte
+    var fileSizeInKB = fileSize / 1024; // Konversi ukuran file dari byte ke kilobyte
+
+    if (fileSizeInKB > fileLimit) {
+        // Menggunakan SweetAlert untuk menampilkan pemberitahuan jika ukuran file terlalu besar
+        Swal.fire({
+            title: 'Warning!',
+            text: 'Ukuran file terlalu besar. Maksimal 20 MB yang diizinkan.',
+            icon: 'warning',
+            confirmButtonText: 'OK'
+          });
+
+        // Mengosongkan input file
+        inputElement.value = "";
+    } else {
+        // Jika ukuran file sesuai batas, maka lanjutkan proses upload
+        let file = files[0];
+        if (file) {
+            let fileName = file.name;
+            if (fileName.length >= 12) {
+                let splitName = fileName.split('.');
+                fileName = splitName[0].substring(0, 12) + "... ." + splitName[1];
+            }
+            uploadFile(fileName, file, inputId === "image_path" ? 'image' : (inputId === "video_path" ? 'video' : 'file'));
+        }
+    }
+}
 
 function uploadFile(name, file, type) {
     let xhr = new XMLHttpRequest();
@@ -238,13 +249,4 @@ function uploadFile(name, file, type) {
     let formData = new FormData();
     formData.append('file', file);
     xhr.send(formData);
-}
-function reset() {
-    // Mengakses formulir berdasarkan ID atau kelas
-    var form = document.getElementById('form-vendor');
-    // Mengatur ulang nilai-nilai input dalam formulir
-    form.reset();
-
-    // // Mengatur scroll halaman kembali ke atas
-    // window.scrollTo({ top: 0, behavior: 'smooth' });
 }

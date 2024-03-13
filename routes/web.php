@@ -5,6 +5,7 @@ use App\Livewire\Auth\Register;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FormDataController;
 use App\Http\Controllers\Admin\VendorController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -163,3 +164,6 @@ route::middleware('guest')->group(function(){
 });
 
 Route::get('/frontend/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('contact-us', [ContactController::class, 'index']);
+Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');

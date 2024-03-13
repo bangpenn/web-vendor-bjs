@@ -254,25 +254,41 @@
                     </div>
                 </div>
             </div>
+
+            @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{Session::get('success')}}
+                </div>
+            @endif
 			<div class="row m-0">
 				<div class="col-md-12 p-0 pt-4 pb-4">
-					<form action="#" class="bg-light p-4 m-auto">
+					<form method="POST" action="{{ route('contact.us.store') }}" id="contactUSForm" class="bg-light p-4 m-auto">
+                        {{ csrf_field() }}
 						<div class="row">
 							<div class="col-md-12">
 								<div class="mb-3">
-									<input class="form-control" placeholder="Full Name" required="" type="text">
+									<input class="form-control" name="name" placeholder="Full Name" required="" type="text" value="{{ old('name') }}">
+                                        @if ($errors->has('name'))
+                                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                                        @endif
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="mb-3">
-									<input class="form-control" placeholder="Email" required="" type="email">
+									<input class="form-control" name="email" placeholder="Email" required="" type="email" value="{{ old('email') }}">
+                                        @if ($errors->has('email'))
+                                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                                        @endif
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="mb-3">
-									<textarea class="form-control" placeholder="Message" required="" rows="3"></textarea>
+									<textarea class="form-control" name="message" placeholder="Message" required="" rows="3">{{ old('message') }}</textarea>
+                                        @if ($errors->has('message'))
+                                            <span class="text-danger">{{ $errors->first('message') }}</span>
+                                        @endif
 								</div>
-							</div><button class="btn btn-lg btn-block mt-3 text-white" type="button" style="background-color: #EE2B47">Kirim Sekarang</button>
+							</div><button class="btn btn-lg btn-block btn-submit mt-3 text-white" type="button" style="background-color: #EE2B47">Kirim Sekarang</button>
 						</div>
 					</form>
 				</div>

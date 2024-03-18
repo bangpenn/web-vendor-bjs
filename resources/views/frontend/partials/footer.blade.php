@@ -40,7 +40,7 @@
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            <img src="{{ asset('auth/assets/tukuklik.png') }}"alt="Tukuklik" width="24" height="24"/> Tukuklik
+                            <img src="{{ asset('auth/assets/Logo CV BJS.webp') }}"alt="logo BJS" width="120" height="40"/>
                         </h6>
                         <p>
                             Bergabunglah dan menjadi mitra kami dalam menjelajahi ekspansi tanpa batas.
@@ -96,7 +96,7 @@
                             <i class="fas fa-home me-3"></i> Jl. Bangah Jaya Indah XI No.2, Kec. Gedangan Kab Sidoarjo Jawa Timur
                         </p>
                         <p>
-                            <i class="fas fa-envelope me-3"></i>official@tukuklik.com
+                            <i class="fas fa-envelope me-3"></i>official@bjs.com
                         </p>
                         <p><i class="fas fa-phone me-3"></i> + 62 812 1656 6690</p>
                     </div>

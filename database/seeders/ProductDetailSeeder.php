@@ -17,7 +17,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 1,
                 'name'                  => 'Jaket Kantor',
-                'image'                 => 'coba 1.jpg',
+                'image'                 => 'coba 1.webp',
                 'spesifikasi'           => <<<SPEC
                                             Material Taslan anti air
                                             Ukuran M, L, XL, XXL
@@ -32,7 +32,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 2,
                 'name'                  => 'Amplop HVS',
-                'image'                 => 'AH 002-2.jpg',
+                'image'                 => 'AH 002-2.webp',
                 'spesifikasi'           => <<<SPEC
                                             Bahan Leather
                                             Ukuran A5
@@ -55,7 +55,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 3,
                 'name'                  => 'Cartridge',
-                'image'                 => 'Cartridge CF276A-2.jpg',
+                'image'                 => 'Cartridge CF276A-2.webp',
                 'spesifikasi'           => <<<SPEC
                                             Type : Toner Cartridge
                                             Colour : Black
@@ -74,7 +74,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 4,
                 'name'                  => 'Agenda Eksklusif',
-                'image'                 => 'AE001_1.jpg',
+                'image'                 => 'AE001_1.webp',
                 'spesifikasi'           => <<<SPEC
                                             Material Leather Glosy
                                             Isi HVS 100 Lembar
@@ -93,7 +93,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 5,
                 'name'                  => 'Kaos Jersey',
-                'image'                 => 'coba 3.jpg',
+                'image'                 => 'coba 3.webp',
                 'spesifikasi'           => <<<SPEC
                                             Bahan Jersey Dri Fit
                                             Kualitas Distro
@@ -109,7 +109,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 6,
                 'name'                  => 'Jaket Kantor',
-                'image'                 => 'coba 2.jpg',
+                'image'                 => 'coba 2.webp',
                 'spesifikasi'           => <<<SPEC
                                                 Material Taslan anti air
                                                 Ukuran M, L, XL, XXL
@@ -125,7 +125,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 7,
                 'name'                  => 'Kaos Polo CVC Pique Hexagon',
-                'image'                 => 'coba 5.jpg',
+                'image'                 => 'coba 5.webp',
                 'spesifikasi'           => <<<SPEC
                                                 Material CVC Pique Hexagon
                                                 Ukuran M, L, XL, XXL
@@ -144,7 +144,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 8,
                 'name'                  => 'Topi Drill',
-                'image'                 => 'coba 9.jpg',
+                'image'                 => 'coba 9.webp',
                 'spesifikasi'           => <<<SPEC
                                                 Material Drill
                                                 Ukuran 27 x 18 cm
@@ -159,7 +159,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 9,
                 'name'                  => 'Kaos Katun 30s',
-                'image'                 => 'coba 4.jpg',
+                'image'                 => 'coba 4.webp',
                 'spesifikasi'           => <<<SPEC
                                                 Material Katun 30s/ cotton combed 30s
                                                 Kualitas Distro
@@ -175,7 +175,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 10,
                 'name'                  => 'Topi Rimba',
-                'image'                 => 'coba 12.jpg',
+                'image'                 => 'coba 12.webp',
                 'spesifikasi'           => <<<SPEC
                                                 - Bahan topi dari Cotton Ripstop Premium
                                                 - Jahitan topi Woven Bordir
@@ -196,7 +196,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 11,
                 'name'                  => 'Kaos Polo Lengan Panjang',
-                'image'                 => 'coba 7.jpg',
+                'image'                 => 'coba 7.webp',
                 'spesifikasi'           => <<<SPEC
                                                 Material CVC Pique
                                                 Ukuran M, L, XL, XXL
@@ -214,7 +214,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 12,
                 'name'                  => 'Amplop HVS Mika',
-                'image'                 => 'AMH 004-2.jpg',
+                'image'                 => 'AMH 004-2.webp',
                 'spesifikasi'           => <<<SPEC
                                                 Kertas HVS 100 gsm
                                                 Ukuran 12 x 26 cm
@@ -229,7 +229,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 13,
                 'name'                  => 'Amplop Samson',
-                'image'                 => 'AMP 001-2.jpg',
+                'image'                 => 'AMP 001-2.webp',
                 'spesifikasi'           => <<<SPEC
                                                 Kertas Samson 80 gsm
                                                 Ukuran 27 x 40 cm
@@ -243,7 +243,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 14,
                 'name'                  => 'Kalendar Meja Landscape',
-                'image'                 => 'KML 002.jpg',
+                'image'                 => 'KML 002.webp',
                 'spesifikasi'           => <<<SPEC
                                                 Ukuran : 20 x 20 cm (Potrait)
                                                 Isi 1 Bulan : 13 Lembar / 26 Halaman
@@ -267,7 +267,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 15,
                 'name'                  => 'Kalender Dinding Spiral Gantung Atas',
-                'image'                 => 'KDSGA 001.jpg',
+                'image'                 => 'KDSGA 001.webp',
                 'spesifikasi'           => <<<SPEC
                                                 Ukuran : A3 31 x 47 cm
                                                 Isi 1 Bulan : 13 Lembar / 26 Halaman
@@ -284,7 +284,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 16,
                 'name'                  => 'Leaflet Lipat 3',
-                'image'                 => 'LL3 001.jpg',
+                'image'                 => 'LL3 001.webp',
                 'spesifikasi'           => <<<SPEC
                                                 Material Art Paper 150 gr
                                                 Ukuran 29,7 x 21 cm
@@ -299,7 +299,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 17,
                 'name'                  => 'Leaflet Lipat 4',
-                'image'                 => 'LL4002 1.png',
+                'image'                 => 'LL4002 1.webp',
                 'spesifikasi'           => <<<SPEC
                                                 Material Art Paper 150 gr
                                                 Ukuran 39 x 21 cm
@@ -314,7 +314,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 18,
                 'name'                  => 'Agenda Premium ',
-                'image'                 => 'AP001_1.jpg',
+                'image'                 => 'AP001_1.webp',
                 'spesifikasi'           => <<<SPEC
                                             Bahan Leather
                                             Ukuran A5
@@ -336,7 +336,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 19,
                 'name'                  => 'Agenda Standard',
-                'image'                 => 'AS 003_1.jpg',
+                'image'                 => 'AS 003_1.webp',
                 'spesifikasi'           => <<<SPEC
                                             Material Leather
                                             Florance Blue
@@ -357,7 +357,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 20,
                 'name'                  => 'Alat Set Makan',
-                'image'                 => 'SSG003.jpg',
+                'image'                 => 'SSG003.wbp',
                 'spesifikasi'           => <<<SPEC
                                             Material Stainless
                                             Ukuran 23,5 x 6 x 3 cm
@@ -376,7 +376,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 21,
                 'name'                  => 'Tatakan Gelas',
-                'image'                 => 'Tatakan Gelas.jpg',
+                'image'                 => 'Tatakan Gelas.webp',
                 'spesifikasi'           => <<<SPEC
                                             Material Akrilik
                                             Ukuran 10 x 10 cm ( P x L )
@@ -391,7 +391,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 22,
                 'name'                  => 'Bantal Kotak',
-                'image'                 => 'Bantal Kotak.jpg',
+                'image'                 => 'Bantal Kotak.webp',
                 'spesifikasi'           => <<<SPEC
                                             Material Velboa
                                             Isi Dakron
@@ -408,7 +408,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 23,
                 'name'                  => 'Bantal Mobil',
-                'image'                 => 'Bantal Mobil.jpg',
+                'image'                 => 'Bantal Mobil.webp',
                 'spesifikasi'           => <<<SPEC
                                             Bahan Velboa
                                             Isi Dakron
@@ -426,7 +426,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 24,
                 'name'                  => 'Bantal Leher',
-                'image'                 => 'Bantal Leher.jpg',
+                'image'                 => 'Bantal Leher.webp',
                 'spesifikasi'           => <<<SPEC
                                             Material Velboa
                                             Isi Dakron
@@ -442,7 +442,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 25,
                 'name'                  => 'Ballpoint Stainless',
-                'image'                 => 'bolpoint.jpg',
+                'image'                 => 'bolpoint.webp',
                 'spesifikasi'           => <<<SPEC
                                             Material Stainless
                                             Ukuran panjang 14,3 cm
@@ -457,7 +457,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 26,
                 'name'                  => 'Card Holder',
-                'image'                 => 'card holder.jpg',
+                'image'                 => 'card holder.webp',
                 'spesifikasi'           => <<<SPEC
                                             Bahan Leather
                                             Ukuran 7,5 x 11 cm ( P x L )
@@ -473,7 +473,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 27,
                 'name'                  => 'Card Holder',
-                'image'                 => 'card holder 2.jpg',
+                'image'                 => 'card holder 2.webp',
                 'spesifikasi'           => <<<SPEC
                                             Material Leather + Stainless
                                             Ukuran 9,5 x 6,5 cm ( P x L )
@@ -490,7 +490,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 28,
                 'name'                  => 'Gantungan Kunci Premium',
-                'image'                 => 'GKP_BARU_1.png',
+                'image'                 => 'GKP_BARU_1.webp',
                 'spesifikasi'           => <<<SPEC
                                             Material Stainless
                                             Ukuran 8,1 x 2 cm ( P x L )
@@ -506,7 +506,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 29,
                 'name'                  => 'Gantungan Kunci STNK',
-                'image'                 => 'GKST 003-2.jpg',
+                'image'                 => 'GKST 003-2.webp',
                 'spesifikasi'           => <<<SPEC
                                             Bahan kain Cordura (polyester waterproof)
                                             Ukuran  11,5 x 7 cm ( P x L )
@@ -524,7 +524,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 30,
                 'name'                  => 'Giftset 2 In',
-                'image'                 => 'Giftset 2 In.jpg',
+                'image'                 => 'Giftset 2 In.webp',
                 'spesifikasi'           => <<<SPEC
                                             Agenda A6 Kulit Sintetis
                                             Bolpoint Stainless
@@ -538,7 +538,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 31,
                 'name'                  => 'Giftset 3 In',
-                'image'                 => 'Giftset 3 In.jpg',
+                'image'                 => 'Giftset 3 In.webp',
                 'spesifikasi'           => <<<SPEC
                                             Tumbler suhu
                                             Buku Agenda A6
@@ -553,7 +553,7 @@ class ProductDetailSeeder extends Seeder
             [
                 'products_id'           => 32,
                 'name'                  => 'Handuk Sport',
-                'image'                 => 'GKST 003-2.jpg',
+                'image'                 => 'HS001_1.webp',
                 'spesifikasi'           => <<<SPEC
                                             Material Microcotton
                                             Ukuran 30 x 70 cm ( P x L )

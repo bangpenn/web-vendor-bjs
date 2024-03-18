@@ -111,6 +111,9 @@ Route::prefix('frontend')->group(function () {
 // Route::get('/frontend/catalog2', [App\Http\Controllers\SouvenirController::class, 'showSouvenir'])->name('catalog2');
 Route::get('/frontend/catalog/{categoryId}', [App\Http\Controllers\HomeController::class, 'showCategory'])->name('catalog.category');
 
+
+Route::get('/frontend/form/{categoryId}', [App\Http\Controllers\FormController::class, 'showCategory'])->name('frontend.form');
+
 Route::get('/frontend/catalog/{productId}/productDetail/{productDetailId}', [App\Http\Controllers\HomeController::class, 'showProductDetail'])->name('catalog.product.detail');
 
 // Route::get('/frontend/catalog/{categoryId}', [App\Http\Controllers\HomeController::class, 'showCategory'])->name('catalog.category');

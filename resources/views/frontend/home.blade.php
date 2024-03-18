@@ -255,13 +255,14 @@
                 </div>
             </div>
 
-            @if(Session::has('success'))
-                <div class="alert alert-success">
-                    {{Session::get('success')}}
-                </div>
-            @endif
+
 			<div class="row m-0">
 				<div class="col-md-12 p-0 pt-4 pb-4">
+                    @if(Session::has('success'))
+                        <div class="alert alert-success">
+                            {{Session::get('success')}}
+                        </div>
+                    @endif
 					<form method="POST" action="{{ route('contact.us.store') }}" id="contactUSForm" class="bg-light p-4 m-auto">
                         {{ csrf_field() }}
 						<div class="row">
@@ -288,7 +289,8 @@
                                             <span class="text-danger">{{ $errors->first('message') }}</span>
                                         @endif
 								</div>
-							</div><button class="btn btn-lg btn-block btn-submit mt-3 text-white" type="button" style="background-color: #EE2B47">Kirim Sekarang</button>
+							</div><button class="btn btn-lg btn-block btn-submit mt-3 text-white" type="submit" style="background-color: #EE2B47">Kirim Sekarang</button>
+
 						</div>
 					</form>
 				</div>

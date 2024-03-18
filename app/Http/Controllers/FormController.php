@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class FormController extends Controller
@@ -72,4 +74,15 @@ class FormController extends Controller
 
         return redirect()->back()->with('success', 'Data berhasil disimpan!');
     }
+
+    public function showCategory($categoryId)
+    {
+        $categoryProducts = Product::where('categories_id', $categoryId)->get();
+        $category = Category::findOrFail($categoryId);
+
+        // Kirim variabel $category ke tampilan blade
+        return view('frontend.form', compact('categoryProducts', 'category'));
+    }
+
+
 }

@@ -55,7 +55,6 @@ class HomeController extends Controller
         // Mengambil data detail produk berdasarkan productDetailId
         $productDetail = ProductDetail::findOrFail($productDetailId);
 
-        // Kemudian, Anda bisa mengirimkan data ke view atau melakukan operasi lain sesuai kebutuhan Anda
         return view('frontend.catDetail2', compact('product', 'productDetail'));
     }
 

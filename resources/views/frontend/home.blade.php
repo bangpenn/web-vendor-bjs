@@ -17,7 +17,7 @@
                 <div class="carousel-caption">
                     <h5 class="judul-banner" data-aos="fade-up" data-aos-duration="1000">Kolaborasi yang Menguntungkan</h5>
                     <p class="detail-banner">Di perusahaan kami, kami percaya pada kerjasama yang saling menguntungkan. Bergabunglah dengan jaringan vendor kami dan nikmati peluang kolaborasi yang luas.</p>
-                    <p><a href="{{ url('frontend/form') }}" class="btn btn-danger mt-3">Daftar</a></p>
+                    <p><a href="{{ url('frontend/form') }}" class="btn btn-danger mt-3">Klik untuk Daftar</a></p>
                 </div>
               </div>
               <div class="carousel-item">
@@ -25,7 +25,7 @@
                 <div class="carousel-caption">
                     <h5 class="judul-banner "data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="200">Peluang Pertumbuhan Bersama</h5>
                     <p class="detail-banner">Bergabunglah dengan perusahaan kami untuk mendapatkan peluang pertumbuhan bersama yang tak terbatas.</p>
-                    <p><a href="{{ url('frontend/form') }}" class="btn btn-danger mt-3">Daftar</a></p>
+                    <p><a href="{{ url('frontend/form') }}" class="btn btn-danger mt-3">Klik untuk Daftar</a></p>
                 </div>
               </div>
               <div class="carousel-item">
@@ -33,7 +33,7 @@
                 <div class="carousel-caption">
                   <h5 class="judul-banner" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300">Networking yang Luas dan Peluang Ekspansi</h5>
                     <p class="detail-banner">Dengan bergabung bersama kami, Anda akan mendapatkan akses ke jaringan yang luas dan peluang ekspansi yang tak terbatas.</p>
-                    <p><a href="{{ url('frontend/form') }}" class="btn btn-danger mt-3">Daftar</a></p>
+                    <p><a href="{{ url('frontend/form') }}" class="btn btn-danger mt-3">Klik untuk Daftar</a></p>
                 </div>
               </div>
             </div>
@@ -204,7 +204,7 @@
                             <h2 class="display-6 fw-bold" data-aos="fade-left" data-aos-duration="1000">Tim Kami</h2>
                             <h5 data-aos="fade" data-aos-duration="500" data-aos-delay="200">Tim ahli luar biasa</h5>
                             <p class="about-detail" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">Ayo bergabung bersama kami sebagai mitra perusahaan! Sebagai vendor, kami berkomitmen untuk membantu Anda mengembangkan bisnis Anda ke tingkat selanjutnya. Kami mengundang Anda untuk menjalin kemitraan yang saling menguntungkan, di mana kami akan menyediakan solusi teknologi terbaik untuk mendukung pertumbuhan bisnis Anda. Dengan kerjasama yang erat, kita bisa mewujudkan potensi penuh dari usaha Anda. Mari kita jalin kemitraan yang kuat dan sukses bersama-sama.<br> yaa gak siiih, Tunggu apa lagi??</p>
-                            <a href="{{ url('frontend/form') }}" class="btn btn-danger text-white" data-aos="fade" data-aos-duration="500">Daftar dong</a>
+                            <a href="{{ url('frontend/form') }}" class="btn btn-danger text-white" data-aos="fade" data-aos-duration="500">Klik untuk Daftar</a>
                       </div>
                   </div>
               </div>
@@ -224,7 +224,7 @@
                         <p class="video-detail" data-aos="fade" data-aos-duration="500" data-aos-delay="200">
                             Dengan bergabung bersama kami, Anda akan mendapatkan akses ke jaringan yang luas dan peluang ekspansi yang tak terbatas. Kami percaya pada pertumbuhan bersama dan memberikan platform bagi vendor untuk mencapai potensi penuh mereka. Mari bersama-sama mengeksplorasi peluang baru dan menghadirkan inovasi. <br> yaa gak siiih, Tunggu apa lagi??
                         </p>
-                        <a href="{{ url('frontend/form') }}" class="btn btn-danger text-white"  data-aos="fade" data-aos-duration="500" data-aos-delay="300">Daftar dong</a>
+                        <a href="{{ url('frontend/form') }}" class="btn btn-danger text-white"  data-aos="fade" data-aos-duration="500" data-aos-delay="300">Klik untuk Daftar</a>
                     </div>
                 </div>
                 <!-- Video Profil -->
@@ -296,6 +296,21 @@
 				</div>
 			</div>
 		</div>
+        <!-- home.blade.php -->
+        {{-- <div>
+            <!-- Konten lainnya -->
+            <button class="btn d-inline-flex mb-md-0 btn-try text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                Daftar Vendor
+            </button>
+            @include('frontend.components.modal')
+        </div>
+        <div>
+            <!-- Konten lainnya -->
+            <button class="btn d-inline-flex mb-md-0 btn-try text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+                Daftar Vendor
+            </button>
+            @include('frontend.components.modal2')
+        </div> --}}
       </section>
       <!-- contact ends -->
 

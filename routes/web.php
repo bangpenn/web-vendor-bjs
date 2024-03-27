@@ -122,20 +122,20 @@ Route::get('/frontend/catalog/{productId}/productDetail/{productDetailId}', [App
 
 
 
-Route::prefix('admin')->group(function () {
+// routes/web.php
+Route::prefix('admin')->middleware(['auth','auth.admin'])->group(function () {
+    // Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
-    Route::prefix('vendor_profile/')->group(function () {
-        Route::get('/', function () {
-            return view('admin.vendor');
-        })->name('admin.vendor');
+    // Vendor profile
+    Route::get('/vendor_profile', function () {
+        return view('admin.vendor');
+    })->name('admin.vendor');
 
-
-    });
-
+    // Menampilkan profil vendor berdasarkan ID
     Route::get('/vendor_profile/{id}', [VendorController::class, 'showProfile'])->name('admin.vendor_profile');
-
 });
+
 
 Route::get('/admin/search', [DashboardController::class, 'search'])->name('admin.search');
 
@@ -170,3 +170,9 @@ Route::get('/frontend/home', [App\Http\Controllers\HomeController::class, 'index
 
 Route::get('contact-us', [ContactController::class, 'index']);
 Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
+
+// Logout
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/login');
+})->name('logout');

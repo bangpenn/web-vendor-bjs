@@ -19,8 +19,8 @@
 	<section id="sidebar">
 		<a href="#" class="brand">
 			<i class='bx bxs-smile'></i><br>
-            {{-- <span class="text">Hello, {{ $user->name }}</span> --}}
-            <span class="text">Hello, Admin</span>
+            <span class="text">Hello, {{ $user->name }}</span>
+            {{-- <span class="text">Hello, Admin</span> --}}
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
@@ -62,15 +62,15 @@
 				</a>
 			</li>
 			<li>
-                <form method="post" action="{{ route('logout') }}">
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout">
+                    <i class='bx bx-power-off '></i>
+                    <span class="text">Logout</span>
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
-                    <a href="{{ route('admin.dashboard') }}" class="logout">
-                        <i class='bx bx-power-off '></i>
-                        <span class="text">Logout</span>
-                    </a>
                 </form>
+            </li>
 
-			</li>
 		</ul>
 	</section>
 	<!-- SIDEBAR -->

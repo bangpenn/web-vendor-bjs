@@ -35,12 +35,12 @@
 					<span class="text">My Vendor</span>
 				</a>
 			</li> --}}
-			<li>
+			{{-- <li>
 				<a href="{{ route('admin.dashboard') }}">
 					<i class='bx bxs-doughnut-chart' ></i>
 					<span class="text">Analytics</span>
 				</a>
-			</li>
+			</li> --}}
 			<!-- <li>
 				<a href="#">
 					<i class='bx bxs-message-dots' ></i>
@@ -82,7 +82,7 @@
 		<!-- NAVBAR -->
 		<nav>
 			<i class='bx bx-menu' ></i>
-			<a href="#" class="nav-link">Categories</a>
+			{{-- <a href="#" class="nav-link">Categories</a> --}}
 			<form action="{{ route('admin.search') }}" method="GET">
 				<div class="form-input">
 					<input type="search" placeholder="Search...">
@@ -127,13 +127,13 @@
 						<p>New Vendor</p>
 					</span>
 				</li>
-				<li>
+				{{-- <li>
 					<i class='bx bxs-group' ></i>
 					<span class="text">
 						<h3 id="count">1834</h3>
 						<p>Visitors</p>
 					</span>
-				</li>
+				</li> --}}
 				<!-- <li>
 					<i class='bx bxs-dollar-circle' ></i>
 					<span class="text">

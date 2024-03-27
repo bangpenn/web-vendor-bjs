@@ -19,7 +19,7 @@
 	<section id="sidebar">
 		<a href="#" class="brand">
 			<i class='bx bxs-smile'></i>
-			<span class="text">Hello, Admin</span>
+			<span class="text">Hello, {{ $user->name }}</span>
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
@@ -34,12 +34,12 @@
 					<span class="text">My Vendor</span>
 				</a>
 			</li> --}}
-			<li>
+			{{-- <li>
 				<a href="#">
 					<i class='bx bxs-doughnut-chart' ></i>
 					<span class="text">Analytics</span>
 				</a>
-			</li>
+			</li> --}}
 			<!-- <li>
 				<a href="#">
 					<i class='bx bxs-message-dots' ></i>
@@ -81,7 +81,7 @@
 		<!-- NAVBAR -->
 		<nav>
 			<i class='bx bx-menu' ></i>
-			<a href="#" class="nav-link">Categories</a>
+			{{-- <a href="#" class="nav-link">Categories</a> --}}
 			<form action="#">
 				<div class="form-input">
 					<input type="search" placeholder="Search...">

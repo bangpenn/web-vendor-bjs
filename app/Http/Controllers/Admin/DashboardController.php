@@ -29,6 +29,7 @@ class DashboardController extends Controller
 
     public function search(Request $request)
     {
+        $user = Auth::user();
         $keyword = $request->search;
 
         $results = Data::where('nama_distributor', 'like', '%' . $keyword . '%')
@@ -39,6 +40,7 @@ class DashboardController extends Controller
         ->orWhere('provinsi', 'like', '%'.$keyword.'%')
         ->get();
         return view('admin.result', [
+            'user' => $user,
             'keyword' => $keyword,
             'data' => $results
         ]);

@@ -20,7 +20,7 @@
 		<a href="#" class="brand">
 			<i class='bx bxs-smile'></i><br>
             {{-- <span class="text">Hello, {{ $user->name }}</span> --}}
-            <span class="text">Hello, Admin</span>
+            <span class="text">Hello, {{ $user->name }}</span>
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
@@ -35,12 +35,12 @@
 					<span class="text">My Vendor</span>
 				</a>
 			</li> --}}
-			<li>
+			{{-- <li>
 				<a href="{{ route('admin.dashboard') }}">
 					<i class='bx bxs-doughnut-chart' ></i>
 					<span class="text">Analytics</span>
 				</a>
-			</li>
+			</li> --}}
 			<!-- <li>
 				<a href="#">
 					<i class='bx bxs-message-dots' ></i>

@@ -3,10 +3,10 @@
     background: #fccb90;
 
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, #8a0000, #f53f42, #e25252, #e61616);
+    background: -webkit-linear-gradient(to right, #190146, #0400fcc7, #0400fcc7, #010375);
 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, #8a0000, #f53f42, #e25252, #e61616);
+    background: linear-gradient(to right, #190146, #0400fcc7, #0400fcc7, #010375);
   }
 
   @media (min-width: 768px) {
@@ -23,7 +23,7 @@
 
   .btn.btn-outline-danger:hover {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, #8a0000, #f53f42, #e25252, #e61616);
+    background: linear-gradient(to right, #30008a, #423ff5, #5254e2, #161ae6);
     color: white;
   }
 

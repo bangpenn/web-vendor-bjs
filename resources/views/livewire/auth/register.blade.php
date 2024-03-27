@@ -6,9 +6,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Tukuklik | Website Vendor Management Systems</title>>
+  <title>BJS | Website Vendor Management Systems</title>
   <!-- MDB icon -->
-   <link rel="icon" href="{{ asset('auth/assets/tukuklik.png') }}" type="image/x-icon" /><link rel="icon" href="{{ asset('auth/assets/tukuklik.png') }}" type="image/x-icon" />
+   <link rel="icon" href="{{ asset('auth/assets/Logo CV BJS.png') }}" type="image/x-icon" /><link rel="icon" href="{{ asset('auth/assets/tukuklik.png') }}" type="image/x-icon" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
   <!-- Google Fonts Roboto -->
@@ -31,8 +31,8 @@
                 <div class="card-body p-md-4 mx-md-4">
 
                   <div class="text-center">
-                    <img src="{{ asset('auth/assets/tukuklik.png') }}" style="width: 80px;" alt="logo">
-                    <h4 class="mt-1 pb-1">Register</h4>
+                    <img src="{{ asset('auth/assets/Logo CV BJS.png') }}" style="width: 80px;" alt="logo">
+                    <h4 class="mt-1 pb-1">Halaman Register</h4>
                   </div>
 
                   <form wire:submit.prevent="registerUser">

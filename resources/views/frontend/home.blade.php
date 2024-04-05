@@ -13,7 +13,7 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="{{ asset('frontend/img/showroom1.jpg') }}" class="d-block w-100 landscape-image" alt="...">
+                <img src="{{ asset('frontend/img/showroom1.webp') }}" class="d-block w-100 landscape-image" alt="...">
                 <div class="carousel-caption">
                     <h5 class="judul-banner" data-aos="fade-up" data-aos-duration="1000">Kolaborasi yang Menguntungkan</h5>
                     <p class="detail-banner">Di perusahaan kami, kami percaya pada kerjasama yang saling menguntungkan. Bergabunglah dengan jaringan vendor kami dan nikmati peluang kolaborasi yang luas.</p>
@@ -21,7 +21,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="{{ asset('frontend/img/showroom2.jpg') }}" class="d-block w-100 landscape-image" alt="...">
+                <img src="{{ asset('frontend/img/showroom2.webp') }}" class="d-block w-100 landscape-image" alt="...">
                 <div class="carousel-caption">
                     <h5 class="judul-banner "data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="200">Peluang Pertumbuhan Bersama</h5>
                     <p class="detail-banner">Bergabunglah dengan perusahaan kami untuk mendapatkan peluang pertumbuhan bersama yang tak terbatas.</p>
@@ -29,7 +29,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="{{ asset('frontend/img/showroom3.jpg') }}" class="d-block w-100 landscape-image" alt="...">
+                <img src="{{ asset('frontend/img/showroom3.webp') }}" class="d-block w-100 landscape-image" alt="...">
                 <div class="carousel-caption">
                   <h5 class="judul-banner" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300">Networking yang Luas dan Peluang Ekspansi</h5>
                     <p class="detail-banner">Dengan bergabung bersama kami, Anda akan mendapatkan akses ke jaringan yang luas dan peluang ekspansi yang tak terbatas.</p>
@@ -125,7 +125,7 @@
                     data-aos-duration="1000">
                         <div class="card-body text-dark">
                           <div class="img-area mb-4">
-                              <img src="{{ asset('frontend/img/percetakkan.png') }}" class="img-fluid" alt="" width="500" height="300">
+                              <img src="{{ asset('frontend/img/konveksi.webp') }}" class="img-fluid" alt="" width="500px" height="300px" style="object-fit: cover">
                           </div>
                             <h3 class="card-title">Konveksi</h3>
                             <p class="lead">Ingin bergabung sebagai vendor Konveksi? Klik tombol di bawah untuk bergabung bersama kami!</p>
@@ -138,10 +138,10 @@
                     data-aos-duration="1000">
                         <div class="card-body text-dark">
                           <div class="img-area mb-4">
-                              <img src="{{ asset('frontend/img/gift-set.png') }}" class="img-fluid" alt="" width="500" height="300">
+                              <img src="{{ asset('frontend/img/atk.webp') }}" class="img-fluid" alt="" width="500px" height="300px" style="object-fit: cover">
                           </div>
-                            <h3 class="card-title">ATK</h3>
-                            <p class="lead">Ingin bergabung sebagai vendor ATK? Klik tombol di bawah untuk bergabung bersama kami!</p>
+                            <h3 class="card-title">Alat Tulis Kantor</h3>
+                            <p class="lead">Ingin bergabung sebagai vendor Alat Tulis Kantor? Klik tombol di bawah untuk bergabung bersama kami!</p>
                             <a href="{{ route('catalog.category', 3) }}"class="btn btn-danger text-white">Lihat Contoh Produk</a>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                     data-aos-duration="1000">
                         <div class="card-body text-dark">
                           <div class="img-area mb-4">
-                              <img src="{{ asset('frontend/img/percetakkan.png') }}" class="img-fluid" alt="" width="500" height="300">
+                              <img src="{{ asset('frontend/img/percetakkan.webp') }}" class="img-fluid" alt="" width="500px" height="500px" style="object-fit: cover">
                           </div>
                             <h3 class="card-title">Percetakkan</h3>
                             <p class="lead">Ingin bergabung sebagai vendor Percetakan? Klik tombol di bawah untuk bergabung bersama kami!</p>
@@ -166,7 +166,7 @@
                     data-aos-duration="1000">
                         <div class="card-body text-dark">
                           <div class="img-area mb-4">
-                              <img src="{{ asset('frontend/img/gift-set.png') }}" class="img-fluid" alt="" width="500" height="300">
+                              <img src="{{ asset('frontend/img/souvenir.webp') }}" class="img-fluid" alt="" width="500px" height="300px" style="object-fit: cover">
                           </div>
                             <h3 class="card-title">Souvenir</h3>
                             <p class="lead">Ingin bergabung sebagai vendor Souvenir? Klik tombol di bawah untuk bergabung bersama kami!</p>
@@ -196,7 +196,7 @@
               <div class="row">
                   <div class="col-lg-6 col-md-12 col-12 md-5">
                       <div class="about-img" data-aos="fade-right" data-aos-duration="2000">
-                          <img src="{{ asset('frontend/img/foto_bersama-removebg-preview.png') }}" alt="" class="img-fluid">
+                          <img src="{{ asset('frontend/img/foto bersama.webp') }}" alt="" class="img-fluid">
                       </div>
                   </div>
                   <div class="col-lg-6 col-md-12 col-12 ps-lg-5 pe-lg-5 md-5">

@@ -10,16 +10,16 @@
                     <a class="nav-link" href="{{ url('/') }}">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#partner">Partner</a>
+                    <a class="nav-link" href="{{ url('/') }}#partner">Partner</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Produk</a>
+                    <a class="nav-link" href="{{ url('/') }}#portfolio">Produk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">Tentang</a>
+                    <a class="nav-link" href="{{ url('/') }}#about">Tentang</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Hubungi</a>
+                    <a class="nav-link" href="{{ url('/') }}#contact">Hubungi</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

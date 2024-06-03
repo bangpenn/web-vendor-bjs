@@ -36,12 +36,17 @@ The Website Vendor is expected to streamline the process of supplying and orderi
 
 ## Screenshoot
 **Home Page**
+![Home-BJS-Vendor](https://github.com/bangpenn/web-vendor-bjs/assets/61650805/18bc33c3-84a5-4ff3-b241-b495439b1a20)
 
 
 **Catalog by Category**
+![Konveksi-BJS-Vendor](https://github.com/bangpenn/web-vendor-bjs/assets/61650805/ea1b4bad-9e8d-4d87-a0e1-d95bdbc986b4)
+
+![Souvenir-BJS-Vendor](https://github.com/bangpenn/web-vendor-bjs/assets/61650805/545ae350-2f26-4ce7-8551-998bc575feea)
 
 
 **Registration Form**
+![BJS-Form-Pendaftaran-Vendor](https://github.com/bangpenn/web-vendor-bjs/assets/61650805/48993593-a13f-44e6-9e8d-d641cd3bb42f)
 
 
 **Admin Login and Register**

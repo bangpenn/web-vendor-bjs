@@ -49,8 +49,6 @@ The Website Vendor is expected to streamline the process of supplying and orderi
 ![BJS-Form-Pendaftaran-Vendor](https://github.com/bangpenn/web-vendor-bjs/assets/61650805/48993593-a13f-44e6-9e8d-d641cd3bb42f)
 
 
-**Admin Login and Register**
-
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

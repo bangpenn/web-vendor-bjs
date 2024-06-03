@@ -34,7 +34,7 @@ This project is a Website Vendor designed to be a solution for providers of souv
 
 The Website Vendor is expected to streamline the process of supplying and ordering goods for various business needs.
 
-## Screenshoot
+## Screenshot
 **Home Page**
 ![Home-BJS-Vendor](https://github.com/bangpenn/web-vendor-bjs/assets/61650805/18bc33c3-84a5-4ff3-b241-b495439b1a20)
 

@@ -30,6 +30,8 @@ This project is a Website Vendor designed to be a solution for providers of souv
 - **Home Page**: An attractive and informative landing page.
 - **Catalog by Category**: Grouping products by category for easy navigation.
 - **Registration Form**: A user-friendly form for new user registration.
+- **Login and Register Page:Allows users and admins to register and log in.
+- **Dashboard Admin: A comprehensive dashboard for admin functionalities, including viewing users who have filled out the registration form.
 
 
 The Website Vendor is expected to streamline the process of supplying and ordering goods for various business needs.
